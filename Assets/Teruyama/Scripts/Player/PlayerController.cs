@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Assets.PixelHeroes.Scripts.CharacterScripts;
 using UnityEngine;
 using AnimationState = Assets.PixelHeroes.Scripts.CharacterScripts.AnimationState;
+using UnityEngine.U2D.Animation;
 
     public class PlayerController : MonoBehaviour
     {
@@ -23,46 +24,44 @@ using AnimationState = Assets.PixelHeroes.Scripts.CharacterScripts.AnimationStat
         int JumpCount;
         [SerializeField] int MaxJumpCount;
         [SerializeField] float MaxSpeed;
+        [SerializeField] ChracterDataBase chracterDataBase;
+        List<CharaDatas> charaData;
+        [SerializeField] SpriteLibrary spriteLibrary;
         public void Start()
         {
+            charaData = chracterDataBase.charaDatas;
             Character.SetState(AnimationState.Idle);
         }
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.A)) Character.Animator.SetTrigger("Attack");
-            else if (Input.GetKeyDown(KeyCode.J)) Character.Animator.SetTrigger("Jab");
-            else if (Input.GetKeyDown(KeyCode.P)) Character.Animator.SetTrigger("Push");
-            else if (Input.GetKeyDown(KeyCode.H)) Character.Animator.SetTrigger("Hit");
-            else if (Input.GetKeyDown(KeyCode.I)) { Character.SetState(AnimationState.Idle); _activityTime = 0; }
-            else if (Input.GetKeyDown(KeyCode.R)) { Character.SetState(AnimationState.Ready); _activityTime = Time.time; }
-            else if (Input.GetKeyDown(KeyCode.B)) Character.SetState(AnimationState.Blocking);
-            else if (Input.GetKeyUp(KeyCode.B)) Character.SetState(AnimationState.Ready);
-            else if (Input.GetKeyDown(KeyCode.D)) Character.SetState(AnimationState.Dead);
+          //  if (Input.GetKeyDown(KeyCode.A)) Character.Animator.SetTrigger("Attack");
+          //  else if (Input.GetKeyDown(KeyCode.J)) Character.Animator.SetTrigger("Jab");
+          //  else if (Input.GetKeyDown(KeyCode.P)) Character.Animator.SetTrigger("Push");
+          //  else if (Input.GetKeyDown(KeyCode.H)) Character.Animator.SetTrigger("Hit");
+          //  else if (Input.GetKeyDown(KeyCode.I)) { Character.SetState(AnimationState.Idle); _activityTime = 0; }
+          //  else if (Input.GetKeyDown(KeyCode.R)) { Character.SetState(AnimationState.Ready); _activityTime = Time.time; }
+         //   else if (Input.GetKeyDown(KeyCode.B)) Character.SetState(AnimationState.Blocking);
+         //   else if (Input.GetKeyUp(KeyCode.B)) Character.SetState(AnimationState.Ready);
+          //  else if (Input.GetKeyDown(KeyCode.D)) Character.SetState(AnimationState.Dead);
 
             // Builder characters only.
-            else if (Input.GetKeyDown(KeyCode.S)) Character.Animator.SetTrigger("Slash");
-            else if (Input.GetKeyDown(KeyCode.O)) Character.Animator.SetTrigger("Shot");
-            else if (Input.GetKeyDown(KeyCode.F)) Character.Animator.SetTrigger("Fire1H");
-            else if (Input.GetKeyDown(KeyCode.E)) Character.Animator.SetTrigger("Fire2H");
-            else if (Input.GetKeyDown(KeyCode.C)) Character.SetState(AnimationState.Climbing);
-            else if (Input.GetKeyUp(KeyCode.C)) Character.SetState(AnimationState.Ready);
-            else if (Input.GetKeyUp(KeyCode.L)) Character.Blink();
+          //  else if (Input.GetKeyDown(KeyCode.O)) Character.Animator.SetTrigger("Shot");
+          //  else if (Input.GetKeyDown(KeyCode.F)) Character.Animator.SetTrigger("Fire1H");
+          //  else if (Input.GetKeyDown(KeyCode.E)) Character.Animator.SetTrigger("Fire2H");
+          //  else if (Input.GetKeyDown(KeyCode.C)) Character.SetState(AnimationState.Climbing);
+          //  else if (Input.GetKeyUp(KeyCode.C)) Character.SetState(AnimationState.Ready);
+          //  else if (Input.GetKeyUp(KeyCode.L)) Character.Blink();
 
             
 
-          /*  if (Controller.isGrounded)
-            {
-                if (Input.GetKeyDown(KeyCode.DownArrow))
-                {
-                    GetDown();
-                }
-                else if (Input.GetKeyUp(KeyCode.DownArrow))
-                {
-                    GetUp();
-                }
-            }
-            */
+             if (Input.GetKeyDown(KeyCode.Space)){
+
+                Character.Animator.SetTrigger("Slash");
+             }
+              if (Input.GetKeyDown(KeyCode.LeftShift)){
+                spriteLibrary.spriteLibraryAsset = charaData[0].Animation;
+             }
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
