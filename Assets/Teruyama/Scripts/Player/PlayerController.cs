@@ -4,36 +4,75 @@ using Assets.PixelHeroes.Scripts.CharacterScripts;
 using UnityEngine;
 using AnimationState = Assets.PixelHeroes.Scripts.CharacterScripts.AnimationState;
 using UnityEngine.U2D.Animation;
+using TMPro;
 
     public class PlayerController : MonoBehaviour
     {
         public Character Character;
-        public CharacterController Controller; // https://docs.unity3d.com/ScriptReference/CharacterController.html
-        public float RunSpeed = 1f;
-        public float JumpSpeed = 3f;
+        public float RunSpeed;
+        public float JumpSpeed;
         public float CrawlSpeed = 0.25f;
         public ParticleSystem MoveDust;
         public ParticleSystem JumpDust;
 
         private Vector3 _motion = Vector3.zero;
-        private int _inputX, _inputY;
-        private float _activityTime;
+        [System.NonSerialized] public int _inputX;
+        private int _inputY;
 
-        [SerializeField] Rigidbody2D rg2d;
-        bool IsGround;
+        public Rigidbody2D rg2d;
+        [SerializeField] TextMeshProUGUI NameText; 
+        bool IsGround;//地面に接地しているか
+        bool IsAttacked;//攻撃後の硬直で攻撃できないならtrue
         int JumpCount;
-        [SerializeField] int MaxJumpCount;
-        [SerializeField] float MaxSpeed;
-        [SerializeField] ChracterDataBase chracterDataBase;
+        [SerializeField] int MaxJumpCount;//ジャンプ回数の最大値
+        public float MaxSpeed;//スピードの最大値
+        [SerializeField] float commandInterval;//コマンド後の硬直
+        [SerializeField] ChracterDataBase chracterDataBase;//キャラクターのデータベース
         List<CharaDatas> charaData;
         [SerializeField] SpriteLibrary spriteLibrary;
-        public void Start()
+        int NowCharaIndex;//現在のキャラクターのID
+        string NowAnimation;
+        ICommand NowCommand;
+
+        /// <summary>
+        /// キャラクターの変更、初期化処理
+        /// </summary>
+        void CharacterChange(int CharaIndex){
+          rg2d.gravityScale = 3;
+          spriteLibrary.spriteLibraryAsset = charaData[CharaIndex].Animation;  
+          MaxSpeed = charaData[CharaIndex].speed;
+          JumpSpeed = charaData[CharaIndex].jumpPower;
+          MaxJumpCount = charaData[CharaIndex].JumpCount;
+          commandInterval = charaData[CharaIndex].CommandInterval;
+          NowAnimation = charaData[CharaIndex].animationType.ToString();
+          NameText.text = charaData[CharaIndex].name;
+          NowCommand = charaData[CharaIndex].Command;
+        }
+        IEnumerator AttackInterval(){
+            yield return new WaitForSeconds(commandInterval);
+            IsAttacked = false;
+        }
+        IEnumerator Attack(){
+            if(!IsAttacked){
+                IsAttacked = true;
+                Character.Animator.SetTrigger(NowAnimation);
+                yield return NowCommand.Command(this);
+                CharacterChange(NowCharaIndex);
+                StartCoroutine(AttackInterval());
+                }
+        }
+        /// <summary>
+        /// 初期化
+        /// </summary>
+        void Start()
         {
             charaData = chracterDataBase.charaDatas;
+            NowCharaIndex = 0;
+            CharacterChange(NowCharaIndex);
             Character.SetState(AnimationState.Idle);
         }
 
-        public void Update()
+        void Update()
         {
           //  if (Input.GetKeyDown(KeyCode.A)) Character.Animator.SetTrigger("Attack");
           //  else if (Input.GetKeyDown(KeyCode.J)) Character.Animator.SetTrigger("Jab");
@@ -56,11 +95,14 @@ using UnityEngine.U2D.Animation;
             
 
              if (Input.GetKeyDown(KeyCode.Space)){
-
-                Character.Animator.SetTrigger("Slash");
+                StartCoroutine(Attack());
              }
               if (Input.GetKeyDown(KeyCode.LeftShift)){
-                spriteLibrary.spriteLibraryAsset = charaData[0].Animation;
+                NowCharaIndex++;
+                if(NowCharaIndex >= charaData.Count){
+                    NowCharaIndex = 0;
+                }
+                CharacterChange(NowCharaIndex);
              }
 
             if (Input.GetKey(KeyCode.LeftArrow))
@@ -90,7 +132,7 @@ using UnityEngine.U2D.Animation;
                 _inputY = 1;
                 Character.SetState(AnimationState.Jumping);
                 rg2d.AddForce(JumpSpeed * Vector2.up);
-               if(IsGround)
+                //if(IsGround)
                 {
                     JumpDust.Play(true);
                 }
@@ -149,45 +191,12 @@ using UnityEngine.U2D.Animation;
                  if(rg2d.velocity.x > MaxSpeed) rg2d.velocity = new Vector2(MaxSpeed,rg2d.velocity.y);
                  if(rg2d.velocity.x < -MaxSpeed) rg2d.velocity = new Vector2(-MaxSpeed,rg2d.velocity.y);
                 }
-                
-
-                
-              /*  else
-                {
-                    switch (state)
-                    {
-                        case AnimationState.Crawling:
-                        case AnimationState.Climbing:
-                        case AnimationState.Blocking:
-                            break;
-                        default:
-                            var targetState = Time.time - _activityTime > LandStan ? AnimationState.Idle : AnimationState.Ready;
-
-                            if (state != targetState)
-                            {
-                                Character.SetState(targetState);
-                            }
-                             Character.SetState(AnimationState.Idle);
-
-                            break;
-                    }
-                }
-                */
             }
             else
             {
                 _motion = new Vector3(RunSpeed * _inputX, _motion.y);
                 Character.SetState(AnimationState.Jumping);
             }
-            
-                
-
-         //   Controller.Move(_motion * Time.fixedDeltaTime);
-
-         //   Character.Animator.SetBool("Grounded", Controller.isGrounded);
-         //   Character.Animator.SetBool("Moving", Controller.isGrounded && _inputX != 0);
-         //   Character.Animator.SetBool("Falling", !Controller.isGrounded && Controller.velocity.y < 0);
-
         
             _inputX = _inputY = 0;
 

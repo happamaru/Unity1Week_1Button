@@ -13,8 +13,37 @@ MonoBehaviour:
   m_Name: CharacterDataBase
   m_EditorClassIdentifier: 
   charaDatas:
-  - name: 
-    speed: 10
-    jumpPower: 30
-    JumpCount: 2
+  - name: "\u4E00\u822C\u4EBA"
+    speed: 4
+    jumpPower: 600
+    JumpCount: 1
+    CommandInterval: 2
+    animationType: 0
     Animation: {fileID: 11400000, guid: 56eba3aab99e5d4468ac3c03f24efa03, type: 2}
+    Command:
+      rid: 1120290626852618241
+  - name: "\u5316\u7269"
+    speed: 6
+    jumpPower: 500
+    JumpCount: 2
+    CommandInterval: 1
+    animationType: 1
+    Animation: {fileID: 11400000, guid: 5449333cefd1a214499c7a948af50360, type: 2}
+    Command:
+      rid: 1120290626852618240
+  - name: "\u76D7\u8CCA"
+    speed: 3
+    jumpPower: 400
+    JumpCount: 1
+    CommandInterval: 1
+    animationType: 2
+    Animation: {fileID: 11400000, guid: 0df19e9c9ae86fd4885586d255637ac6, type: 2}
+    Command:
+      rid: 1120290626852618240
+  references:
+    version: 2
+    RefIds:
+    - rid: 1120290626852618240
+      type: {class: HighJump, ns: , asm: Assembly-CSharp}
+    - rid: 1120290626852618241
+      type: {class: HighSpeed, ns: , asm: Assembly-CSharp}
