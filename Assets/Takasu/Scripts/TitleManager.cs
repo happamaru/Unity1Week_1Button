@@ -7,6 +7,8 @@ public class TitleManager : MonoBehaviour
     public GameObject TitleGroup;
     public GameObject TeamCompositionGroup;
 
+    public int[] Heroes = new int[4];
+
     // Start is called before the first frame update
     void Start()
     {
