@@ -61,6 +61,8 @@ public class CharaImage : MonoBehaviour,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        teamcompositionmanager.CharaExplanationImage.sprite = transform.GetChild(0).GetComponent<Image>().sprite;
+
         if(button.interactable == false) return;
         transform.DOScale(OriginalScale * 1.3f, 0.24f).SetUpdate(true).SetEase(Ease.OutCubic);
     }
@@ -93,6 +95,13 @@ public class CharaImage : MonoBehaviour,
 
                 //編成画面のスプライトを変更する
                 teamcompositionmanager.SetCharaImage(i, transform.GetChild(0).gameObject.GetComponent<Image>().sprite);
+
+                //４人編成できたら決定ボタンが出てくる
+                if(i == 3)
+                {
+                    teamcompositionmanager.TeamComposeButton.SetActive(true);
+                }
+
                 return;
             }
         }
