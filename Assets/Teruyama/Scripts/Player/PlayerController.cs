@@ -5,6 +5,7 @@ using UnityEngine;
 using AnimationState = Assets.PixelHeroes.Scripts.CharacterScripts.AnimationState;
 using UnityEngine.U2D.Animation;
 using TMPro;
+using System;
 
     public class PlayerController : MonoBehaviour
     {
@@ -34,6 +35,9 @@ using TMPro;
         string NowAnimation;
         ICommand NowCommand;
 
+        [NonSerialized] public Action<float> OnChangeGauge;
+        [NonSerialized] public Action OnResetGauge;
+
         /// <summary>
         /// キャラクターの変更、初期化処理
         /// </summary>
@@ -49,14 +53,18 @@ using TMPro;
           NowCommand = charaData[CharaIndex].Command;
         }
         IEnumerator AttackInterval(){
+            OnChangeGauge.Invoke(commandInterval);
             yield return new WaitForSeconds(commandInterval);
             IsAttacked = false;
         }
         IEnumerator Attack(){
             if(!IsAttacked){
+                OnResetGauge();
                 IsAttacked = true;
                 Character.Animator.SetTrigger(NowAnimation);
+                if(NowCommand != null){
                 yield return NowCommand.Command(this);
+                }
                 CharacterChange(NowCharaIndex);
                 StartCoroutine(AttackInterval());
                 }

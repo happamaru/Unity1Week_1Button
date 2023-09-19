@@ -18,7 +18,7 @@ MonoBehaviour:
     jumpPower: 600
     JumpCount: 1
     CommandInterval: 2
-    animationType: 0
+    animationType: 1
     Animation: {fileID: 11400000, guid: 56eba3aab99e5d4468ac3c03f24efa03, type: 2}
     Command:
       rid: 1120290626852618241
@@ -27,7 +27,7 @@ MonoBehaviour:
     jumpPower: 450
     JumpCount: 3
     CommandInterval: 1
-    animationType: 1
+    animationType: 2
     Animation: {fileID: 11400000, guid: 5449333cefd1a214499c7a948af50360, type: 2}
     Command:
       rid: 1120290626852618240
@@ -39,10 +39,12 @@ MonoBehaviour:
     animationType: 3
     Animation: {fileID: 11400000, guid: 0df19e9c9ae86fd4885586d255637ac6, type: 2}
     Command:
-      rid: 1120290626852618240
+      rid: -2
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 1120290626852618240
       type: {class: HighJump, ns: , asm: Assembly-CSharp}
     - rid: 1120290626852618241
