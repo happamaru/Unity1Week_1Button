@@ -94,6 +94,7 @@ MonoBehaviour:
   Type_MoveScene: 0
   CharaNumber: 0
   titlemanager: {fileID: 0}
+  teamcompositionmanager: {fileID: 0}
 --- !u!114 &7274694917692729466
 MonoBehaviour:
   m_ObjectHideFlags: 0

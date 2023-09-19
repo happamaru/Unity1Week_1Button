@@ -19,6 +19,7 @@ public class CharaImage : MonoBehaviour,
 
     public int CharaNumber;
     public TitleManager titlemanager;
+    public TeamCompositionManager teamcompositionmanager;
     Button button;
 
 
@@ -55,7 +56,6 @@ public class CharaImage : MonoBehaviour,
             isClick = true;
         }
         onClickCallback?.Invoke();
-        Debug.Log("!");
 
     }
 
@@ -76,7 +76,7 @@ public class CharaImage : MonoBehaviour,
         int[] heroes = new int[4];
         for(int i = 0; i < 4; i++)
         {
-            heroes[i] = titlemanager.Heroes[i];
+            heroes[i] = teamcompositionmanager.Heroes[i];
         }
 
         //もし編成セットに空きがあったら、左詰めにセットする
@@ -84,16 +84,21 @@ public class CharaImage : MonoBehaviour,
         {
             if(heroes[i] == 0)
             {
-                titlemanager.Heroes[i] = CharaNumber;
+                teamcompositionmanager.Heroes[i] = CharaNumber;
+                teamcompositionmanager.TeamCompositionGauge.GetComponent<Image>().DOFillAmount(0.25f * (i + 1), 0.1f);
                 button.interactable = false;
+
+                //クリックしたボタンの拡大を直す
                 transform.DOScale(OriginalScale, 0.24f).SetUpdate(true).SetEase(Ease.OutCubic);
+
+                //編成画面のスプライトを変更する
+                teamcompositionmanager.SetCharaImage(i, transform.GetChild(0).gameObject.GetComponent<Image>().sprite);
                 return;
             }
-            else
-            {
-                Debug.Log("編成セットが満員です");
-            }
         }
+        
+            //returnしていないということは編成セットが満員
+            Debug.Log("編成セットが満員です！");
     }
 
 }

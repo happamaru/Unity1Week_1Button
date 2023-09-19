@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TitleManager : MonoBehaviour
 {
     public GameObject TitleGroup;
     public GameObject TeamCompositionGroup;
-
-    public int[] Heroes = new int[4];
+    
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class TitleManager : MonoBehaviour
         
     }
 
+    //チーム編成画面に切り替わる
     public void OnTeamComposion()
     {
         Debug.Log("チーム編成");
@@ -33,6 +35,7 @@ public class TitleManager : MonoBehaviour
         TeamCompositionGroup.GetComponent<CanvasGroup>().interactable = true;
     }
 
+    //タイトル画面に切り替わる
     public void OnToTitle()
     {
         Debug.Log("タイトル画面");
@@ -44,4 +47,6 @@ public class TitleManager : MonoBehaviour
         TitleGroup.GetComponent<CanvasGroup>().interactable = true;
 
     }
+
+    
 }
