@@ -36,8 +36,26 @@ MonoBehaviour:
     jumpPower: 400
     JumpCount: 1
     CommandInterval: 1
-    animationType: 3
+    animationType: 4
     Animation: {fileID: 11400000, guid: 0df19e9c9ae86fd4885586d255637ac6, type: 2}
+    Command:
+      rid: 1120290630929481729
+  - name: "\u30D6\u30BF"
+    speed: 10
+    jumpPower: 400
+    JumpCount: 1
+    CommandInterval: 1
+    animationType: 1
+    Animation: {fileID: 11400000, guid: 8221348a5f9228b4d822d09caf6146ec, type: 2}
+    Command:
+      rid: -2
+  - name: "\u30C8\u30ED\u30FC\u30EB"
+    speed: 3
+    jumpPower: 400
+    JumpCount: 1
+    CommandInterval: 1
+    animationType: 3
+    Animation: {fileID: 11400000, guid: 9df330bf56080d14cbeea258cf456834, type: 2}
     Command:
       rid: -2
   references:
@@ -49,3 +67,5 @@ MonoBehaviour:
       type: {class: HighJump, ns: , asm: Assembly-CSharp}
     - rid: 1120290626852618241
       type: {class: HighSpeed, ns: , asm: Assembly-CSharp}
+    - rid: 1120290630929481729
+      type: {class: Slash, ns: , asm: Assembly-CSharp}

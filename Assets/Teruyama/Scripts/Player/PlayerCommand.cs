@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HighJump:ICommand{
     public IEnumerator Command(PlayerController player){
-     
       var rg2d = player.rg2d;
       rg2d.AddForce(Vector2.up * 1000);
       yield return new WaitForSeconds(0.3f);
@@ -19,4 +18,11 @@ public class HighSpeed:ICommand{
       rg2d.AddForce(new Vector2(player.gameObject.transform.localScale.x,0) * 1000);
       yield return new WaitForSeconds(0.3f);
     }
+}
+public class Slash:ICommand{
+  public IEnumerator Command(PlayerController player){
+    player.attackCollider.ActiveCollider(true);
+    yield return new WaitForSeconds(0.1f);
+    player.attackCollider.ActiveCollider(false);
+  }
 }

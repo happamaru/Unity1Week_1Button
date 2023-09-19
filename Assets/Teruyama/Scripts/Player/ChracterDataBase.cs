@@ -16,6 +16,7 @@ public class CharaDatas{
         Idle,
         Running,
         Jumping,
+        Attack,
         Slash,
         Shot,
         Fire1H,

@@ -37,6 +37,7 @@ using System;
 
         [NonSerialized] public Action<float> OnChangeGauge;
         [NonSerialized] public Action OnResetGauge;
+        public AttackCollider attackCollider;
 
         /// <summary>
         /// キャラクターの変更、初期化処理
