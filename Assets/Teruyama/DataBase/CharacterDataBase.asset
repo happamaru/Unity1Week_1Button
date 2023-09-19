@@ -13,46 +13,100 @@ MonoBehaviour:
   m_Name: CharacterDataBase
   m_EditorClassIdentifier: 
   charaDatas:
-  - name: "\u4E00\u822C\u4EBA"
-    speed: 4
+  - name: "\u6751\u4EBA"
+    speed: 4.5
     jumpPower: 600
     JumpCount: 1
-    CommandInterval: 2
-    animationType: 1
-    Animation: {fileID: 11400000, guid: 56eba3aab99e5d4468ac3c03f24efa03, type: 2}
+    gravity: 3
+    blowPower: 0
+    CommandInterval: 0.5
+    animationType: 4
+    Animation: {fileID: 11400000, guid: 32d27605aab1ca943a2d032b1fbc67bd, type: 2}
     Command:
-      rid: 1120290626852618241
-  - name: "\u5316\u7269"
-    speed: 6
+      rid: 1120290638891843584
+  - name: "\u30AF\u30ED\u30A6"
+    speed: 4
     jumpPower: 450
-    JumpCount: 3
-    CommandInterval: 1
+    JumpCount: 1
+    gravity: 1.5
+    blowPower: 0
+    CommandInterval: 3
     animationType: 2
-    Animation: {fileID: 11400000, guid: 5449333cefd1a214499c7a948af50360, type: 2}
+    Animation: {fileID: 11400000, guid: 474ad494e8194a64a93e6c83c437a6cf, type: 2}
     Command:
       rid: 1120290626852618240
-  - name: "\u76D7\u8CCA"
-    speed: 8
-    jumpPower: 400
+  - name: "\u5FCD\u8005"
+    speed: 6
+    jumpPower: 600
     JumpCount: 1
+    gravity: 5
+    blowPower: 0
+    CommandInterval: 2
+    animationType: 1
+    Animation: {fileID: 11400000, guid: b76c4ac3a847bd8498a752a8a46ffa0d, type: 2}
+    Command:
+      rid: 1120290638891843585
+  - name: "\u5263\u58EB"
+    speed: 4
+    jumpPower: 500
+    JumpCount: 1
+    gravity: 3
+    blowPower: 0
     CommandInterval: 1
     animationType: 4
-    Animation: {fileID: 11400000, guid: 0df19e9c9ae86fd4885586d255637ac6, type: 2}
+    Animation: {fileID: 11400000, guid: fdca255169f11484facb8668769e4d92, type: 2}
     Command:
-      rid: 1120290630929481729
+      rid: 1120290638891843587
+  - name: "\u9B54\u6CD5\u4F7F\u3044"
+    speed: 3.5
+    jumpPower: 300
+    JumpCount: 2
+    gravity: 2
+    blowPower: 0
+    CommandInterval: 1
+    animationType: 5
+    Animation: {fileID: 11400000, guid: 755d8b520112e3c4981655e6d2672304, type: 2}
+    Command:
+      rid: 1120290650869465088
+  - name: "\u6CE5\u68D2"
+    speed: 5
+    jumpPower: 200
+    JumpCount: 0
+    gravity: 3
+    blowPower: 0
+    CommandInterval: 1
+    animationType: 1
+    Animation: {fileID: 11400000, guid: 91fa59570610bd546909f70dafa5da2d, type: 2}
+    Command:
+      rid: -2
   - name: "\u30D6\u30BF"
     speed: 10
     jumpPower: 400
     JumpCount: 1
+    gravity: 3
+    blowPower: 0
     CommandInterval: 1
     animationType: 1
     Animation: {fileID: 11400000, guid: 8221348a5f9228b4d822d09caf6146ec, type: 2}
+    Command:
+      rid: -2
+  - name: "\u30AB\u30A8\u30EB"
+    speed: 3
+    jumpPower: 400
+    JumpCount: 5
+    gravity: 3
+    blowPower: 0
+    CommandInterval: 1
+    animationType: 1
+    Animation: {fileID: 11400000, guid: 13c329eeb5d03744fb8526542be8a21c, type: 2}
     Command:
       rid: -2
   - name: "\u30C8\u30ED\u30FC\u30EB"
     speed: 3
     jumpPower: 400
     JumpCount: 1
+    gravity: 3
+    blowPower: 0
     CommandInterval: 1
     animationType: 3
     Animation: {fileID: 11400000, guid: 9df330bf56080d14cbeea258cf456834, type: 2}
@@ -65,7 +119,11 @@ MonoBehaviour:
       type: {class: , ns: , asm: }
     - rid: 1120290626852618240
       type: {class: HighJump, ns: , asm: Assembly-CSharp}
-    - rid: 1120290626852618241
-      type: {class: HighSpeed, ns: , asm: Assembly-CSharp}
-    - rid: 1120290630929481729
+    - rid: 1120290638891843584
       type: {class: Slash, ns: , asm: Assembly-CSharp}
+    - rid: 1120290638891843585
+      type: {class: HighSpeed, ns: , asm: Assembly-CSharp}
+    - rid: 1120290638891843587
+      type: {class: HyperSlash, ns: , asm: Assembly-CSharp}
+    - rid: 1120290650869465088
+      type: {class: Magic, ns: , asm: Assembly-CSharp}

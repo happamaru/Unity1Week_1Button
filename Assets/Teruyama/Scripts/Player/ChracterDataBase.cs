@@ -27,8 +27,10 @@ public class CharaDatas{
     [TooltipAttribute("キャラクターのスピード")] public float speed;
     [TooltipAttribute("ジャンプ力")] public float jumpPower;
     [TooltipAttribute("ジャンプ回数")] public int JumpCount;
+    [TooltipAttribute("重力")] public float gravity = 3;
+    [TooltipAttribute("吹っ飛びやすさ")] public float blowPower;
     [TooltipAttribute("コマンドを使った後の硬直時間")] public float CommandInterval;
-    [TooltipAttribute("キャラアニメーション")] public AnimationType animationType;
+    [TooltipAttribute("キャラアニメーションタイプ")] public AnimationType animationType;
     [TooltipAttribute("キャラアニメーション")] public SpriteLibraryAsset Animation;
     
     

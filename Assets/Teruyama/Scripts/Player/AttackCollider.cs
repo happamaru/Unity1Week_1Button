@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class AttackCollider : MonoBehaviour,IDamage
 {
-    [SerializeField] public List<ColliderData> colliderData;
+    [SerializeField,ReadOnly,Tooltip("敵に与えるダメージ数")] int damage;
+    [SerializeField,ReadOnly] public float activeTime;
+    // [SerializeField,ReadOnly,Tooltip("敵に与えるダメージ数")] public IMove moveType;
 
-    [System.NonSerialized] public int NowIndex;
-
-    public void ActiveCollider(bool b){
-        this.gameObject.SetActive(b);
+    IEnumerator Start(){
+      //  StartCoroutine(moveType.MoveAction(this.gameObject));
+       yield return new WaitForSeconds(activeTime);
+       Destroy(this.gameObject);
     }
 
+    public int Damage{
+        get{return damage;}
+        set{damage = value;}
+    }
+
+    /// <summary>
+    /// 敵にダメージを与える
+    /// </summary>
+    /// <param name="b"></param>
     public int AddDamage(){
-        return colliderData[NowIndex].DamageNum;
+        return damage;
     }
 }
 
-[System.Serializable]
-public class ColliderData{
-    public string Name;
-    public int DamageNum;
-    public Vector2 Scale;
-}
+

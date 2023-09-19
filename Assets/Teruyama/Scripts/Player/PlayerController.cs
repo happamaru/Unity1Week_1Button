@@ -37,17 +37,17 @@ using System;
 
         [NonSerialized] public Action<float> OnChangeGauge;
         [NonSerialized] public Action OnResetGauge;
-        public AttackCollider attackCollider;
+        public AttackManager attackManager;
 
         /// <summary>
         /// キャラクターの変更、初期化処理
         /// </summary>
         void CharacterChange(int CharaIndex){
-          rg2d.gravityScale = 3;
           spriteLibrary.spriteLibraryAsset = charaData[CharaIndex].Animation;  
           MaxSpeed = charaData[CharaIndex].speed;
           JumpSpeed = charaData[CharaIndex].jumpPower;
           MaxJumpCount = charaData[CharaIndex].JumpCount;
+          rg2d.gravityScale = charaData[CharaIndex].gravity;
           commandInterval = charaData[CharaIndex].CommandInterval;
           NowAnimation = charaData[CharaIndex].animationType.ToString();
           NameText.text = charaData[CharaIndex].name;
@@ -60,14 +60,14 @@ using System;
         }
         IEnumerator Attack(){
             if(!IsAttacked){
-                OnResetGauge();
+                if(NowCommand != null){
                 IsAttacked = true;
                 Character.Animator.SetTrigger(NowAnimation);
-                if(NowCommand != null){
+                OnResetGauge();
                 yield return NowCommand.Command(this);
-                }
                 CharacterChange(NowCharaIndex);
                 StartCoroutine(AttackInterval());
+                }
                 }
         }
         /// <summary>
@@ -140,6 +140,7 @@ using System;
                 JumpCount++;
                 _inputY = 1;
                 Character.SetState(AnimationState.Jumping);
+                rg2d.velocity = new Vector2(rg2d.velocity.x,0);
                 rg2d.AddForce(JumpSpeed * Vector2.up);
                 //if(IsGround)
                 {
