@@ -31,6 +31,7 @@ public class CharaDatas{
     [TooltipAttribute("吹っ飛びやすさ")] public float blowPower;
     [TooltipAttribute("コマンドを使った後の硬直時間")] public float CommandInterval;
     [TooltipAttribute("キャラアニメーションタイプ")] public AnimationType animationType;
+    [TooltipAttribute("登場エフェクト")] public GameObject changeEffect;
     [TooltipAttribute("キャラアニメーション")] public SpriteLibraryAsset Animation;
     
     

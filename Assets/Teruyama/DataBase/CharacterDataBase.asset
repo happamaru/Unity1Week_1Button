@@ -21,6 +21,7 @@ MonoBehaviour:
     blowPower: 0
     CommandInterval: 0.5
     animationType: 4
+    changeEffect: {fileID: 4561338316898350250, guid: 8b30000231169e14eb90b7f9a08e4011, type: 3}
     Animation: {fileID: 11400000, guid: 32d27605aab1ca943a2d032b1fbc67bd, type: 2}
     Command:
       rid: 1120290638891843584
@@ -32,6 +33,7 @@ MonoBehaviour:
     blowPower: 0
     CommandInterval: 3
     animationType: 2
+    changeEffect: {fileID: 862486574076858879, guid: 7f727dd879c8e9e4a8a3561045b0e519, type: 3}
     Animation: {fileID: 11400000, guid: 474ad494e8194a64a93e6c83c437a6cf, type: 2}
     Command:
       rid: 1120290626852618240
@@ -43,6 +45,7 @@ MonoBehaviour:
     blowPower: 0
     CommandInterval: 2
     animationType: 1
+    changeEffect: {fileID: 286498580796085441, guid: 661d0093ec6d7fd498ba5335ab9cc695, type: 3}
     Animation: {fileID: 11400000, guid: b76c4ac3a847bd8498a752a8a46ffa0d, type: 2}
     Command:
       rid: 1120290638891843585
@@ -54,6 +57,7 @@ MonoBehaviour:
     blowPower: 0
     CommandInterval: 1
     animationType: 4
+    changeEffect: {fileID: 1494463556257873780, guid: 28d8ccfc874a58140a1903318ae8bcd1, type: 3}
     Animation: {fileID: 11400000, guid: fdca255169f11484facb8668769e4d92, type: 2}
     Command:
       rid: 1120290638891843587
@@ -65,6 +69,7 @@ MonoBehaviour:
     blowPower: 0
     CommandInterval: 1
     animationType: 5
+    changeEffect: {fileID: 3199742085320055194, guid: 0fb431300685be7409a20a6e5a036899, type: 3}
     Animation: {fileID: 11400000, guid: 755d8b520112e3c4981655e6d2672304, type: 2}
     Command:
       rid: 1120290650869465088
@@ -76,6 +81,7 @@ MonoBehaviour:
     blowPower: 0
     CommandInterval: 1
     animationType: 1
+    changeEffect: {fileID: 2848425286219990527, guid: 774dc20b68db8624bbc2ed3ae976a188, type: 3}
     Animation: {fileID: 11400000, guid: 91fa59570610bd546909f70dafa5da2d, type: 2}
     Command:
       rid: -2
@@ -87,6 +93,7 @@ MonoBehaviour:
     blowPower: 0
     CommandInterval: 1
     animationType: 1
+    changeEffect: {fileID: 4177234435896415578, guid: 929e45f1533a4484cb38d2f2b58c754d, type: 3}
     Animation: {fileID: 11400000, guid: 8221348a5f9228b4d822d09caf6146ec, type: 2}
     Command:
       rid: -2
@@ -98,6 +105,7 @@ MonoBehaviour:
     blowPower: 0
     CommandInterval: 1
     animationType: 1
+    changeEffect: {fileID: 7597491518885655522, guid: 760a84f5f55ffbc4ea5ac7a0791778fb, type: 3}
     Animation: {fileID: 11400000, guid: 13c329eeb5d03744fb8526542be8a21c, type: 2}
     Command:
       rid: -2
@@ -109,6 +117,7 @@ MonoBehaviour:
     blowPower: 0
     CommandInterval: 1
     animationType: 3
+    changeEffect: {fileID: 2848425286219990527, guid: 774dc20b68db8624bbc2ed3ae976a188, type: 3}
     Animation: {fileID: 11400000, guid: 9df330bf56080d14cbeea258cf456834, type: 2}
     Command:
       rid: -2

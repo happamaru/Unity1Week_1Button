@@ -53,6 +53,13 @@ using System;
           NameText.text = charaData[CharaIndex].name;
           NowCommand = charaData[CharaIndex].Command;
         }
+        IEnumerator ChangeEffect(int index){
+            GameObject effect = Instantiate(charaData[index].changeEffect);
+            effect.transform.position = this.transform.position;
+            effect.transform.AddPosY(0.5f);
+            yield return new WaitForSeconds(0.4f);
+            Destroy(effect);
+        }
         IEnumerator AttackInterval(){
             OnChangeGauge.Invoke(commandInterval);
             yield return new WaitForSeconds(commandInterval);
@@ -112,6 +119,7 @@ using System;
                     NowCharaIndex = 0;
                 }
                 CharacterChange(NowCharaIndex);
+               StartCoroutine(ChangeEffect(NowCharaIndex));
              }
 
             if (Input.GetKey(KeyCode.LeftArrow))
