@@ -31,13 +31,16 @@ using System;
         [SerializeField] ChracterDataBase chracterDataBase;//キャラクターのデータベース
         List<CharaDatas> charaData;
         [SerializeField] SpriteLibrary spriteLibrary;
-        int NowCharaIndex;//現在のキャラクターのID
+        int NowCharaIndex;//現在のID
         string NowAnimation;
         ICommand NowCommand;
 
         [NonSerialized] public Action<float> OnChangeGauge;
         [NonSerialized] public Action OnResetGauge;
         public AttackManager attackManager;
+
+        const int MaxParty = 4;
+        [SerializeField,ReadOnly] int[] PartyNums = new int[MaxParty];
 
         /// <summary>
         /// キャラクターの変更、初期化処理
@@ -72,7 +75,7 @@ using System;
                 Character.Animator.SetTrigger(NowAnimation);
                 OnResetGauge();
                 yield return NowCommand.Command(this);
-                CharacterChange(NowCharaIndex);
+                CharacterChange(PartyNums[NowCharaIndex]);
                 StartCoroutine(AttackInterval());
                 }
                 }
@@ -82,9 +85,12 @@ using System;
         /// </summary>
         void Start()
         {
+            for(int i =0;i<MaxParty;i++){
+                PartyNums[i] = GameManager.team[i]; 
+            }
             charaData = chracterDataBase.charaDatas;
             NowCharaIndex = 0;
-            CharacterChange(NowCharaIndex);
+            CharacterChange(PartyNums[NowCharaIndex]);
             Character.SetState(AnimationState.Idle);
         }
 
@@ -115,11 +121,11 @@ using System;
              }
               if (Input.GetKeyDown(KeyCode.LeftShift)){
                 NowCharaIndex++;
-                if(NowCharaIndex >= charaData.Count){
+                if(NowCharaIndex >= MaxParty){
                     NowCharaIndex = 0;
                 }
-                CharacterChange(NowCharaIndex);
-               StartCoroutine(ChangeEffect(NowCharaIndex));
+                CharacterChange(PartyNums[NowCharaIndex]);
+               StartCoroutine(ChangeEffect(PartyNums[NowCharaIndex]));
              }
 
             if (Input.GetKey(KeyCode.LeftArrow))

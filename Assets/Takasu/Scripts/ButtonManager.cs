@@ -2,6 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour,
     IPointerClickHandler,
@@ -35,6 +36,11 @@ public class ButtonManager : MonoBehaviour,
         }
         onClickCallback?.Invoke();
 
+            
+    }
+
+    public void StartButton(){
+        SceneManager.LoadScene("MainScene");
     }
 
     public void OnPointerEnter(PointerEventData eventData)
