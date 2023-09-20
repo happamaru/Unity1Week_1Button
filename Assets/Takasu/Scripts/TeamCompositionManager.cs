@@ -95,12 +95,12 @@ public class TeamCompositionManager : MonoBehaviour
             Destroy(go);
         
 
-        GameObject newTextObject = Instantiate(TeamMessage, transform.position, Quaternion.identity);
-        newTextObject.transform.SetParent(canvas.transform); 
-        newTextObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        newTextObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(500, 500);
-        newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(500, 375), 0.5f).SetEase(Ease.OutBack).OnComplete(() => {
-            newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(500, 500), 0.5f).SetDelay(3f).SetEase(Ease.OutBack).OnComplete(() => {
+            GameObject newTextObject = Instantiate(TeamMessage, transform.position, Quaternion.identity);
+            newTextObject.transform.SetParent(canvas.transform); 
+            newTextObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            newTextObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(500, 500);
+            newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(500, 375), 0.5f).SetEase(Ease.OutBack).OnComplete(() => {
+                newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(500, 500), 0.5f).SetDelay(3f).SetEase(Ease.OutBack).OnComplete(() => {
                 Destroy(newTextObject);
             });
         });
