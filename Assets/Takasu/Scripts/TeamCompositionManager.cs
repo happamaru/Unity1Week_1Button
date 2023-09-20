@@ -4,24 +4,34 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.UIElements;
+using UnityEngine.U2D.Animation;
+using Assets.PixelHeroes.Scripts.CharacterScripts;
+using AnimationState = Assets.PixelHeroes.Scripts.CharacterScripts.AnimationState;
+using UnityEngine.Experimental.AI;
 
 public class TeamCompositionManager : MonoBehaviour
 {
-    public GameObject[] TeamImage;
+    public GameObject[] TeamAnimObject;
 
     public GameObject CharaImageGroup;
+    public GameObject TeamImageGroup;
     public GameObject TeamCompositionGauge;
-    public UnityEngine.UI.Image CharaExplanationImage;
+    public GameObject CharaExplanationObject;
     public GameObject TeamComposeButton;
     public GameObject TeamMessage;
     public Canvas canvas;
 
+    public GameObject test;
+
     public int[] Heroes = new int[4];
 
-    //チーム編成で画像を差し替える
-    public void SetCharaImage(int num, Sprite sprite)
+
+
+    //チーム編成でアニメーションを切り替える
+    public void SetCharaAnim(int num, Transform go)
     {
-        TeamImage[num].GetComponent<UnityEngine.UI.Image>().sprite = sprite;
+        TeamAnimObject[num].transform.GetChild(0).GetComponent<SpriteLibrary>().spriteLibraryAsset = go.transform.GetChild(0).GetComponent<SpriteLibrary>().spriteLibraryAsset;
+        TeamAnimObject[num].transform.localScale = new Vector3(60, 60, 60);
     }
 
     //チーム編成を一つ戻す
@@ -44,7 +54,10 @@ public class TeamCompositionManager : MonoBehaviour
         //一つ分チーム選択をリセットする
         CharaImageGroup.transform.GetChild(Heroes[a - 1] - 1).GetComponent<UnityEngine.UI.Button>().interactable = true;   //ボタンリセット
         Heroes[a - 1] = 0;
-        TeamImage[a - 1].GetComponent<UnityEngine.UI.Image>().sprite = null;
+
+        //チーム編成スロット上の表示を消す
+        TeamAnimObject[a - 1].transform.localScale = Vector3.zero;
+
         TeamCompositionGauge.GetComponent<UnityEngine.UI.Image>().DOFillAmount(0.25f * (a - 1), 0.1f);
 
         if(a == 4)
@@ -63,7 +76,7 @@ public class TeamCompositionManager : MonoBehaviour
         {
             Heroes[i] = 0;
 
-            TeamImage[i].GetComponent<UnityEngine.UI.Image>().sprite = null;
+            TeamAnimObject[i].transform.localScale = Vector3.zero;
         }
 
         //キャラ選択ボタンをリセット
@@ -95,12 +108,12 @@ public class TeamCompositionManager : MonoBehaviour
             Destroy(go);
         
 
-        GameObject newTextObject = Instantiate(TeamMessage, transform.position, Quaternion.identity);
-        newTextObject.transform.SetParent(canvas.transform); 
-        newTextObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        newTextObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(500, 500);
-        newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(500, 375), 0.5f).SetEase(Ease.OutBack).OnComplete(() => {
-            newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(500, 500), 0.5f).SetDelay(3f).SetEase(Ease.OutBack).OnComplete(() => {
+            GameObject newTextObject = Instantiate(TeamMessage, transform.position, Quaternion.identity);
+            newTextObject.transform.SetParent(canvas.transform); 
+            newTextObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            newTextObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(500, 500);
+            newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(500, 375), 0.5f).SetEase(Ease.OutBack).OnComplete(() => {
+                newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(500, 500), 0.5f).SetDelay(3f).SetEase(Ease.OutBack).OnComplete(() => {
                 Destroy(newTextObject);
             });
         });

@@ -9,6 +9,7 @@ using System;
 
     public class PlayerController : MonoBehaviour
     {
+
         public Character Character;
         public float RunSpeed;
         public float JumpSpeed;

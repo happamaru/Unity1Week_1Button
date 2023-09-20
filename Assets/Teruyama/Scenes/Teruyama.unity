@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  HP: 3
+  HP: 8
   score: 1
 --- !u!50 &796508363
 Rigidbody2D:
@@ -12295,7 +12295,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 4723107735738678597, guid: a0365d023f68c044eaeb4df7f8d9f7c5, type: 3}
+  m_Sprite: {fileID: 4723107735738678597, guid: 1fbb09fb3389e7f428cc21cb0571c14a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12319,7 +12319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 11400000, guid: 0df19e9c9ae86fd4885586d255637ac6, type: 2}
+  m_SpriteLibraryAsset: {fileID: 11400000, guid: 32d27605aab1ca943a2d032b1fbc67bd, type: 2}
 --- !u!1 &375063815663186538
 GameObject:
   m_ObjectHideFlags: 0

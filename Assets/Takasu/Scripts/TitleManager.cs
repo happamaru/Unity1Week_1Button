@@ -32,6 +32,9 @@ public class TitleManager : MonoBehaviour
         TitleGroup.GetComponent<CanvasGroup>().alpha = 0;
         TitleGroup.GetComponent<CanvasGroup>().interactable = false;
 
+        teamcompositionmanager.TeamImageGroup.SetActive(true);
+        teamcompositionmanager.CharaImageGroup.SetActive(true);
+        teamcompositionmanager.CharaExplanationObject.SetActive(true);
         TeamCompositionGroup.GetComponent<CanvasGroup>().alpha = 1;
         TeamCompositionGroup.GetComponent<CanvasGroup>().interactable = true;
 
@@ -46,6 +49,11 @@ public class TitleManager : MonoBehaviour
 
         TeamCompositionGroup.GetComponent<CanvasGroup>().alpha = 0;
         TeamCompositionGroup.GetComponent<CanvasGroup>().interactable = false;
+        teamcompositionmanager.TeamImageGroup.SetActive(false);
+        teamcompositionmanager.CharaImageGroup.SetActive(false);
+        teamcompositionmanager.CharaExplanationObject.SetActive(false);
+        
+        
 
         TitleGroup.GetComponent<CanvasGroup>().alpha = 1;
         TitleGroup.GetComponent<CanvasGroup>().interactable = true;
