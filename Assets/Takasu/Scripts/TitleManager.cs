@@ -8,6 +8,7 @@ public class TitleManager : MonoBehaviour
 {
     public GameObject TitleGroup;
     public GameObject TeamCompositionGroup;
+    public TeamCompositionManager teamcompositionmanager;
     
 
     // Start is called before the first frame update
@@ -33,6 +34,9 @@ public class TitleManager : MonoBehaviour
 
         TeamCompositionGroup.GetComponent<CanvasGroup>().alpha = 1;
         TeamCompositionGroup.GetComponent<CanvasGroup>().interactable = true;
+
+        //編成画面の更新
+        teamcompositionmanager.SetTeamCompose();
     }
 
     //タイトル画面に切り替わる

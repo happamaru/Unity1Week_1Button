@@ -83,6 +83,13 @@ public class TeamCompositionManager : MonoBehaviour
     //決定ボタンを押されたらチーム編成を更新する
     public void OnTeamCompose()
     {
+        //チーム編成を更新
+        for(int i = 0; i < 4; i++)
+        {
+            GameManager.team[i] = Heroes[i];
+        }
+
+
         GameObject go = GameObject.Find("TeamMessage(Clone)");
         if(go != null)
             Destroy(go);
@@ -98,5 +105,15 @@ public class TeamCompositionManager : MonoBehaviour
             });
         });
         
+    }
+
+
+    //staticのパーティー編成を編成画面のほうに反映させる
+    public void SetTeamCompose()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            CharaImageGroup.transform.GetChild(GameManager.team[i] - 1).GetComponent<CharaImage>().OnClickCharaImage();
+        }
     }
 }

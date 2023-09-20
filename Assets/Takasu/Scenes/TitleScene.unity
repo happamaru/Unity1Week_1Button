@@ -2281,6 +2281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TitleGroup: {fileID: 420299167}
   TeamCompositionGroup: {fileID: 1730772187}
+  teamcompositionmanager: {fileID: 869474860}
 --- !u!1001 &1030412052
 PrefabInstance:
   m_ObjectHideFlags: 0
