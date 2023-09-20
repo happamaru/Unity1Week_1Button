@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.U2D.Animation;
 
 public class CharaImage : MonoBehaviour,
     IPointerClickHandler,
@@ -23,7 +24,7 @@ public class CharaImage : MonoBehaviour,
     Button button;
 
 
-    void Start()
+    void Awake()
     {
         OriginalScale = transform.localScale;
 
@@ -61,7 +62,7 @@ public class CharaImage : MonoBehaviour,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        teamcompositionmanager.CharaExplanationImage.sprite = transform.GetChild(0).GetComponent<Image>().sprite;
+        teamcompositionmanager.CharaExplanationObject.transform.GetChild(0).GetComponent<SpriteLibrary>().spriteLibraryAsset = transform.GetChild(0).GetChild(0).GetComponent<SpriteLibrary>().spriteLibraryAsset;
 
         if(button.interactable == false) return;
         transform.DOScale(OriginalScale * 1.3f, 0.24f).SetUpdate(true).SetEase(Ease.OutCubic);
@@ -94,7 +95,7 @@ public class CharaImage : MonoBehaviour,
                 transform.DOScale(OriginalScale, 0.24f).SetUpdate(true).SetEase(Ease.OutCubic);
 
                 //編成画面のスプライトを変更する
-                teamcompositionmanager.SetCharaImage(i, transform.GetChild(0).gameObject.GetComponent<Image>().sprite);
+                teamcompositionmanager.SetCharaAnim(i, transform.GetChild(0));
 
                 //４人編成できたら決定ボタンが出てくる
                 if(i == 3)
