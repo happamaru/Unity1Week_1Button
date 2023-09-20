@@ -26,7 +26,7 @@ MonoBehaviour:
     Command:
       rid: 1120290638891843584
   - name: "\u30AF\u30ED\u30A6"
-    speed: 4
+    speed: 2.5
     jumpPower: 450
     JumpCount: 1
     gravity: 1.5

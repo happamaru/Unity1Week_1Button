@@ -9,9 +9,12 @@ public abstract class Enemy : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     Sequence _seq;
+    protected Action OnVisible;
+    protected Action OnDisable;
     [SerializeField] protected int damage;
     [SerializeField] protected int HP;
     [SerializeField] protected int score;
+    
     private void Awake() 
     {
         spriteRenderer = this.GetComponent<SpriteRenderer>();
@@ -32,12 +35,34 @@ public abstract class Enemy : MonoBehaviour
     {
         _seq?.Kill();
         _seq = DOTween.Sequence();
-        _seq.AppendCallback(() => spriteRenderer.enabled = false);
+        _seq.AppendCallback(() => spriteRenderer.color = Vector4.zero);
         _seq.AppendInterval(0.05f);
-        _seq.AppendCallback(() => spriteRenderer.enabled = true);
+        _seq.AppendCallback(() => spriteRenderer.color = Vector4.one);
         _seq.AppendInterval(0.05f);
-        _seq.SetLoops(1);
+        _seq.SetLoops(2);
         _seq.Play();
     }
+
+        /// <summary>
+    /// Rendererが任意のカメラから見えると呼び出される
+    /// </summary>
+    private void OnBecameVisible()
+    {
+        if(OnVisible != null){
+           OnVisible.Invoke();
+        }
+    }
+    
+    
+    /// <summary>
+    /// Rendererがカメラから見えなくなると呼び出される
+    /// </summary>
+    private void OnBecameInvisible()
+    {
+        if(OnDisable != null){
+            OnDisable.Invoke();
+        }
+    }
+    
 
 }
