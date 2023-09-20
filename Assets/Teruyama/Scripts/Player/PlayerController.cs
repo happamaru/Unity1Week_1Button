@@ -41,7 +41,15 @@ using System;
         public AttackManager attackManager;
 
         const int MaxParty = 4;
-        [SerializeField,ReadOnly] int[] PartyNums = new int[MaxParty];
+        [SerializeField,ReadOnly] int[] PartyNums;
+
+         enum DebugType{
+            none,
+            Team4,
+            AllTeam,
+        }
+    [SerializeField] DebugType debugType;
+    [SerializeField] int[] Debug_Party;
 
         /// <summary>
         /// キャラクターの変更、初期化処理
@@ -86,9 +94,24 @@ using System;
         /// </summary>
         void Start()
         {
-            for(int i =0;i<MaxParty;i++){
+            if(debugType == DebugType.none){
+                for(int i =0;i<MaxParty;i++){
                 PartyNums[i] = GameManager.team[i]; 
+               }
             }
+           else if(debugType == DebugType.Team4){
+                GameManager.team = Debug_Party;
+                for(int i =0;i<MaxParty;i++){
+                PartyNums[i] = GameManager.team[i]; 
+               }
+            }else if(debugType == DebugType.AllTeam){
+                PartyNums = new int[chracterDataBase.charaDatas.Count];
+                for(int i=0;i<chracterDataBase.charaDatas.Count;i++){
+                    PartyNums[i] = i;
+                }
+            }
+
+           
             charaData = chracterDataBase.charaDatas;
             NowCharaIndex = 0;
             CharacterChange(PartyNums[NowCharaIndex]);
@@ -122,7 +145,7 @@ using System;
              }
               if (Input.GetKeyDown(KeyCode.LeftShift)){
                 NowCharaIndex++;
-                if(NowCharaIndex >= MaxParty){
+                if(NowCharaIndex >= PartyNums.Length){
                     NowCharaIndex = 0;
                 }
                 CharacterChange(PartyNums[NowCharaIndex]);
@@ -195,16 +218,9 @@ using System;
             {
                 if (state == AnimationState.Jumping)
                 {
-                    if (Input.GetKey(KeyCode.DownArrow))
-                    {
-                        GetDown();
-                    }
-                    else
-                    {
                         Character.Animator.SetTrigger("Landed");
                         Character.SetState(AnimationState.Ready);
                         JumpDust.Play(true);
-                    }
                 }
 
 
