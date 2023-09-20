@@ -9,7 +9,9 @@ using System;
 
     public class PlayerController : MonoBehaviour
     {
-
+        [SerializeField] GroundCheck groundCheck;
+        [SerializeField] WallCheck wallCheck;
+        [SerializeField] SlopeCheck slopeCheck;
         public Character Character;
         public float RunSpeed;
         public float JumpSpeed;
@@ -23,9 +25,8 @@ using System;
 
         public Rigidbody2D rg2d;
         [SerializeField] TextMeshProUGUI NameText; 
-        bool IsGround;//地面に接地しているか
         bool IsAttacked;//攻撃後の硬直で攻撃できないならtrue
-        int JumpCount;
+        [NonSerialized] public int JumpCount;
         [SerializeField] int MaxJumpCount;//ジャンプ回数の最大値
         public float MaxSpeed;//スピードの最大値
         [SerializeField] float commandInterval;//コマンド後の硬直
@@ -120,6 +121,7 @@ using System;
 
         void Update()
         {
+
           //  if (Input.GetKeyDown(KeyCode.A)) Character.Animator.SetTrigger("Attack");
           //  else if (Input.GetKeyDown(KeyCode.J)) Character.Animator.SetTrigger("Jab");
           //  else if (Input.GetKeyDown(KeyCode.P)) Character.Animator.SetTrigger("Push");
@@ -155,14 +157,14 @@ using System;
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 _inputX = -1;
-                if(IsGround == true){
+                if(groundCheck.IsGround == true){
                 Character.SetState(AnimationState.Running);
                 }
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
                 _inputX = 1;
-                if(IsGround == true){   
+                if(groundCheck.IsGround == true){   
                 Character.SetState(AnimationState.Running);
                 }
             }
@@ -174,13 +176,16 @@ using System;
             
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                if(JumpCount == 0){
+                    if(groundCheck.IsGround == false) return;
+                }
                 if(JumpCount >= MaxJumpCount) return;
                 JumpCount++;
                 _inputY = 1;
                 Character.SetState(AnimationState.Jumping);
                 rg2d.velocity = new Vector2(rg2d.velocity.x,0);
                 rg2d.AddForce(JumpSpeed * Vector2.up);
-                //if(IsGround)
+                //if(groundCheck.IsGround)
                 {
                     JumpDust.Play(true);
                 }
@@ -209,12 +214,17 @@ using System;
             }
 
             if(state == AnimationState.Running || state == AnimationState.Jumping||state == AnimationState.Idle){
+                 if(wallCheck.IsWall == false){
                  rg2d.AddForce(Vector3.right * RunSpeed * _inputX);
+                 }
+                 //else if(slopeCheck.IsSlope && wallCheck.IsWall == false){
+                  //  this.gameObject.transform.Translate(0.1f*_inputX,0,0);
+                 //}
                  if(rg2d.velocity.x > MaxSpeed) rg2d.velocity = new Vector2(MaxSpeed,rg2d.velocity.y);
                  if(rg2d.velocity.x < -MaxSpeed) rg2d.velocity = new Vector2(-MaxSpeed,rg2d.velocity.y);
                 }
 
-            if (IsGround)
+            if (groundCheck.IsGround)
             {
                 if (state == AnimationState.Jumping)
                 {
@@ -236,12 +246,20 @@ using System;
             else
             {
                 _motion = new Vector3(RunSpeed * _inputX, _motion.y);
+                if(groundCheck.IsGround == false){
                 Character.SetState(AnimationState.Jumping);
+                }else{
+                    if(_inputX != 0){
+                        Character.SetState(AnimationState.Running);   
+                    }else{
+                        Character.SetState(AnimationState.Idle);
+                    }
+                }
             }
         
             _inputX = _inputY = 0;
 
-            if (IsGround && !Mathf.Approximately(rg2d.velocity.x, 0))
+            if (groundCheck.IsGround && !Mathf.Approximately(rg2d.velocity.x, 0))
             {
                 var velocity = MoveDust.velocityOverLifetime;
 
@@ -283,11 +301,11 @@ using System;
             Character.CharacterController.height = 0.16f * Character.transform.localScale.x;
         }
 
-        private void OnTriggerStay2D(Collider2D other) {
+     /*   private void OnTriggerStay2D(Collider2D other) {
             if(other.gameObject.tag == "ground"){
-                if(!IsGround){
+                if(!groundCheck.IsGround){
                 rg2d.velocity = new Vector2(rg2d.velocity.x,0);
-                IsGround = true;
+                groundCheck.IsGround = true;
                 JumpCount = 0;
                 }
             }
@@ -296,7 +314,8 @@ using System;
        
         private void OnTriggerExit2D(Collider2D other) {
             if(other.gameObject.tag == "ground"){
-                IsGround = false;
+                groundCheck.IsGround = false;
             }
         }
+        */
     }
