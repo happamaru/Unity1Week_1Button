@@ -80,10 +80,16 @@ public class TeamCompositionManager : MonoBehaviour
         }
 
         //キャラ選択ボタンをリセット
+        /*
         Transform children = CharaImageGroup.GetComponentInChildren<Transform>();
         foreach(Transform ob in children)
         {
             ob.GetComponent<UnityEngine.UI.Button>().interactable = true;
+        }
+        */
+        for(int i = 0; i < 8; i++)
+        {
+            CharaImageGroup.transform.GetChild(i + 1).GetComponent<UnityEngine.UI.Button>().interactable = true;
         }
 
         //ゲージをリセット
@@ -103,17 +109,17 @@ public class TeamCompositionManager : MonoBehaviour
         }
 
 
-        GameObject go = GameObject.Find("TeamMessage(Clone)");
+        GameObject go = GameObject.Find("TeamMessageBG(Clone)");
         if(go != null)
             Destroy(go);
         
 
             GameObject newTextObject = Instantiate(TeamMessage, transform.position, Quaternion.identity);
             newTextObject.transform.SetParent(canvas.transform); 
-            newTextObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-            newTextObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(500, 500);
-            newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(500, 375), 0.5f).SetEase(Ease.OutBack).OnComplete(() => {
-                newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(500, 500), 0.5f).SetDelay(3f).SetEase(Ease.OutBack).OnComplete(() => {
+            newTextObject.transform.localScale = new Vector3(3.9f, 0.85f, 1.0f);
+            newTextObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(580, 500);
+            newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(580, 375), 0.5f).SetEase(Ease.OutBack).OnComplete(() => {
+                newTextObject.GetComponent<RectTransform>().DOAnchorPos(new Vector2(580, 500), 0.5f).SetDelay(3f).SetEase(Ease.OutBack).OnComplete(() => {
                 Destroy(newTextObject);
             });
         });
@@ -126,7 +132,7 @@ public class TeamCompositionManager : MonoBehaviour
     {
         for(int i = 0; i < 4; i++)
         {
-            CharaImageGroup.transform.GetChild(GameManager.team[i] - 1).GetComponent<CharaImage>().OnClickCharaImage();
+            CharaImageGroup.transform.GetChild(GameManager.team[i]).GetComponent<CharaImage>().OnClickCharaImage();
         }
     }
 }
