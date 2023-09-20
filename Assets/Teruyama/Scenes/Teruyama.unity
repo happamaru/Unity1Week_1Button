@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  HP: 3
+  HP: 8
   score: 1
 --- !u!50 &796508363
 Rigidbody2D:
