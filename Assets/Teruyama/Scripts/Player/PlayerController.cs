@@ -253,10 +253,19 @@ using System;
         }
 
         private void OnTriggerStay2D(Collider2D other) {
-        IsGround = true;
-        JumpCount = 0;
+            if(other.gameObject.tag == "ground"){
+                if(!IsGround){
+                rg2d.velocity = new Vector2(rg2d.velocity.x,0);
+                IsGround = true;
+                JumpCount = 0;
+                }
+            }
+                
         }
+       
         private void OnTriggerExit2D(Collider2D other) {
-            IsGround = false;
+            if(other.gameObject.tag == "ground"){
+                IsGround = false;
+            }
         }
     }
