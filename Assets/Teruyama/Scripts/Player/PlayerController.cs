@@ -12,6 +12,8 @@ using System;
         [SerializeField] GroundCheck groundCheck;
         [SerializeField] WallCheck wallCheck;
         [SerializeField] SlopeCheck slopeCheck;
+        public GameObject zanzou;
+        public SpriteRenderer spriteRenderer;
         public Character Character;
         public float RunSpeed;
         public float JumpSpeed;

@@ -117,7 +117,7 @@ MonoBehaviour:
     blowPower: 0
     CommandInterval: 1
     animationType: 3
-    changeEffect: {fileID: 2848425286219990527, guid: 774dc20b68db8624bbc2ed3ae976a188, type: 3}
+    changeEffect: {fileID: 7758097831833352222, guid: c32651bab02924f4380823a5539a0b69, type: 3}
     Animation: {fileID: 11400000, guid: 9df330bf56080d14cbeea258cf456834, type: 2}
     Command:
       rid: -2

@@ -12,6 +12,7 @@ public class HighJump:ICommand{
     }
 }
 public class HighSpeed:ICommand{
+
     public IEnumerator Command(PlayerController player){
       player.MaxSpeed = 20;
       var rg2d = player.rg2d;
