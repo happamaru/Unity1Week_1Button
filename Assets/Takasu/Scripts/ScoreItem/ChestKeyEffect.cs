@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChestKeyEffect : MonoBehaviour
 {
+    public GameObject treasure;
     public GameObject UnlockedChest;
 
     void Awake()
@@ -18,6 +19,7 @@ public class ChestKeyEffect : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
 
         GameObject go =  Instantiate(UnlockedChest, transform.GetChild(0).transform.position, Quaternion.identity);
+        go.GetComponent<UnlockedChest>().treasure = treasure;
 
         go.GetComponent<UnlockedChest>().Test();
 
