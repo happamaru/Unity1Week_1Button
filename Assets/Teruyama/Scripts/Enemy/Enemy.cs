@@ -10,18 +10,22 @@ public abstract class Enemy : MonoBehaviour
     SpriteRenderer spriteRenderer;
     protected Animator animator;
     protected GameObject Character;
+    protected PlayerInformation playerInformation;
     Sequence _seq;
     protected Action OnVisible;
+    protected Action OnDisable;
     [SerializeField] protected int damage;
     [SerializeField] protected int HP;
     [SerializeField] protected float MovePosX;
     [SerializeField] protected int score;
     [SerializeField] protected float addForce;
      protected bool IsMove;
-     bool Once;
+     bool VisibleOnce;
+     bool DisableOnce;
     
     private void Awake() 
     {
+        playerInformation = GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>();
         spriteRenderer = this.GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         Character = GameObject.Find("Character");
@@ -31,15 +35,24 @@ public abstract class Enemy : MonoBehaviour
         if(Damage != null){
             HitBlink();
             HP -= Damage.AddDamage();
+            playerInformation.SetHit(this.transform.position);
             if(HP <= 0){
+                this.transform.DOKill();
+                StartCoroutine(playerInformation.SetDie(this.transform.position));
                 Destroy(this.gameObject);
             }
         }     
+    }
+    protected IEnumerator StopInterval(float time){
+        IsMove = false;
+        yield return new WaitForSeconds(time);
+        IsMove = true;
     }
 
      /// <summary> 点滅によるダメージ演出再生 </summary>
     private void HitBlink()
     {
+        if(spriteRenderer == null) return;
         _seq?.Kill();
         _seq = DOTween.Sequence();
         _seq.AppendCallback(() => spriteRenderer.color = Vector4.zero);
@@ -51,13 +64,23 @@ public abstract class Enemy : MonoBehaviour
     }
 
      private void LateUpdate() {
-        if(Once) return;
+        if(!VisibleOnce){
         if(IsMoveCheck(MovePosX)){
-            Once = true;
+            VisibleOnce = true;
             if(OnVisible != null){
                 OnVisible?.Invoke();
             }
-        }    
+        }
+        }
+        if(VisibleOnce){
+            if(!DisableOnce){
+                if(IsEnemyOut()){
+                    if(OnDisable != null){
+                       OnDisable?.Invoke();
+                    }       
+                }
+            }
+        }
     }
 
     /// <summary>
@@ -73,13 +96,14 @@ public abstract class Enemy : MonoBehaviour
     /// <summary>
     /// Rendererがカメラから見えなくなると呼び出される
     /// </summary>
-    /*private void OnBecameInvisible()
+   /* private void OnBecameInvisible()
     {
         if(OnDisable != null){
             OnDisable.Invoke();
         }
     }
     */
+    
     
      bool IsMoveCheck(float x){
         float posX = this.transform.position.x - Character.transform.position.x;
@@ -90,4 +114,14 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
+    bool IsEnemyOut(){
+        float posX = Mathf.Abs(this.transform.position.x - Character.transform.position.x);
+        if(posX > 15){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+   
 }

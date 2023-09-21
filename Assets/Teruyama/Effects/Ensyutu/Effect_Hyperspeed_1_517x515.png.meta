@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b29930666d8729f4f95df968df803e17
+guid: f54715cf663b95e41b56b0fdee6586e3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -141,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_0
+      name: Effect_Hyperspeed_1_517x515_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 64
-        height: 64
+        y: 2060
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6476540990f60c5468e551d495d8dccb
-      internalID: -1884791584
+      spriteID: da9dad96764fae944ae9052bc85a6ee1
+      internalID: -1956392762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_1
+      name: Effect_Hyperspeed_1_517x515_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 256
-        width: 64
-        height: 64
+        x: 517
+        y: 2060
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 734c844c92e6b9d488c9b755342f82d8
-      internalID: -1861806967
+      spriteID: de9d6cbea56735645b15f8b7119895bd
+      internalID: 910110859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_2
+      name: Effect_Hyperspeed_1_517x515_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
-        width: 64
-        height: 64
+        x: 1034
+        y: 2060
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9c8a806ee0a98b48857f49d30c945d9
-      internalID: -1555768253
+      spriteID: e508e59778255964998c18ab33df43e2
+      internalID: 97277047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_3
+      name: Effect_Hyperspeed_1_517x515_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
-        width: 64
-        height: 64
+        x: 1551
+        y: 2060
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c435a789b55f1146b3d078b4a5fff6c
-      internalID: -872767084
+      spriteID: 08c30f2073da3894daa38fceda4031a7
+      internalID: 2081834627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_4
+      name: Effect_Hyperspeed_1_517x515_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 64
-        height: 64
+        x: 2068
+        y: 2060
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a79aa306af764c47a18b895c423cee2
-      internalID: 618750449
+      spriteID: b1035c8490f8f24478d27c4e8da287f7
+      internalID: -1419651875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_5
+      name: Effect_Hyperspeed_1_517x515_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 64
-        height: 64
+        x: 2585
+        y: 2060
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,83 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37a839f8b9c3cb049b8c1530634b1c87
-      internalID: 1416555287
+      spriteID: 055ff642426ac314eba2303ba4efda09
+      internalID: -1166891240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5d4d8e1746e2604cb1a3433e8c222ce
-      internalID: -1270025828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_7
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bce94213efcbbcd47a458c7f29f06c93
-      internalID: 1750236416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_8
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c24fd80aa808c4a4fad068cb224f1af3
-      internalID: -2139342849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_9
+      name: Effect_Hyperspeed_1_517x515_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 64
-        height: 64
+        y: 1545
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +281,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b9e3e58f2660e245a1c3e69e9fb9bd2
-      internalID: -779411513
+      spriteID: 01afe6e533d0e944bb99bee6df5105f1
+      internalID: -1173878671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_10
+      name: Effect_Hyperspeed_1_517x515_7
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1545
+        width: 517
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff2a779a972cba4bb0c3df168fcbb7a
+      internalID: -1737489240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Hyperspeed_1_517x515_8
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1545
+        width: 517
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0365ff00d8fe364e911f7408acfb66a
+      internalID: -1345027135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Hyperspeed_1_517x515_9
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1545
+        width: 517
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d309a87921e90a40acf1731ec2e4b9f
+      internalID: -680234884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Hyperspeed_1_517x515_10
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 1545
+        width: 517
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a50adfed2be274ba68ba13be4165f1
+      internalID: 1985359487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Hyperspeed_1_517x515_11
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 1545
+        width: 517
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5afd9d15913dc4db1a1f59c950abb7
+      internalID: -1548362258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Hyperspeed_1_517x515_12
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 64
-        height: 64
+        y: 1030
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,20 +407,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1ade3eee7b3e1d4e95c31e0f8403812
-      internalID: -1369456703
+      spriteID: 41c7161d1f9e7c243ae963c3bfcf43cc
+      internalID: -1912343855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_11
+      name: Effect_Hyperspeed_1_517x515_13
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 517
+        y: 1030
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,20 +428,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f3bbf66b2c765e4a9486a344f39f148
-      internalID: 1347523121
+      spriteID: b7139769b2f2be44fb3518a9cd328299
+      internalID: -300454237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_12
+      name: Effect_Hyperspeed_1_517x515_14
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
+        x: 1034
+        y: 1030
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,20 +449,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 506d5f4173c17264d8591d38032d9965
-      internalID: 1081348583
+      spriteID: d6ba72246d4ad7746979f13132b1424f
+      internalID: -78189022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_13
+      name: Effect_Hyperspeed_1_517x515_15
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
+        x: 1551
+        y: 1030
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,20 +470,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4175fd563ed22674ca0019a752575089
-      internalID: -1961582066
+      spriteID: 5785071509aaf9547a3c87bbc5e3bbfb
+      internalID: 1094150302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_14
+      name: Effect_Hyperspeed_1_517x515_16
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 64
+        x: 2068
+        y: 1030
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,20 +491,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8213ef94d6ddccf44a47ece0ea420de8
-      internalID: -244250257
+      spriteID: 5981f0b3e563767498d7f85fe13d74fe
+      internalID: -1206777188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_15
+      name: Effect_Hyperspeed_1_517x515_17
       rect:
         serializedVersion: 2
-        x: 320
-        y: 64
-        width: 64
-        height: 64
+        x: 2585
+        y: 1030
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,20 +512,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45a4de3518bc75f4cbabe6b04d4e82d2
-      internalID: 1932046413
+      spriteID: d4ba1593f7efa3643bd249ed36e6ef10
+      internalID: -2071807702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_16
+      name: Effect_Hyperspeed_1_517x515_18
       rect:
         serializedVersion: 2
-        x: 384
-        y: 64
-        width: 64
-        height: 64
+        x: 0
+        y: 515
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,20 +533,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34b05a965d3b6194c9e4a73169e9f854
-      internalID: 360070280
+      spriteID: 30cf786b4cc7a78459149ff73e2bc086
+      internalID: 1780133129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_17
+      name: Effect_Hyperspeed_1_517x515_19
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 515
+        width: 517
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f58b61f6cbe9f0459ead3f89a8c6b45
+      internalID: -1563307903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Hyperspeed_1_517x515_20
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 515
+        width: 517
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3911f3ae237116c42ab9ee6dfd5b49f0
+      internalID: -1291443048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Hyperspeed_1_517x515_21
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 515
+        width: 517
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde3796b4d2166642b2b2f2a3ce56d2c
+      internalID: 1310233660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Hyperspeed_1_517x515_22
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 515
+        width: 517
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f92fc7fc1e69ee43a1b2f01b6c76fd8
+      internalID: 1526212937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Hyperspeed_1_517x515_23
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 515
+        width: 517
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafc54f333323f0469e9a1edaff58ed3
+      internalID: -1816308428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Hyperspeed_1_517x515_24
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,20 +659,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2de92b990fae6bc4f8f2e14f0622a6dc
-      internalID: -377752167
+      spriteID: 912ad13454f5ce34eb497a2fe8be909f
+      internalID: 587268776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_18
+      name: Effect_Hyperspeed_1_517x515_25
       rect:
         serializedVersion: 2
-        x: 64
+        x: 517
         y: 0
-        width: 64
-        height: 64
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,20 +680,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3910700e42fac94285a9d944d50c472
-      internalID: -1572779114
+      spriteID: b36a32f665f7d8546a424caa64b9a570
+      internalID: 830984017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_19
+      name: Effect_Hyperspeed_1_517x515_26
       rect:
         serializedVersion: 2
-        x: 128
+        x: 1034
         y: 0
-        width: 64
-        height: 64
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -554,20 +701,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 730fa890a635f6a48bde4af5cb554d7b
-      internalID: -1729304915
+      spriteID: a7804f3988d6b9a4a933b6ca7667db2b
+      internalID: 1431752879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_20
+      name: Effect_Hyperspeed_1_517x515_27
       rect:
         serializedVersion: 2
-        x: 192
+        x: 1551
         y: 0
-        width: 64
-        height: 64
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,20 +722,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eea05763d3555f43b8178b3041725a6
-      internalID: -1138912364
+      spriteID: 086d1431b9fc77f4d9bde95a48835daf
+      internalID: 381547998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_21
+      name: Effect_Hyperspeed_1_517x515_28
       rect:
         serializedVersion: 2
-        x: 256
+        x: 2068
         y: 0
-        width: 64
-        height: 64
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -596,20 +743,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2aed0f8e68735754aa013776627f73b3
-      internalID: 744538312
+      spriteID: f28cd6cf6d759c6419ab4dfbb2292367
+      internalID: -1552084725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_22
+      name: Effect_Hyperspeed_1_517x515_29
       rect:
         serializedVersion: 2
-        x: 320
+        x: 2585
         y: 0
-        width: 64
-        height: 64
+        width: 517
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -617,29 +764,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69e2da976a8fae24b98c39b763c2c804
-      internalID: 1626607569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_23
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da1c7cb9534f2c24a983e2eb9b7ca0d2
-      internalID: -22573209
+      spriteID: 891c5d0410d00b64d9ac69e3461affba
+      internalID: 1720670844
       vertices: []
       indices: 
       edges: []
@@ -655,30 +781,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      16x16 Grim Reaper_0: -1884791584
-      16x16 Grim Reaper_1: -1861806967
-      16x16 Grim Reaper_10: -1369456703
-      16x16 Grim Reaper_11: 1347523121
-      16x16 Grim Reaper_12: 1081348583
-      16x16 Grim Reaper_13: -1961582066
-      16x16 Grim Reaper_14: -244250257
-      16x16 Grim Reaper_15: 1932046413
-      16x16 Grim Reaper_16: 360070280
-      16x16 Grim Reaper_17: -377752167
-      16x16 Grim Reaper_18: -1572779114
-      16x16 Grim Reaper_19: -1729304915
-      16x16 Grim Reaper_2: -1555768253
-      16x16 Grim Reaper_20: -1138912364
-      16x16 Grim Reaper_21: 744538312
-      16x16 Grim Reaper_22: 1626607569
-      16x16 Grim Reaper_23: -22573209
-      16x16 Grim Reaper_3: -872767084
-      16x16 Grim Reaper_4: 618750449
-      16x16 Grim Reaper_5: 1416555287
-      16x16 Grim Reaper_6: -1270025828
-      16x16 Grim Reaper_7: 1750236416
-      16x16 Grim Reaper_8: -2139342849
-      16x16 Grim Reaper_9: -779411513
+      Effect_Hyperspeed_1_517x515_0: -1956392762
+      Effect_Hyperspeed_1_517x515_1: 910110859
+      Effect_Hyperspeed_1_517x515_10: 1985359487
+      Effect_Hyperspeed_1_517x515_11: -1548362258
+      Effect_Hyperspeed_1_517x515_12: -1912343855
+      Effect_Hyperspeed_1_517x515_13: -300454237
+      Effect_Hyperspeed_1_517x515_14: -78189022
+      Effect_Hyperspeed_1_517x515_15: 1094150302
+      Effect_Hyperspeed_1_517x515_16: -1206777188
+      Effect_Hyperspeed_1_517x515_17: -2071807702
+      Effect_Hyperspeed_1_517x515_18: 1780133129
+      Effect_Hyperspeed_1_517x515_19: -1563307903
+      Effect_Hyperspeed_1_517x515_2: 97277047
+      Effect_Hyperspeed_1_517x515_20: -1291443048
+      Effect_Hyperspeed_1_517x515_21: 1310233660
+      Effect_Hyperspeed_1_517x515_22: 1526212937
+      Effect_Hyperspeed_1_517x515_23: -1816308428
+      Effect_Hyperspeed_1_517x515_24: 587268776
+      Effect_Hyperspeed_1_517x515_25: 830984017
+      Effect_Hyperspeed_1_517x515_26: 1431752879
+      Effect_Hyperspeed_1_517x515_27: 381547998
+      Effect_Hyperspeed_1_517x515_28: -1552084725
+      Effect_Hyperspeed_1_517x515_29: 1720670844
+      Effect_Hyperspeed_1_517x515_3: 2081834627
+      Effect_Hyperspeed_1_517x515_4: -1419651875
+      Effect_Hyperspeed_1_517x515_5: -1166891240
+      Effect_Hyperspeed_1_517x515_6: -1173878671
+      Effect_Hyperspeed_1_517x515_7: -1737489240
+      Effect_Hyperspeed_1_517x515_8: -1345027135
+      Effect_Hyperspeed_1_517x515_9: -680234884
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

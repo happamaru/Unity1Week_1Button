@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b29930666d8729f4f95df968df803e17
+guid: 75211eb0c47ef9f45aa3cbe0bdc1e4a7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -141,13 +141,139 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_0
+      name: Effect_PuffAndStars_1_120x109_0
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 545
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3dc0f55f129a147875543407d35d8f
+      internalID: -1054735882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 545
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f7158addc422041bc46a4bc6b1cb61
+      internalID: -1268887828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 545
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5de8f42db566b4f8dfbb78ccc05cd3
+      internalID: -1556413598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 545
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b884d41231b48a841b6ad6c69dfcae77
+      internalID: -1933809440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 545
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6dc5a2ea4bd089409ebf468ad5bdb49
+      internalID: -563214708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 545
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f206927c2ab36044aa66d5fdd0d0b99e
+      internalID: -2034059850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 64
-        height: 64
+        y: 436
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6476540990f60c5468e551d495d8dccb
-      internalID: -1884791584
+      spriteID: 11a891ba9eda35c4f873185366384270
+      internalID: -1437904055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_1
+      name: Effect_PuffAndStars_1_120x109_7
       rect:
         serializedVersion: 2
-        x: 64
-        y: 256
-        width: 64
-        height: 64
+        x: 120
+        y: 436
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +302,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 734c844c92e6b9d488c9b755342f82d8
-      internalID: -1861806967
+      spriteID: 9e1924a633d55b94fbfc6c9a7ba86efe
+      internalID: 201285738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_2
+      name: Effect_PuffAndStars_1_120x109_8
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
-        width: 64
-        height: 64
+        x: 240
+        y: 436
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +323,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9c8a806ee0a98b48857f49d30c945d9
-      internalID: -1555768253
+      spriteID: 0768d6670f548a64bb97618f8c8a31c6
+      internalID: -2129191433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_3
+      name: Effect_PuffAndStars_1_120x109_9
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
-        width: 64
-        height: 64
+        x: 360
+        y: 436
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +344,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c435a789b55f1146b3d078b4a5fff6c
-      internalID: -872767084
+      spriteID: a3aa64ed7fb74d545922a15f925e5a21
+      internalID: -506427795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_4
+      name: Effect_PuffAndStars_1_120x109_10
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 64
-        height: 64
+        x: 480
+        y: 436
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +365,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a79aa306af764c47a18b895c423cee2
-      internalID: 618750449
+      spriteID: 248f0cb0bb00df947bd3ad4e7d5ca18b
+      internalID: -1322140859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_5
+      name: Effect_PuffAndStars_1_120x109_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 64
-        height: 64
+        x: 600
+        y: 436
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,20 +386,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37a839f8b9c3cb049b8c1530634b1c87
-      internalID: 1416555287
+      spriteID: 2970d6ef6c307b14bba7962d5e435a26
+      internalID: 489781310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_6
+      name: Effect_PuffAndStars_1_120x109_12
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
-        width: 64
-        height: 64
+        x: 720
+        y: 436
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,62 +407,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5d4d8e1746e2604cb1a3433e8c222ce
-      internalID: -1270025828
+      spriteID: d2d720443b06ca44bb6ce8d0a2fed74c
+      internalID: 1768430175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_7
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bce94213efcbbcd47a458c7f29f06c93
-      internalID: 1750236416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_8
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c24fd80aa808c4a4fad068cb224f1af3
-      internalID: -2139342849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_9
+      name: Effect_PuffAndStars_1_120x109_13
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 64
-        height: 64
+        y: 327
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +428,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b9e3e58f2660e245a1c3e69e9fb9bd2
-      internalID: -779411513
+      spriteID: a47cd5da6e24b0a4cad65539bec82724
+      internalID: -1573475853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_10
+      name: Effect_PuffAndStars_1_120x109_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 327
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e944886a2be315438b60bec6b8ee249
+      internalID: -1466799958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 327
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568ac4324ddfef34a9445429bb52bab4
+      internalID: 1062926292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_16
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 327
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f37c64d214f9bb48a54113403197de9
+      internalID: -2102858185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_17
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 327
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c8c9f55b1dd334aa7a0c8614a9f9e6
+      internalID: -589848959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 327
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4431347ea57014c4c858bb928d1f6a62
+      internalID: 1704910026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_19
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 327
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d541437300bae644af1e6e4a126bbb7
+      internalID: 1242253637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_PuffAndStars_1_120x109_20
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 64
-        height: 64
+        y: 218
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,20 +575,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1ade3eee7b3e1d4e95c31e0f8403812
-      internalID: -1369456703
+      spriteID: 9218f871953d8244599f731db378857d
+      internalID: -929992050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_11
+      name: Effect_PuffAndStars_1_120x109_21
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 120
+        y: 218
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,20 +596,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f3bbf66b2c765e4a9486a344f39f148
-      internalID: 1347523121
+      spriteID: 4b977858701c60848a00b4bdcae2bfb8
+      internalID: -458777841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_12
+      name: Effect_PuffAndStars_1_120x109_22
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
+        x: 240
+        y: 218
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,20 +617,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 506d5f4173c17264d8591d38032d9965
-      internalID: 1081348583
+      spriteID: d914eea45ad6a954fb5dada7900dfa65
+      internalID: 163242750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_13
+      name: Effect_PuffAndStars_1_120x109_23
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
+        x: 360
+        y: 218
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,20 +638,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4175fd563ed22674ca0019a752575089
-      internalID: -1961582066
+      spriteID: ec668c2258813264eaa835a330480f2c
+      internalID: 1001375398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_14
+      name: Effect_PuffAndStars_1_120x109_24
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 64
+        x: 480
+        y: 218
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,20 +659,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8213ef94d6ddccf44a47ece0ea420de8
-      internalID: -244250257
+      spriteID: 8f59e9673bf88ef4cb5f5a6b15423b04
+      internalID: -682585562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_15
+      name: Effect_PuffAndStars_1_120x109_25
       rect:
         serializedVersion: 2
-        x: 320
-        y: 64
-        width: 64
-        height: 64
+        x: 600
+        y: 218
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,20 +680,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45a4de3518bc75f4cbabe6b04d4e82d2
-      internalID: 1932046413
+      spriteID: fa7edbada2becbb4d801bba323ebb9ca
+      internalID: 1152675178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_16
+      name: Effect_PuffAndStars_1_120x109_26
       rect:
         serializedVersion: 2
-        x: 384
-        y: 64
-        width: 64
-        height: 64
+        x: 720
+        y: 218
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,20 +701,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34b05a965d3b6194c9e4a73169e9f854
-      internalID: 360070280
+      spriteID: 0fbea15158941704486567e1b012d505
+      internalID: 1502310202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_17
+      name: Effect_PuffAndStars_1_120x109_27
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
-        height: 64
+        y: 109
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,20 +722,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2de92b990fae6bc4f8f2e14f0622a6dc
-      internalID: -377752167
+      spriteID: 9186d0e1501f4c6499a0ee59a6eec684
+      internalID: -1670568337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16x16 Grim Reaper_18
+      name: Effect_PuffAndStars_1_120x109_28
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 120
+        y: 109
+        width: 120
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,113 +743,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3910700e42fac94285a9d944d50c472
-      internalID: -1572779114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_19
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 730fa890a635f6a48bde4af5cb554d7b
-      internalID: -1729304915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_20
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0eea05763d3555f43b8178b3041725a6
-      internalID: -1138912364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_21
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2aed0f8e68735754aa013776627f73b3
-      internalID: 744538312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_22
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69e2da976a8fae24b98c39b763c2c804
-      internalID: 1626607569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16x16 Grim Reaper_23
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da1c7cb9534f2c24a983e2eb9b7ca0d2
-      internalID: -22573209
+      spriteID: 0e0cf6e2365e8a44bbe250d8b98a26a6
+      internalID: -2133280777
       vertices: []
       indices: 
       edges: []
@@ -655,30 +760,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      16x16 Grim Reaper_0: -1884791584
-      16x16 Grim Reaper_1: -1861806967
-      16x16 Grim Reaper_10: -1369456703
-      16x16 Grim Reaper_11: 1347523121
-      16x16 Grim Reaper_12: 1081348583
-      16x16 Grim Reaper_13: -1961582066
-      16x16 Grim Reaper_14: -244250257
-      16x16 Grim Reaper_15: 1932046413
-      16x16 Grim Reaper_16: 360070280
-      16x16 Grim Reaper_17: -377752167
-      16x16 Grim Reaper_18: -1572779114
-      16x16 Grim Reaper_19: -1729304915
-      16x16 Grim Reaper_2: -1555768253
-      16x16 Grim Reaper_20: -1138912364
-      16x16 Grim Reaper_21: 744538312
-      16x16 Grim Reaper_22: 1626607569
-      16x16 Grim Reaper_23: -22573209
-      16x16 Grim Reaper_3: -872767084
-      16x16 Grim Reaper_4: 618750449
-      16x16 Grim Reaper_5: 1416555287
-      16x16 Grim Reaper_6: -1270025828
-      16x16 Grim Reaper_7: 1750236416
-      16x16 Grim Reaper_8: -2139342849
-      16x16 Grim Reaper_9: -779411513
+      Effect_PuffAndStars_1_120x109_0: -1054735882
+      Effect_PuffAndStars_1_120x109_1: -1268887828
+      Effect_PuffAndStars_1_120x109_10: -1322140859
+      Effect_PuffAndStars_1_120x109_11: 489781310
+      Effect_PuffAndStars_1_120x109_12: 1768430175
+      Effect_PuffAndStars_1_120x109_13: -1573475853
+      Effect_PuffAndStars_1_120x109_14: -1466799958
+      Effect_PuffAndStars_1_120x109_15: 1062926292
+      Effect_PuffAndStars_1_120x109_16: -2102858185
+      Effect_PuffAndStars_1_120x109_17: -589848959
+      Effect_PuffAndStars_1_120x109_18: 1704910026
+      Effect_PuffAndStars_1_120x109_19: 1242253637
+      Effect_PuffAndStars_1_120x109_2: -1556413598
+      Effect_PuffAndStars_1_120x109_20: -929992050
+      Effect_PuffAndStars_1_120x109_21: -458777841
+      Effect_PuffAndStars_1_120x109_22: 163242750
+      Effect_PuffAndStars_1_120x109_23: 1001375398
+      Effect_PuffAndStars_1_120x109_24: -682585562
+      Effect_PuffAndStars_1_120x109_25: 1152675178
+      Effect_PuffAndStars_1_120x109_26: 1502310202
+      Effect_PuffAndStars_1_120x109_27: -1670568337
+      Effect_PuffAndStars_1_120x109_28: -2133280777
+      Effect_PuffAndStars_1_120x109_3: -1933809440
+      Effect_PuffAndStars_1_120x109_4: -563214708
+      Effect_PuffAndStars_1_120x109_5: -2034059850
+      Effect_PuffAndStars_1_120x109_6: -1437904055
+      Effect_PuffAndStars_1_120x109_7: 201285738
+      Effect_PuffAndStars_1_120x109_8: -2129191433
+      Effect_PuffAndStars_1_120x109_9: -506427795
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

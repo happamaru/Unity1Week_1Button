@@ -14,9 +14,13 @@ public class Bat : Enemy,IEnemy
                 animator.SetBool("IsMove",true);
         });
         };
+        OnDisable = () =>{
+            Destroy(this.gameObject);
+        };
     }
     public int AddDamage(){
         Character.GetComponent<Rigidbody2D>().AddForce(Vector2.left * this.transform.localScale.normalized * addForce);
+        StartCoroutine(StopInterval(0.5f));
         return damage;
     }
 

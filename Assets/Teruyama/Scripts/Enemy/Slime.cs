@@ -5,12 +5,12 @@ using UnityEngine;
 public class Slime :Enemy,IEnemy
 {
     Rigidbody2D SlimeRg2d;
-    PlayerInformation playerInformation;
     [SerializeField] float speed;
  
     int dir;
     
     private void FixedUpdate() {
+        if(!IsMove) return;
         SlimeRg2d.AddForce(dir * 30 * Vector2.left);   
     }
     private void Update() {
@@ -36,14 +36,18 @@ public class Slime :Enemy,IEnemy
         var rg2d = Character.GetComponent<Rigidbody2D>();
         rg2d.velocity = Vector2.zero;
         rg2d.AddForce(Vector2.left * this.transform.localScale.normalized * addForce);
+        StartCoroutine(StopInterval(0.5f));
         return damage;
     }
 
     void Start(){
-        playerInformation = GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>();
+        
         SlimeRg2d = this.GetComponent<Rigidbody2D>();
         OnVisible = () =>{
             IsMove = true;
+        };
+        OnDisable = () =>{
+            Destroy(this.gameObject);
         };
     }
 

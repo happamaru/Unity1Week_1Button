@@ -6,6 +6,7 @@ using AnimationState = Assets.PixelHeroes.Scripts.CharacterScripts.AnimationStat
 using UnityEngine.U2D.Animation;
 using TMPro;
 using System;
+using DG.Tweening;
 
     public class PlayerController : MonoBehaviour
     {
@@ -308,6 +309,7 @@ using System;
          private void OnCollisionEnter2D(Collision2D other) {    
             var enemy = other.gameObject.GetComponent<IEnemy>();
             if(enemy != null){
+                HitBlink();
                 OnHpChange(enemy.AddDamage());
             }
         }
@@ -318,6 +320,22 @@ using System;
                 OnScoreChange(item.AddScore());
             }
         }
+
+        
+        Sequence _seq;
+     /// <summary> 点滅によるダメージ演出再生 </summary>
+    private void HitBlink()
+    {
+        _seq?.Kill();
+        _seq = DOTween.Sequence();
+        _seq.AppendCallback(() => spriteRenderer.color = Vector4.zero);
+        _seq.AppendInterval(0.05f);
+        _seq.AppendCallback(() => spriteRenderer.color = Vector4.one);
+        _seq.AppendInterval(0.05f);
+        _seq.SetLoops(2);
+        _seq.Play();
+    }
+
 
      /*   private void OnTriggerStay2D(Collider2D other) {
             if(other.gameObject.tag == "ground"){

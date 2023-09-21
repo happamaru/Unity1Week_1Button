@@ -85,7 +85,7 @@ MonoBehaviour:
     Animation: {fileID: 11400000, guid: 91fa59570610bd546909f70dafa5da2d, type: 2}
     Command:
       rid: -2
-  - name: "\u30D6\u30BF"
+  - name: "\u30A4\u30CE\u30B7\u30B7"
     speed: 10
     jumpPower: 0
     JumpCount: 0
