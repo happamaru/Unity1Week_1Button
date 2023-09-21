@@ -38,10 +38,10 @@ MonoBehaviour:
     Command:
       rid: 1120290626852618240
   - name: "\u5FCD\u8005"
-    speed: 6
-    jumpPower: 600
+    speed: 6.5
+    jumpPower: 800
     JumpCount: 1
-    gravity: 5
+    gravity: 6.5
     blowPower: 0
     CommandInterval: 2
     animationType: 1
@@ -55,7 +55,7 @@ MonoBehaviour:
     JumpCount: 1
     gravity: 3
     blowPower: 0
-    CommandInterval: 1
+    CommandInterval: 3
     animationType: 4
     changeEffect: {fileID: 1494463556257873780, guid: 28d8ccfc874a58140a1903318ae8bcd1, type: 3}
     Animation: {fileID: 11400000, guid: fdca255169f11484facb8668769e4d92, type: 2}
@@ -63,9 +63,9 @@ MonoBehaviour:
       rid: 1120290638891843587
   - name: "\u9B54\u6CD5\u4F7F\u3044"
     speed: 3.5
-    jumpPower: 300
+    jumpPower: 200
     JumpCount: 2
-    gravity: 2
+    gravity: 1
     blowPower: 0
     CommandInterval: 1
     animationType: 5
@@ -75,8 +75,8 @@ MonoBehaviour:
       rid: 1120290650869465088
   - name: "\u6CE5\u68D2"
     speed: 5
-    jumpPower: 200
-    JumpCount: 0
+    jumpPower: 500
+    JumpCount: 1
     gravity: 3
     blowPower: 0
     CommandInterval: 1
@@ -87,8 +87,8 @@ MonoBehaviour:
       rid: -2
   - name: "\u30D6\u30BF"
     speed: 10
-    jumpPower: 400
-    JumpCount: 1
+    jumpPower: 0
+    JumpCount: 0
     gravity: 3
     blowPower: 0
     CommandInterval: 1

@@ -15,16 +15,16 @@ MonoBehaviour:
   attackDatas:
   - Name: "\u30B9\u30E9\u30C3\u30B7\u30E5"
     prefab: {fileID: 4974091717215526766, guid: a45a126f6955da040a8d3b6edd614483, type: 3}
-    DamageNum: 1
+    DamageNum: 3
     activeTime: 0.1
     InitPosition: {x: 0.5, y: 0.5, z: 0}
   - Name: "\u30CF\u30A4\u30D1\u30FC\u30B9\u30E9\u30C3\u30B7\u30E5"
     prefab: {fileID: 30866072889184262, guid: 3ef07379bc3856c4abf190ecd68b616a, type: 3}
-    DamageNum: 3
+    DamageNum: 7
     activeTime: 0.3
     InitPosition: {x: 0.5, y: 0.5, z: 0}
   - Name: "\u9B54\u6CD5"
     prefab: {fileID: 8854671154911556094, guid: cc7171e7f046a8a49b22c1339a9523d7, type: 3}
-    DamageNum: 2
+    DamageNum: 4
     activeTime: 2
     InitPosition: {x: 0, y: 1, z: 0}
