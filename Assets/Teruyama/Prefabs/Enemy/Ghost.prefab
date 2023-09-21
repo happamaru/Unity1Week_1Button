@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5665940219462082841}
   - component: {fileID: 5665940219462082847}
   - component: {fileID: 5665940219462082840}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,9 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b3c58b1e4fb914d825a0063b51eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 10
   HP: 7
+  MovePosX: 5
   score: 1
+  addForce: 1000
   GhostSpeed: 3
   limitSpeed: 2
 --- !u!61 &5665940219462082847
@@ -136,10 +138,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000007450581, y: 0.014698148}
+  m_Offset: {x: 0.0024096146, y: 0.017710272}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -150,7 +152,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13454737, y: 0.22372842}
+  m_Size: {x: 0.0984022, y: 0.19360733}
   m_EdgeRadius: 0
 --- !u!50 &5665940219462082840
 Rigidbody2D:

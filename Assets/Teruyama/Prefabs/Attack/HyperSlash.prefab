@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  activeTime: 0
 --- !u!61 &2314537809516959745
 BoxCollider2D:
   m_ObjectHideFlags: 0

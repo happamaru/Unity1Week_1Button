@@ -2,16 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ghost : Enemy
+public class Ghost : Enemy,IEnemy
 {
-   bool IsMove;
-   PlayerInformation Player;
-
+    PlayerInformation Player;
     [SerializeField] private float GhostSpeed;     //幽霊の速度
     [SerializeField] private float limitSpeed;      //幽霊の制限速度
     private Rigidbody2D rb;                         //幽霊のRigidbody2D
-    Animator animator;
     float scale;
+
+    public int AddDamage(){
+        var rg2d = Character.GetComponent<Rigidbody2D>();
+        rg2d.velocity = Vector2.zero;
+        rg2d.AddForce(Vector2.left * this.transform.localScale.normalized * addForce);
+        return damage;
+    }
+
     private void FixedUpdate()
     {
         if(IsMove){
@@ -33,14 +38,10 @@ public class Ghost : Enemy
     }
     void Start(){
         Player = GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>();
-        animator = this.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         scale = this.transform.localScale.x;
         OnVisible = () =>{
             IsMove = true;
-        };
-        OnDisable = () =>{
-            Destroy(this.gameObject);
         };
     }
 

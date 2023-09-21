@@ -41,6 +41,7 @@ using System;
 
         [NonSerialized] public Action<float> OnChangeGauge;
         [NonSerialized] public Action OnResetGauge;
+        [NonSerialized] public Action<int> OnHpChange;
         public AttackManager attackManager;
 
         const int MaxParty = 4;
@@ -301,6 +302,13 @@ using System;
             Character.Animator.SetTrigger("GetUp");
             Character.CharacterController.center = new Vector3(0, 0.08f) * Character.transform.localScale.x;
             Character.CharacterController.height = 0.16f * Character.transform.localScale.x;
+        }
+
+         private void OnCollisionEnter2D(Collision2D other) {    
+            var enemy = other.gameObject.GetComponent<IEnemy>();
+            if(enemy != null){
+                OnHpChange(enemy.AddDamage());
+            }
         }
 
      /*   private void OnTriggerStay2D(Collider2D other) {

@@ -6,6 +6,7 @@ public class AttackCollider : MonoBehaviour,IDamage
 {
     [SerializeField,ReadOnly,Tooltip("敵に与えるダメージ数")] int damage;
     [SerializeField,ReadOnly] public float activeTime;
+    
     // [SerializeField,ReadOnly,Tooltip("敵に与えるダメージ数")] public IMove moveType;
 
     IEnumerator Start(){
@@ -26,6 +27,7 @@ public class AttackCollider : MonoBehaviour,IDamage
     public int AddDamage(){
         return damage;
     }
+
 }
 
 

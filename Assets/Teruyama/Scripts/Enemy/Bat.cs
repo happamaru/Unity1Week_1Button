@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
-public class Bat : Enemy
+public class Bat : Enemy,IEnemy
 {
-    bool IsMove;
+   
     [SerializeField] float speed;
     void Start(){
         OnVisible = () =>{
-            IsMove = true;
+            transform.DOMoveY(GameObject.Find("Character").transform.position.y,1).SetEase(Ease.Linear).OnComplete(() => {
+                IsMove = true;
+                animator.SetBool("IsMove",true);
+        });
         };
-        OnDisable = () =>{
-            Destroy(this.gameObject);
-        };
+    }
+    public int AddDamage(){
+        Character.GetComponent<Rigidbody2D>().AddForce(Vector2.left * this.transform.localScale.normalized * addForce);
+        return damage;
     }
 
     void Update(){
