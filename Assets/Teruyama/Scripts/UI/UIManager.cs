@@ -8,10 +8,21 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
     [SerializeField] Image SkillGauge;
+    [SerializeField] Image HpGauge;
+    const int MaxHp = 100; 
+    int NowHp;
 
     void Start(){
         playerController.OnChangeGauge = ChangeGauge;
-        playerController.OnResetGauge = ResetGauge; 
+        playerController.OnResetGauge = ResetGauge;
+        playerController.OnHpChange = ChangeHp; 
+        NowHp = MaxHp;
+    }
+
+    void ChangeHp(int num){
+        NowHp -= num;
+        float Num = (float)NowHp;
+        HpGauge.DOFillAmount(Num/(float)MaxHp,0.5f);
     }
 
     void ChangeGauge(float interval){

@@ -25,9 +25,21 @@ public class HighSpeed:ICommand{
 public class Slash:ICommand{
   public IEnumerator Command(PlayerController player){
     GameObject go = player.attackManager.SetEffect((int)AttackManager.AttackType.Slash);
+    //go.transform.parent = player.transform;
+    //go.transform.localPosition = Vector2.zero;
+    /*go.transform.position = player.transform.position;
+    Vector2 Pos = player.attackManager.attackDataBase.attackDatas[(int)AttackManager.AttackType.Slash].InitPosition;
+    if(player.transform.localScale.x < 0){
+    go.transform.position += new Vector3(-Pos.x,Pos.y);
+    }else{
+      go.transform.position += new Vector3(-Pos.x,Pos.y);
+    }
+    go.transform.localScale = new Vector3(go.transform.localScale.x * player.transform.localScale.x,go.transform.localScale.y,go.transform.localScale.z);
+    yield break;
+    */
     go.transform.parent = player.transform;
     go.transform.localPosition = Vector2.zero;
-    go.transform.localPosition += player.attackManager.attackDataBase.attackDatas[(int)AttackManager.AttackType.Slash].InitPosition;
+    go.transform.localPosition += player.attackManager.attackDataBase.attackDatas[(int)AttackManager.AttackType.HyperSlash].InitPosition;
     go.transform.localScale = new Vector3(go.transform.localScale.x * player.transform.localScale.x,go.transform.localScale.y,go.transform.localScale.z);
     yield break;
   }

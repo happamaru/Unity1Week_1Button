@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
+  - enemy
+  - hitArea
   layers:
   - Default
   - TransparentFX
@@ -12,12 +14,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Chack
+  - Ground
+  - Enemy
+  - Attack
+  - HitArea
+  - TriggerEnemy
   - 
   - 
   - 
