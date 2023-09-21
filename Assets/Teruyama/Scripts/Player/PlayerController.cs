@@ -42,6 +42,7 @@ using System;
         [NonSerialized] public Action<float> OnChangeGauge;
         [NonSerialized] public Action OnResetGauge;
         [NonSerialized] public Action<int> OnHpChange;
+        [NonSerialized] public Action<int> OnScoreChange;
         public AttackManager attackManager;
 
         const int MaxParty = 4;
@@ -308,6 +309,13 @@ using System;
             var enemy = other.gameObject.GetComponent<IEnemy>();
             if(enemy != null){
                 OnHpChange(enemy.AddDamage());
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D other) {
+            var item = other.gameObject.GetComponent<IScore>();
+            if(item != null){
+                OnScoreChange(item.AddScore());
             }
         }
 

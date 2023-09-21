@@ -5,4 +5,5 @@ using UnityEngine;
 public static class GameManager
 {
     public static int[] team = {1, 2, 3, 4};
+    public static int resultScore;
 }

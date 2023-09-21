@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6243152367533783752}
   - component: {fileID: 7663666034579094628}
   - component: {fileID: 7139253023334344028}
+  - component: {fileID: 368063428377631431}
   m_Layer: 0
   m_Name: GoldCoin
   m_TagString: Untagged
@@ -121,3 +122,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldcoinscore: 500
   coineffect: {fileID: 7454987551522880206, guid: b79eb62ac0fad724a8eae4c035ebf1bc, type: 3}
+--- !u!61 &368063428377631431
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3897799497430180984}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.009300517, y: -0.0021883585}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.10419686, y: 0.105291046}
+  m_EdgeRadius: 0
