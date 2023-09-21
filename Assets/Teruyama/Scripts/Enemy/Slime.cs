@@ -5,9 +5,31 @@ using UnityEngine;
 public class Slime :Enemy,IEnemy
 {
     Rigidbody2D SlimeRg2d;
+    PlayerInformation playerInformation;
     [SerializeField] float speed;
-     private void FixedUpdate() {
-        SlimeRg2d.AddForce(speed * Vector2.left);   
+ 
+    int dir;
+    
+    private void FixedUpdate() {
+        SlimeRg2d.AddForce(dir * 30 * Vector2.left);   
+    }
+    private void Update() {
+        if(!IsMove) return;
+        if(playerInformation.IsPlayerLeft(this.transform.position.x)){
+            dir = 1;
+            transform.localScale = new Vector3(1,1,1);
+        }else{
+            dir = -1;
+            transform.localScale = new Vector3(-1,1,1);
+        }
+
+        if(SlimeRg2d.velocity.x > speed){
+            SlimeRg2d.velocity = new Vector2(speed,SlimeRg2d.velocity.y);
+        }    
+        
+        if(SlimeRg2d.velocity.x < -speed){
+            SlimeRg2d.velocity = new Vector2(-speed,SlimeRg2d.velocity.y);
+        }    
     }
 
     public int AddDamage(){
@@ -18,6 +40,7 @@ public class Slime :Enemy,IEnemy
     }
 
     void Start(){
+        playerInformation = GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>();
         SlimeRg2d = this.GetComponent<Rigidbody2D>();
         OnVisible = () =>{
             IsMove = true;
