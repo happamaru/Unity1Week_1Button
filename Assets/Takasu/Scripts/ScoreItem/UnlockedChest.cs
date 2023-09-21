@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class UnlockedChest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject treasure;
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //StartCoroutine("OpenChest");
     }
 
     public void Test()
     {
-        Debug.Log("Test");
+        StartCoroutine("OpenChest");
+    }
+
+    IEnumerator OpenChest()
+    {
+        yield return new WaitForSeconds(0.7f);
+
+        //宝箱の中身を出す処理(n個のtreasureをインスタンス化したい)
+        //いったん一個だけ出す処理にする
+        Instantiate(treasure, new Vector3(transform.position.x, transform.position.y + 1.0f, 1.0f), Quaternion.identity);
+
     }
 }

@@ -9,11 +9,7 @@ public class GoldCoin : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log(AddScore());
-            
-        }
+
     }
 
     public int AddScore()
