@@ -9,8 +9,13 @@ public class ChestKey : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-            GetKey();
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.tag == "Player"){
+            GetKey();        
+        }
     }
 
     public void GetKey()
