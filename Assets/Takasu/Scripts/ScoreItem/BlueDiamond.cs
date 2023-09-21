@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BlueDiamond : MonoBehaviour, IScore
 {
+    public int bluediamondscore = 5000;
     
     public GameObject diamondeffect;
     
@@ -16,24 +17,12 @@ public class BlueDiamond : MonoBehaviour, IScore
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log(AddScore());
-            
-        }
-
-        
-        
-    }
 
     public int AddScore()
     {
         Instantiate(diamondeffect, pos, Quaternion.identity);
         Destroy(gameObject);
 
-        return 1;
+        return bluediamondscore;
     }
 }
