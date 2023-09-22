@@ -52,7 +52,7 @@ public class TeamCompositionManager : MonoBehaviour
         if(a == 0) return;
 
         //一つ分チーム選択をリセットする
-        CharaImageGroup.transform.GetChild(Heroes[a - 1] - 1).GetComponent<UnityEngine.UI.Button>().interactable = true;   //ボタンリセット
+        CharaImageGroup.transform.GetChild(Heroes[a - 1]).GetComponent<UnityEngine.UI.Button>().interactable = true;   //ボタンリセット
         Heroes[a - 1] = 0;
 
         //チーム編成スロット上の表示を消す
