@@ -633,9 +633,9 @@ TextureImporter:
       name: tileset-sliced_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 159
         y: 336
-        width: 16
+        width: 17
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -654,9 +654,9 @@ TextureImporter:
       name: tileset-sliced_6
       rect:
         serializedVersion: 2
-        x: 176
+        x: 175
         y: 336
-        width: 16
+        width: 17
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
