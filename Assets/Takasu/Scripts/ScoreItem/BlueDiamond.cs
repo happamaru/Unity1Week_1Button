@@ -17,8 +17,6 @@ public class BlueDiamond : MonoBehaviour, IScore
     public float scoresize = 1.5f;
     
     Vector3 pos;
-
-    GameObject canvas;
     TextMeshProUGUI text;
 
     // Start is called before the first frame update
@@ -26,17 +24,8 @@ public class BlueDiamond : MonoBehaviour, IScore
     {
         pos = transform.position;
 
-
         text = scoretext.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         
-    }
-
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            AddScore();
-        }
     }
 
 

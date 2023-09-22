@@ -22,8 +22,9 @@ public class SoundManager_SE : MonoBehaviour
         m_AudioSourceSE = this.GetComponent<AudioSource>();
     }
 
-    public void PlaySoundEfect(AudioClip audioClip_SE)
+    public void PlaySoundEfect(AudioClip audioClip_SE,float volume)
     {
+        m_AudioSourceSE.volume = volume;
         m_AudioSourceSE.PlayOneShot(audioClip_SE);
     }
 }

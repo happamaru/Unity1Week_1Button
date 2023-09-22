@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7310698944776138244}
   - component: {fileID: 7310698944776138243}
   - component: {fileID: 7310698944776138246}
+  - component: {fileID: 1463556054262572677}
   m_Layer: 0
   m_Name: Skull
   m_TagString: Untagged
@@ -122,3 +123,21 @@ MonoBehaviour:
   coineffect: {fileID: 7454987551522880206, guid: b79eb62ac0fad724a8eae4c035ebf1bc, type: 3}
   skulleffect: {fileID: 968398350492350693, guid: 9eabac9c515c3af41bc636aad23f3e42, type: 3}
   skullscore: 10270000e8030000f401000078ecffff
+  scoresize: 2
+  scoretext: {fileID: 6049666091617551603, guid: e0f9f99f96afd9640a927aea89ed418b, type: 3}
+--- !u!58 &1463556054262572677
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310698944776138242}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0053401827, y: -0.049632635}
+  serializedVersion: 2
+  m_Radius: 0.07434665
