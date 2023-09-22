@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TitleaudioClip: {fileID: 8300000, guid: ae1a2f76e40df4c60b0548f050213819, type: 3}
   SelectaudioClip: {fileID: 8300000, guid: 703e5eab945b84c5a90c56495c86adc9, type: 3}
+  ToTitleaudioClip: {fileID: 8300000, guid: 6f973605db21641ddad5422f6ce9695d, type: 3}
   TitleGroup: {fileID: 1935609994}
   TeamCompositionGroup: {fileID: 1449375035}
   teamcompositionmanager: {fileID: 608931532}
@@ -283,6 +284,10 @@ PrefabInstance:
       propertyPath: titlemanager
       value: 
       objectReference: {fileID: 9000759}
+    - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
+      propertyPath: CharaSelectaudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d18812c67504a95b53b1d52dbd3216, type: 3}
     - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
       propertyPath: teamcompositionmanager
       value: 
@@ -694,6 +699,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9000759}
     - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
+      propertyPath: CharaSelectaudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d18812c67504a95b53b1d52dbd3216, type: 3}
+    - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
       propertyPath: teamcompositionmanager
       value: 
       objectReference: {fileID: 608931532}
@@ -819,6 +828,10 @@ PrefabInstance:
       propertyPath: titlemanager
       value: 
       objectReference: {fileID: 9000759}
+    - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
+      propertyPath: CharaSelectaudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d18812c67504a95b53b1d52dbd3216, type: 3}
     - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
       propertyPath: teamcompositionmanager
       value: 
@@ -1657,6 +1670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b00e4f6a18adb47870e04fb9c62072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamComposeaudioClip: {fileID: 8300000, guid: 5a4dbda18aa2d43fa8788333a5800f9a, type: 3}
+  OneBackaudioClip: {fileID: 8300000, guid: 6f973605db21641ddad5422f6ce9695d, type: 3}
+  ResetaudioClip: {fileID: 8300000, guid: 6f973605db21641ddad5422f6ce9695d, type: 3}
   TeamAnimObject:
   - {fileID: 1109874877}
   - {fileID: 569350784}
@@ -1933,6 +1949,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9000759}
     - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
+      propertyPath: CharaSelectaudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d18812c67504a95b53b1d52dbd3216, type: 3}
+    - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
       propertyPath: teamcompositionmanager
       value: 
       objectReference: {fileID: 608931532}
@@ -2193,6 +2213,10 @@ PrefabInstance:
       propertyPath: titlemanager
       value: 
       objectReference: {fileID: 9000759}
+    - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
+      propertyPath: CharaSelectaudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d18812c67504a95b53b1d52dbd3216, type: 3}
     - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
       propertyPath: teamcompositionmanager
       value: 
@@ -3939,6 +3963,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9000759}
     - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
+      propertyPath: CharaSelectaudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d18812c67504a95b53b1d52dbd3216, type: 3}
+    - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
       propertyPath: teamcompositionmanager
       value: 
       objectReference: {fileID: 608931532}
@@ -4303,6 +4331,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9000759}
     - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
+      propertyPath: CharaSelectaudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d18812c67504a95b53b1d52dbd3216, type: 3}
+    - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
       propertyPath: teamcompositionmanager
       value: 
       objectReference: {fileID: 608931532}
@@ -4428,6 +4460,10 @@ PrefabInstance:
       propertyPath: titlemanager
       value: 
       objectReference: {fileID: 9000759}
+    - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
+      propertyPath: CharaSelectaudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d18812c67504a95b53b1d52dbd3216, type: 3}
     - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
       propertyPath: teamcompositionmanager
       value: 

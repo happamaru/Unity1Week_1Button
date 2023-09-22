@@ -11,6 +11,8 @@ public class CharaImage : MonoBehaviour,
     IPointerEnterHandler,
     IPointerExitHandler
 {
+    [SerializeField] AudioClip CharaSelectaudioClip;
+
     public System.Action onClickCallback;
 
     Vector2 OriginalScale;
@@ -39,6 +41,17 @@ public class CharaImage : MonoBehaviour,
     
 
     public void OnClickCharaImage()
+    {
+        Debug.Log(CharaNumber);
+
+
+        SoundManager_SE.m_Instane.PlaySoundEfect(CharaSelectaudioClip,0.2f);
+
+        //titlemanagerのheroes配列にクリックしたボタンのnumberをセットする
+        SetCharaNumber(CharaNumber);
+    }
+
+    public void SetCharaImage()
     {
         Debug.Log(CharaNumber);
 

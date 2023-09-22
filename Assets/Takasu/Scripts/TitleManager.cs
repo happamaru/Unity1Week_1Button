@@ -9,6 +9,7 @@ public class TitleManager : MonoBehaviour
     [SerializeField] AudioClip TitleaudioClip;
 
     [SerializeField] AudioClip SelectaudioClip;
+    [SerializeField] AudioClip ToTitleaudioClip;
 
     public GameObject TitleGroup;
     public GameObject TeamCompositionGroup;
@@ -55,6 +56,8 @@ public class TitleManager : MonoBehaviour
     public void OnToTitle()
     {
         Debug.Log("タイトル画面");
+
+        SoundManager_SE.m_Instane.PlaySoundEfect(ToTitleaudioClip,0.2f);
 
         TeamCompositionGroup.GetComponent<CanvasGroup>().alpha = 0;
         TeamCompositionGroup.GetComponent<CanvasGroup>().interactable = false;
