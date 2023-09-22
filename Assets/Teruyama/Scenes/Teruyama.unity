@@ -1097,7 +1097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &184942070
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -113964,10 +113964,11 @@ MonoBehaviour:
   spriteLibrary: {fileID: 375063815663186519}
   attackManager: {fileID: 1527126643}
   ThiefField: {fileID: 8547789735024152663, guid: a80e0240c8697e64c8dd13d2b9614864, type: 3}
+  IsNoButton: 0
   block: {fileID: 883380724255815505, guid: 2d25a3d6868eb314ba93583384cbb47c, type: 3}
   PartyNums: 00000000000000000000000000000000
   debugType: 1
-  Debug_Party: 00000000010000000200000009000000
+  Debug_Party: 00000000010000000200000003000000
 --- !u!70 &375063816584014957
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

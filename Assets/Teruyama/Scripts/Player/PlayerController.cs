@@ -47,6 +47,8 @@ using DG.Tweening;
         [NonSerialized] public Action<int> OnChangeSlot;
         public AttackManager attackManager;
         [SerializeField] GameObject ThiefField;
+
+        public bool IsNoButton = false;
         public GameObject InitThief(){
             return Instantiate(ThiefField);
         }
@@ -157,9 +159,12 @@ using DG.Tweening;
             
 
              if (Input.GetKeyDown(KeyCode.Space)){
+                if(!IsNoButton){
                 StartCoroutine(Attack());
+                } 
              }
               if (Input.GetKeyDown(KeyCode.LeftShift)){
+                //if(!IsNoButton){
                 NowCharaIndex++;
                 if(NowCharaIndex >= PartyNums.Length){
                     NowCharaIndex = 0;
@@ -167,30 +172,39 @@ using DG.Tweening;
                 OnChangeSlot.Invoke(NowCharaIndex);
                 CharacterChange(PartyNums[NowCharaIndex]);
                StartCoroutine(ChangeEffect(PartyNums[NowCharaIndex]));
-             }
+                }
+            // }
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
+                if(!IsNoButton){
                 _inputX = -1;
                 if(groundCheck.IsGround == true){
                 Character.SetState(AnimationState.Running);
                 }
+                }
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
+                if(!IsNoButton){
                 _inputX = 1;
                 if(groundCheck.IsGround == true){   
                 Character.SetState(AnimationState.Running);
                 }
+                }
             }
             if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
             {
+                if(!IsNoButton){
                 rg2d.velocity = new Vector2(0,rg2d.velocity.y);
                 Character.SetState(AnimationState.Idle);
+                }
             }
             
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                if(!IsNoButton){
+
                 if(JumpCount == 0){
                     if(groundCheck.IsGround == false) return;
                 }
@@ -203,6 +217,7 @@ using DG.Tweening;
                 //if(groundCheck.IsGround)
                 {
                     JumpDust.Play(true);
+                }
                 }
             }
         }

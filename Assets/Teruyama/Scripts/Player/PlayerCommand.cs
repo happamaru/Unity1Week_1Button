@@ -18,8 +18,13 @@ public class HighSpeed:ICommand{
       var rg2d = player.rg2d;
       rg2d.velocity = Vector2.zero;
       rg2d.gravityScale = 0;
-      rg2d.AddForce(new Vector2(player.gameObject.transform.localScale.x,0) * 1000);
+      player.IsNoButton = true;
+      rg2d.constraints = RigidbodyConstraints2D.FreezeRotation  //Rotationを全てオン
+            | RigidbodyConstraints2D.FreezePositionY;  //PositionのYのみオン
+      rg2d.AddForce(new Vector2(player.gameObject.transform.localScale.x,0) * 2000);
       yield return new WaitForSeconds(0.3f);
+      player.IsNoButton = false;
+      rg2d.constraints = RigidbodyConstraints2D.FreezeRotation;  //Rotationを全てオン
     }
 }
 public class Slash:ICommand{
