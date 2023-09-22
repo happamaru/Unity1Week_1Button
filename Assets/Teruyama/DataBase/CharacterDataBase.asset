@@ -71,7 +71,7 @@ MonoBehaviour:
     JumpCount: 2
     gravity: 1
     blowPower: 0
-    CommandInterval: 1
+    CommandInterval: 2
     animationType: 5
     changeEffect: {fileID: 3199742085320055194, guid: 0fb431300685be7409a20a6e5a036899, type: 3}
     Animation: {fileID: 11400000, guid: 755d8b520112e3c4981655e6d2672304, type: 2}

@@ -6,7 +6,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
-public class GoldCoin : MonoBehaviour
+public class GoldCoin : MonoBehaviour,IScore
 {
     public int goldcoinscore = 500;
 
