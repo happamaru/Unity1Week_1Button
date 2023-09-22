@@ -23,6 +23,7 @@ MonoBehaviour:
     animationType: 4
     changeEffect: {fileID: 4561338316898350250, guid: 8b30000231169e14eb90b7f9a08e4011, type: 3}
     Animation: {fileID: 11400000, guid: 32d27605aab1ca943a2d032b1fbc67bd, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: 1fbb09fb3389e7f428cc21cb0571c14a, type: 3}
     Command:
       rid: 1120290638891843584
   - name: "\u30AF\u30ED\u30A6"
@@ -35,6 +36,7 @@ MonoBehaviour:
     animationType: 2
     changeEffect: {fileID: 862486574076858879, guid: 7f727dd879c8e9e4a8a3561045b0e519, type: 3}
     Animation: {fileID: 11400000, guid: 474ad494e8194a64a93e6c83c437a6cf, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: 52e545bfa4f28d44bb19d9a024bc7651, type: 3}
     Command:
       rid: 1120290626852618240
   - name: "\u5FCD\u8005"
@@ -47,6 +49,7 @@ MonoBehaviour:
     animationType: 1
     changeEffect: {fileID: 286498580796085441, guid: 661d0093ec6d7fd498ba5335ab9cc695, type: 3}
     Animation: {fileID: 11400000, guid: b76c4ac3a847bd8498a752a8a46ffa0d, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: 815bd5f9ed68cc64580ccf76cb5c95e3, type: 3}
     Command:
       rid: 1120290638891843585
   - name: "\u5263\u58EB"
@@ -59,6 +62,7 @@ MonoBehaviour:
     animationType: 4
     changeEffect: {fileID: 1494463556257873780, guid: 28d8ccfc874a58140a1903318ae8bcd1, type: 3}
     Animation: {fileID: 11400000, guid: fdca255169f11484facb8668769e4d92, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: 75d2d554e641c7744b3b6975e3e04026, type: 3}
     Command:
       rid: 1120290638891843587
   - name: "\u9B54\u6CD5\u4F7F\u3044"
@@ -71,6 +75,7 @@ MonoBehaviour:
     animationType: 5
     changeEffect: {fileID: 3199742085320055194, guid: 0fb431300685be7409a20a6e5a036899, type: 3}
     Animation: {fileID: 11400000, guid: 755d8b520112e3c4981655e6d2672304, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: 1d217056632777948843be5ea3748067, type: 3}
     Command:
       rid: 1120290650869465088
   - name: "\u6CE5\u68D2"
@@ -83,6 +88,7 @@ MonoBehaviour:
     animationType: 1
     changeEffect: {fileID: 2848425286219990527, guid: 774dc20b68db8624bbc2ed3ae976a188, type: 3}
     Animation: {fileID: 11400000, guid: 91fa59570610bd546909f70dafa5da2d, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: d3d1a503186ed264db2cbd24200e5094, type: 3}
     Command:
       rid: -2
   - name: "\u30A4\u30CE\u30B7\u30B7"
@@ -95,6 +101,7 @@ MonoBehaviour:
     animationType: 1
     changeEffect: {fileID: 4177234435896415578, guid: 929e45f1533a4484cb38d2f2b58c754d, type: 3}
     Animation: {fileID: 11400000, guid: 8221348a5f9228b4d822d09caf6146ec, type: 2}
+    sprite: {fileID: -7008412969330441016, guid: 02ac95bcdf4830146babd4489563288a, type: 3}
     Command:
       rid: -2
   - name: "\u30B9\u30E9\u30A4\u30E0"
@@ -107,6 +114,7 @@ MonoBehaviour:
     animationType: 1
     changeEffect: {fileID: 7597491518885655522, guid: 760a84f5f55ffbc4ea5ac7a0791778fb, type: 3}
     Animation: {fileID: 11400000, guid: 13c329eeb5d03744fb8526542be8a21c, type: 2}
+    sprite: {fileID: -7008412969330441016, guid: 2fc74fa7747dc0049add021cd64d7a48, type: 3}
     Command:
       rid: -2
   - name: "\u30C8\u30ED\u30FC\u30EB"
@@ -119,6 +127,7 @@ MonoBehaviour:
     animationType: 3
     changeEffect: {fileID: 7758097831833352222, guid: c32651bab02924f4380823a5539a0b69, type: 3}
     Animation: {fileID: 11400000, guid: 9df330bf56080d14cbeea258cf456834, type: 2}
+    sprite: {fileID: -4556197565260342421, guid: 1a78810867d9a9a41935a4cf6ce3683f, type: 3}
     Command:
       rid: -2
   references:

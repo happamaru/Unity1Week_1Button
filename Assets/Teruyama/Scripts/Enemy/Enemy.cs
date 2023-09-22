@@ -48,12 +48,16 @@ public abstract class Enemy : MonoBehaviour
             if(HP <= 0){
                 this.transform.DOKill();
                 StartCoroutine(playerInformation.SetDie(this.transform.position));
-                playerInformation.OnScoreChange(score);
-                Destroy(ParentHp);
+                playerInformation.OnScoreChange(score);  
                 Destroy(this.gameObject);
             }
         }     
     }
+
+     private void OnDestroy() {
+        Destroy(ParentHp);    
+    }
+
     protected IEnumerator StopInterval(float time){
         IsMove = false;
         yield return new WaitForSeconds(time);

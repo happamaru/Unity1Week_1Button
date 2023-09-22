@@ -44,6 +44,7 @@ using DG.Tweening;
         [NonSerialized] public Action OnResetGauge;
         [NonSerialized] public Action<int> OnHpChange;
         [NonSerialized] public Action<int> OnScoreChange;
+        [NonSerialized] public Action<int> OnChangeSlot;
         public AttackManager attackManager;
 
         const int MaxParty = 4;
@@ -155,6 +156,7 @@ using DG.Tweening;
                 if(NowCharaIndex >= PartyNums.Length){
                     NowCharaIndex = 0;
                 }
+                OnChangeSlot.Invoke(NowCharaIndex);
                 CharacterChange(PartyNums[NowCharaIndex]);
                StartCoroutine(ChangeEffect(PartyNums[NowCharaIndex]));
              }

@@ -33,7 +33,7 @@ public class CharaDatas{
     [TooltipAttribute("キャラアニメーションタイプ")] public AnimationType animationType;
     [TooltipAttribute("登場エフェクト")] public GameObject changeEffect;
     [TooltipAttribute("キャラアニメーション")] public SpriteLibraryAsset Animation;
-    
+    [TooltipAttribute("キャライメージ")] public Sprite sprite;
     
     [SerializeReference, SubclassSelector,TooltipAttribute("コマンドクラス")] public ICommand Command;
 }

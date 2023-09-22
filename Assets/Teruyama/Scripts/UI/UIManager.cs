@@ -23,6 +23,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] Vector3 HpBarPos;
     GameObject Hp;
     GameObject ParentHp;
+    const int PartyNum = 4;
+    int[] slotNums = new int[PartyNum];
+    [SerializeField] ChracterDataBase chracterDataBase;
+    [SerializeField] Transform SelectButton;
+    [SerializeField] Image[] slots;
+    float[] SelectPosx = {245,350,455,560};
     void Start(){
         ParentHp = Instantiate(playerInformation.HpBar);
         Hp = ParentHp.transform.GetChild(0).gameObject;
@@ -31,9 +37,15 @@ public class UIManager : MonoBehaviour
         playerController.OnChangeGauge = ChangeGauge;
         playerController.OnResetGauge = ResetGauge;
         playerController.OnHpChange = ChangeHp; 
+        playerController.OnChangeSlot = OnChangeSlot;
         playerController.OnScoreChange = ChangeScore;
         NowHp = MaxHp;
-    }
+        slotNums = GameManager.team;
+        for(int i=0;i<PartyNum;i++){
+            slots[i].color = Vector4.one;
+            slots[i].sprite = chracterDataBase.charaDatas[slotNums[i]].sprite;
+        }  
+        }
 
     void Update(){
          ParentHp.transform.position = playerInformation.GetPlayerPos() + HpBarPos;
@@ -44,6 +56,11 @@ public class UIManager : MonoBehaviour
         }
         */
     }
+
+    void OnChangeSlot(int index){
+        if(index >= PartyNum) return;
+        SelectButton.transform.localPosition = new Vector3(SelectPosx[index],SelectButton.transform.localPosition.y,SelectButton.transform.localPosition.z);
+    } 
 
     void ChangeHp(int num){
         NowHp -= num;
