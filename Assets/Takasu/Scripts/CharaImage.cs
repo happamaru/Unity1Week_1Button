@@ -5,6 +5,7 @@ using DG.Tweening;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.U2D.Animation;
+using TMPro;
 
 public class CharaImage : MonoBehaviour,
     IPointerClickHandler,
@@ -24,6 +25,10 @@ public class CharaImage : MonoBehaviour,
     public TitleManager titlemanager;
     public TeamCompositionManager teamcompositionmanager;
     Button button;
+
+    public TextMeshProUGUI charanametext;
+    public TextMeshProUGUI charaexplainetext;
+
 
 
     void Awake()
@@ -79,6 +84,9 @@ public class CharaImage : MonoBehaviour,
 
         if(button.interactable == false) return;
         transform.DOScale(OriginalScale * 1.3f, 0.24f).SetUpdate(true).SetEase(Ease.OutCubic);
+
+        //キャラの名前と説明を入れる
+        SetNameAndExplaine();
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -122,6 +130,66 @@ public class CharaImage : MonoBehaviour,
         
             //returnしていないということは編成セットが満員
             Debug.Log("編成セットが満員です！");
+    }
+
+
+    void SetNameAndExplaine()
+    {
+        
+        switch(CharaNumber)
+        {
+            case 1:
+            {
+                
+
+                break;
+            }
+            case 2:
+            {
+                break;
+            }
+            case 3:
+            {
+                break;
+            }
+            case 4:
+            {
+                break;
+            }
+            case 5:
+            {
+                break;
+            }
+            case 6:
+            {
+                break;
+            }
+            case 7:
+            {
+                break;
+            }
+            case 8:
+            {
+                break;
+            }
+            case 9:
+            {
+                break;
+            }
+            case 10:
+            {
+                break;
+            }
+            case 11:
+            {
+                break;
+            }
+            case 12:
+            {
+                break;
+            }
+        }
+
     }
 
 }
