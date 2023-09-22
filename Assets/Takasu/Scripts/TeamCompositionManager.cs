@@ -11,7 +11,10 @@ using UnityEngine.Experimental.AI;
 
 public class TeamCompositionManager : MonoBehaviour
 {
-    
+    [SerializeField] AudioClip TeamComposeaudioClip;
+    [SerializeField] AudioClip OneBackaudioClip;
+    [SerializeField] AudioClip ResetaudioClip;
+
 
     public GameObject[] TeamAnimObject;
 
@@ -39,6 +42,8 @@ public class TeamCompositionManager : MonoBehaviour
     //チーム編成を一つ戻す
     public void OnBackOneStep()
     {
+        SoundManager_SE.m_Instane.PlaySoundEfect(OneBackaudioClip,0.2f);
+
         int a = 4;
 
         for(int i = 0; i < 4; i++)
@@ -73,6 +78,8 @@ public class TeamCompositionManager : MonoBehaviour
     //チーム編成をリセットする
     public void OnTeamReset()
     {
+        SoundManager_SE.m_Instane.PlaySoundEfect(ResetaudioClip,0.2f);
+
         //チーム編成、編成画面をリセット
         for(int i = 0; i < 4; i++)
         {
@@ -104,6 +111,8 @@ public class TeamCompositionManager : MonoBehaviour
     //決定ボタンを押されたらチーム編成を更新する
     public void OnTeamCompose()
     {
+        SoundManager_SE.m_Instane.PlaySoundEfect(TeamComposeaudioClip,0.2f);
+
         //チーム編成を更新
         for(int i = 0; i < 4; i++)
         {
@@ -134,7 +143,7 @@ public class TeamCompositionManager : MonoBehaviour
     {
         for(int i = 0; i < 4; i++)
         {
-            CharaImageGroup.transform.GetChild(GameManager.team[i]).GetComponent<CharaImage>().OnClickCharaImage();
+            CharaImageGroup.transform.GetChild(GameManager.team[i]).GetComponent<CharaImage>().SetCharaImage();
         }
     }
 }
