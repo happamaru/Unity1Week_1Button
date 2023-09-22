@@ -56,7 +56,7 @@ public class BlueDiamond : MonoBehaviour, IScore
         GameObject go = Instantiate(scoretext, transform.position, quaternion.identity);
         go.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 0.5f, 1.0f);
         go.GetComponent<RectTransform>().localScale = go.transform.GetComponent<RectTransform>().localScale * scoresize;
-        text.text = "+" + score;
+        text.text = "+" + score.ToString();
 
         go.transform.DOMoveY(transform.position.y + 0.5f, 0.5f, false).SetEase(Ease.OutBack).OnComplete(() => {
             go.transform.GetChild(0).GetComponent<TextMeshProUGUI>().DOFade(0.0f, 0.5f).SetEase(Ease.Linear).OnComplete(() => {
