@@ -26,13 +26,6 @@ public class SilverCoin : MonoBehaviour, IScore
         return silvercoinscore;
     }
     
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            AddScore();
-        }
-    }
 
     void DisplayScore(int score)
     {

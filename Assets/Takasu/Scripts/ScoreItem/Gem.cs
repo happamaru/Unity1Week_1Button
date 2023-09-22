@@ -28,13 +28,7 @@ public class Gem : MonoBehaviour, IScore
         return gemscore;
     }   
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            AddScore();
-        }
-    }
+
 
     void DisplayScore(int score)
     {

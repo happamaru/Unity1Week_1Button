@@ -7,10 +7,7 @@ public class ChestKey : MonoBehaviour
     public GameObject treasure;
     public GameObject chestkeyeffect;
 
-    void Update()
-    {
 
-    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player"){
