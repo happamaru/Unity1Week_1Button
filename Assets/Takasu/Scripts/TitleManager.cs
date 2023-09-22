@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class TitleManager : MonoBehaviour
 {
+    [SerializeField] AudioClip TitleaudioClip;
+
+    [SerializeField] AudioClip SelectaudioClip;
+
     public GameObject TitleGroup;
     public GameObject TeamCompositionGroup;
     public TeamCompositionManager teamcompositionmanager;
@@ -16,6 +20,9 @@ public class TitleManager : MonoBehaviour
     {
         TeamCompositionGroup.GetComponent<CanvasGroup>().alpha = 0;
         TeamCompositionGroup.GetComponent<CanvasGroup>().interactable = false;
+
+        SoundManager_BGM.m_Instane.PlayBackGroundMusic(TitleaudioClip,0.2f);
+
     }
 
     // Update is called once per frame
@@ -28,6 +35,8 @@ public class TitleManager : MonoBehaviour
     public void OnTeamComposion()
     {
         Debug.Log("チーム編成");
+
+        SoundManager_SE.m_Instane.PlaySoundEfect(SelectaudioClip,0.2f);
 
         TitleGroup.GetComponent<CanvasGroup>().alpha = 0;
         TitleGroup.GetComponent<CanvasGroup>().interactable = false;

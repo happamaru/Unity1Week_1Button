@@ -15,7 +15,7 @@ public class ButtonManager : MonoBehaviour,
 
     [SerializeField] bool Type_MoveScene;
 
-   // [SerializeField] AudioClip audioClip;
+   [SerializeField] AudioClip StartaudioClip;
     bool isClick;
 
     void OnEnable()
@@ -42,7 +42,7 @@ public class ButtonManager : MonoBehaviour,
     }
 
     public void StartButton(){
-       // SoundManager_SE.m_Instane.PlaySoundEfect(audioClip,0.2f);
+       SoundManager_SE.m_Instane.PlaySoundEfect(StartaudioClip,0.2f);
        // SoundManager_BGM.m_Instane.PlayBackGroundMusic(audioClip,0.2f);
         SceneManager.LoadScene("MainScene");
     }
