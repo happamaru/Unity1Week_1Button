@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c742408a4fd01654c9228db0518eb1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 10
   HP: 10
   MovePosX: 5
   score: 3000

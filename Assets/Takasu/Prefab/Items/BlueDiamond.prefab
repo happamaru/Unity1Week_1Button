@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 500d41478b79cd4409fcc229de4dbe80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bluediamondscore: 5000
+  bluediamondscore: 1000
   diamondeffect: {fileID: 7482234625477884037, guid: c1445e12c8712e142bfdedf91d4c6008, type: 3}
   scoretext: {fileID: 6049666091617551603, guid: e0f9f99f96afd9640a927aea89ed418b, type: 3}
   scoresize: 2
