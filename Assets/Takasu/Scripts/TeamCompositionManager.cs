@@ -11,6 +11,8 @@ using UnityEngine.Experimental.AI;
 
 public class TeamCompositionManager : MonoBehaviour
 {
+    
+
     public GameObject[] TeamAnimObject;
 
     public GameObject CharaImageGroup;

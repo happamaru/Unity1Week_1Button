@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf1793d7537d6047acb6ad323827604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TitleaudioClip: {fileID: 8300000, guid: ae1a2f76e40df4c60b0548f050213819, type: 3}
+  SelectaudioClip: {fileID: 8300000, guid: 703e5eab945b84c5a90c56495c86adc9, type: 3}
   TitleGroup: {fileID: 1935609994}
   TeamCompositionGroup: {fileID: 1449375035}
   teamcompositionmanager: {fileID: 608931532}
@@ -485,6 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type_MoveScene: 0
+  StartaudioClip: {fileID: 8300000, guid: 703e5eab945b84c5a90c56495c86adc9, type: 3}
 --- !u!114 &178855306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,6 +1140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type_MoveScene: 0
+  StartaudioClip: {fileID: 0}
 --- !u!114 &369219522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1406,6 +1410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type_MoveScene: 0
+  StartaudioClip: {fileID: 0}
 --- !u!114 &559424011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2669,6 +2674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type_MoveScene: 0
+  StartaudioClip: {fileID: 0}
 --- !u!114 &1124211880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2915,6 +2921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type_MoveScene: 0
+  StartaudioClip: {fileID: 0}
 --- !u!114 &1181284252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3275,6 +3282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type_MoveScene: 0
+  StartaudioClip: {fileID: 0}
 --- !u!114 &1266471879
 MonoBehaviour:
   m_ObjectHideFlags: 0
