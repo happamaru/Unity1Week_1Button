@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class StageSelectManager : MonoBehaviour
 {
     public GameObject StageSelectGroup;
     GameObject rightbutton;
     GameObject leftbutton;
+
+    public int stagenumber;
     
     void Start()
     {
@@ -19,5 +23,15 @@ public class StageSelectManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ToTitle()
+    {
+        StageSelectGroup.GetComponent<RectTransform>().DOAnchorPosY(900.0f, 0.5f, true);
+    }
+
+    public void ToStart()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }
