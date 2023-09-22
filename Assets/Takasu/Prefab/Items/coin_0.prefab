@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 412756381612024063}
   - component: {fileID: 412756381612024062}
   - component: {fileID: 5871610962532314786}
+  - component: {fileID: 7325411431110245072}
   m_Layer: 0
   m_Name: coin_0
   m_TagString: Untagged
@@ -123,3 +124,19 @@ MonoBehaviour:
   scoresize: 2
   coineffect: {fileID: 7454987551522880206, guid: b79eb62ac0fad724a8eae4c035ebf1bc, type: 3}
   scoretext: {fileID: 6049666091617551603, guid: e0f9f99f96afd9640a927aea89ed418b, type: 3}
+--- !u!58 &7325411431110245072
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412756381612024033}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.0012740135}
+  serializedVersion: 2
+  m_Radius: 0.05987052
