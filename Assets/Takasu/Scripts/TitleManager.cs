@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class TitleManager : MonoBehaviour
 {
@@ -10,9 +12,11 @@ public class TitleManager : MonoBehaviour
 
     [SerializeField] AudioClip SelectaudioClip;
     [SerializeField] AudioClip ToTitleaudioClip;
+    [SerializeField] AudioClip StartaudioClip;
 
     public GameObject TitleGroup;
     public GameObject TeamCompositionGroup;
+    public GameObject StageSelectGruop;
     public TeamCompositionManager teamcompositionmanager;
     
 
@@ -70,6 +74,15 @@ public class TitleManager : MonoBehaviour
         TitleGroup.GetComponent<CanvasGroup>().alpha = 1;
         TitleGroup.GetComponent<CanvasGroup>().interactable = true;
 
+    }
+
+    //ステージ選択画面を呼び出す
+    public void StageSelectButton(){
+       SoundManager_SE.m_Instane.PlaySoundEfect(StartaudioClip,0.2f);
+       // SoundManager_BGM.m_Instane.PlayBackGroundMusic(audioClip,0.2f);
+        //SceneManager.LoadScene("MainScene");
+
+        StageSelectGruop.GetComponent<RectTransform>().DOAnchorPosY(0.0f, 0.5f, true);
     }
 
     
