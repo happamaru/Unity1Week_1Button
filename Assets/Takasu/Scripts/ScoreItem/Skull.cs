@@ -15,13 +15,7 @@ public class Skull : MonoBehaviour, IScore
 
     public GameObject scoretext;
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            AddScore();
-        }
-    }
+
 
 
     public int AddScore()
