@@ -50,6 +50,7 @@ public class ButtonManager : MonoBehaviour,
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        
         transform.DOScale(OriginalScale, 0.24f).SetUpdate(true).SetEase(Ease.OutCubic);
     }
 }
