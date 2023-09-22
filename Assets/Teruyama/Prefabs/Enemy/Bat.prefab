@@ -171,6 +171,7 @@ MonoBehaviour:
   damage: 5
   HP: 3
   MovePosX: 8
-  score: 2
+  score: 300
   addForce: 1000
+  HpPos: {x: -0.6, y: 1.5, z: 0}
   speed: -3

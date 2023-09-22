@@ -19,13 +19,21 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float MovePosX;
     [SerializeField] protected int score;
     [SerializeField] protected float addForce;
+    [SerializeField] Vector3 HpPos;
      protected bool IsMove;
      bool VisibleOnce;
      bool DisableOnce;
-    
+    GameObject ParentHp;
+    GameObject hp;
+    float hpNum;
     private void Awake() 
     {
+        hpNum = (float)HP;
         playerInformation = GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>();
+        ParentHp = Instantiate(playerInformation.HpBar);
+        hp = ParentHp.transform.GetChild(0).gameObject;
+        ParentHp.transform.position = this.transform.position + HpPos;
+
         spriteRenderer = this.GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         Character = GameObject.Find("Character");
@@ -35,10 +43,13 @@ public abstract class Enemy : MonoBehaviour
         if(Damage != null){
             HitBlink();
             HP -= Damage.AddDamage();
+            hp.transform.localScale = new Vector3((float)HP/hpNum,1,1);
             playerInformation.SetHit(this.transform.position);
             if(HP <= 0){
                 this.transform.DOKill();
                 StartCoroutine(playerInformation.SetDie(this.transform.position));
+                playerInformation.OnScoreChange(score);
+                Destroy(ParentHp);
                 Destroy(this.gameObject);
             }
         }     
@@ -64,6 +75,10 @@ public abstract class Enemy : MonoBehaviour
     }
 
      private void LateUpdate() {
+        if(ParentHp != null){
+            ParentHp.transform.position = this.transform.position + HpPos;
+        }
+
         if(!VisibleOnce){
         if(IsMoveCheck(MovePosX)){
             VisibleOnce = true;

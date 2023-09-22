@@ -8,9 +8,11 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
+    [SerializeField] PlayerInformation playerInformation;
     [SerializeField] Image SkillGauge;
     [SerializeField] Image HpGauge;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] GameOverManager gameOverManager;
     const int MaxHp = 100; 
     int NowHp;
     [SerializeField,ReadOnly] int NowScore;
@@ -18,7 +20,14 @@ public class UIManager : MonoBehaviour
     public int Get_NowScore{
         get{return NowScore;}
     }
+    [SerializeField] Vector3 HpBarPos;
+    GameObject Hp;
+    GameObject ParentHp;
     void Start(){
+        ParentHp = Instantiate(playerInformation.HpBar);
+        Hp = ParentHp.transform.GetChild(0).gameObject;
+        ParentHp.transform.position = playerInformation.GetPlayerPos() + HpBarPos;
+        playerInformation.OnScoreChange = ChangeScore;
         playerController.OnChangeGauge = ChangeGauge;
         playerController.OnResetGauge = ResetGauge;
         playerController.OnHpChange = ChangeHp; 
@@ -27,6 +36,7 @@ public class UIManager : MonoBehaviour
     }
 
     void Update(){
+         ParentHp.transform.position = playerInformation.GetPlayerPos() + HpBarPos;
        /* delta += Time.deltaTime;
         if(delta > 1.0f){
             delta = 0;
@@ -37,8 +47,12 @@ public class UIManager : MonoBehaviour
 
     void ChangeHp(int num){
         NowHp -= num;
+        if(NowHp <= 0){
+            gameOverManager.GameOver();
+        }
         float Num = (float)NowHp;
-        HpGauge.DOFillAmount(Num/(float)MaxHp,0.5f);
+        //HpGauge.DOFillAmount(Num/(float)MaxHp,0.5f);
+        Hp.transform.localScale = new Vector3(Num/MaxHp,1,1);
     }
 
     void ChangeGauge(float interval){

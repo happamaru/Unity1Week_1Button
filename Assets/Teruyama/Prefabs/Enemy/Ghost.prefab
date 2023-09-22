@@ -124,8 +124,9 @@ MonoBehaviour:
   damage: 10
   HP: 7
   MovePosX: 8
-  score: 1
+  score: 1500
   addForce: 1200
+  HpPos: {x: -0.6, y: 1.5, z: 0}
   GhostSpeed: 3
   limitSpeed: 2
 --- !u!61 &5665940219462082847

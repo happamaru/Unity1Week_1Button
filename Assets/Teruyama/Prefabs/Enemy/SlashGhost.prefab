@@ -155,7 +155,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &6880412754243298411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,8 +171,9 @@ MonoBehaviour:
   damage: 15
   HP: 10
   MovePosX: 5
-  score: 10
+  score: 3000
   addForce: 1200
+  HpPos: {x: -0.6, y: 1.5, z: 0}
   GhostSpeed: 0.8
   ShakeInterval: 2
   WaitInterval: 2

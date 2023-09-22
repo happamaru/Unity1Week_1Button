@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerInformation : MonoBehaviour
 {
     [SerializeField] GameObject player;
     [SerializeField] GameObject DieEffect;
     [SerializeField] GameObject HitEffect;
+    public GameObject HpBar;
+    public Action<int> OnScoreChange;
+
 
    public IEnumerator SetDie(Vector2 pos){
         GameObject go = Instantiate(DieEffect);
