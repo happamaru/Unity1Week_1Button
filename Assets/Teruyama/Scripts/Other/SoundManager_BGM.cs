@@ -25,9 +25,10 @@ public class SoundManager_BGM : MonoBehaviour
         m_AudioSourceBGM = this.GetComponent<AudioSource>();
     }
 
-    public void PlayBackGroundMusic(AudioClip audioClip_BGM)
+    public void PlayBackGroundMusic(AudioClip audioClip_BGM,float volume)
     {
         m_AudioSourceBGM.clip = audioClip_BGM;
+        m_AudioSourceBGM.volume = volume;
         m_AudioSourceBGM.Play();
     }
 
