@@ -70,3 +70,27 @@ public class Magic:ICommand{
     yield break;
 }
 }
+
+public class thief:ICommand{
+  public IEnumerator Command(PlayerController player){
+    GameObject go = player.InitThief();
+    go.transform.position = player.transform.position;
+    yield break;
+}
+}
+
+public class CraftMan:ICommand{
+  public IEnumerator Command(PlayerController player){
+    GameObject go = player.InitBlock();
+    go.transform.position = player.transform.position;
+    go.transform.AddPosY(-1);
+    yield break;
+}
+}
+
+public class BigExploMagic:ICommand{
+  public IEnumerator Command(PlayerController player){
+    player.attackManager.StartCoroutine(player.attackManager.BigMagic(player.transform.position,18,player.transform.localScale.x));   
+    yield break;
+}
+}

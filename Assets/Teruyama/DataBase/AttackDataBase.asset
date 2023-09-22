@@ -28,3 +28,18 @@ MonoBehaviour:
     DamageNum: 4
     activeTime: 1
     InitPosition: {x: 0, y: 1, z: 0}
+  - Name: "\u7206\u767A1"
+    prefab: {fileID: 7787872526335293894, guid: 07a37b99b0ad9dc4f910803934e46c9f, type: 3}
+    DamageNum: 2
+    activeTime: 1.5
+    InitPosition: {x: 0, y: 1, z: 0}
+  - Name: "\u7206\u767A2"
+    prefab: {fileID: 4946839129939443332, guid: b3475ddd97e1365428323106c825e082, type: 3}
+    DamageNum: 2
+    activeTime: 1.5
+    InitPosition: {x: 0, y: 1, z: 0}
+  - Name: "\u7206\u767A3"
+    prefab: {fileID: 7719493860722944908, guid: c261db48a5530a04189013b6a43b0231, type: 3}
+    DamageNum: 2
+    activeTime: 1.5
+    InitPosition: {x: 0, y: 1, z: 0}

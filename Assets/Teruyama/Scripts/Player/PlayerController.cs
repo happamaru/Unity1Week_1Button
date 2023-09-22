@@ -46,6 +46,14 @@ using DG.Tweening;
         [NonSerialized] public Action<int> OnScoreChange;
         [NonSerialized] public Action<int> OnChangeSlot;
         public AttackManager attackManager;
+        [SerializeField] GameObject ThiefField;
+        public GameObject InitThief(){
+            return Instantiate(ThiefField);
+        }
+         [SerializeField] GameObject block;
+        public GameObject InitBlock(){
+            return Instantiate(block);
+        }
 
         const int MaxParty = 4;
         [SerializeField,ReadOnly] int[] PartyNums;
