@@ -122,6 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bluediamondscore: 5000
   diamondeffect: {fileID: 7482234625477884037, guid: c1445e12c8712e142bfdedf91d4c6008, type: 3}
+  scoretext: {fileID: 6049666091617551603, guid: e0f9f99f96afd9640a927aea89ed418b, type: 3}
+  scoresize: 2
 --- !u!61 &347370743280813502
 BoxCollider2D:
   m_ObjectHideFlags: 0
