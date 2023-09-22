@@ -26,5 +26,5 @@ MonoBehaviour:
   - Name: "\u9B54\u6CD5"
     prefab: {fileID: 8854671154911556094, guid: cc7171e7f046a8a49b22c1339a9523d7, type: 3}
     DamageNum: 4
-    activeTime: 2
+    activeTime: 1
     InitPosition: {x: 0, y: 1, z: 0}

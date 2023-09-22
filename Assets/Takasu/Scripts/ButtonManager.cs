@@ -14,6 +14,8 @@ public class ButtonManager : MonoBehaviour,
     Vector2 OriginalScale;
 
     [SerializeField] bool Type_MoveScene;
+
+   // [SerializeField] AudioClip audioClip;
     bool isClick;
 
     void OnEnable()
@@ -40,6 +42,8 @@ public class ButtonManager : MonoBehaviour,
     }
 
     public void StartButton(){
+       // SoundManager_SE.m_Instane.PlaySoundEfect(audioClip,0.2f);
+       // SoundManager_BGM.m_Instane.PlayBackGroundMusic(audioClip,0.2f);
         SceneManager.LoadScene("MainScene");
     }
 
