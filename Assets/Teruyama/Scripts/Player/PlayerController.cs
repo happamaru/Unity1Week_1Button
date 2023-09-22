@@ -230,7 +230,9 @@ using DG.Tweening;
         private void Move()
         {
             var state = Character.GetState();
-
+            if(rg2d.velocity.x > MaxSpeed) rg2d.velocity = new Vector2(MaxSpeed,rg2d.velocity.y);
+            if(rg2d.velocity.x < -MaxSpeed) rg2d.velocity = new Vector2(-MaxSpeed,rg2d.velocity.y);
+            
             if (state == AnimationState.Dead)
             {
                 if (_inputX == 0) return;
@@ -250,8 +252,7 @@ using DG.Tweening;
                  //else if(slopeCheck.IsSlope && wallCheck.IsWall == false){
                   //  this.gameObject.transform.Translate(0.1f*_inputX,0,0);
                  //}
-                 if(rg2d.velocity.x > MaxSpeed) rg2d.velocity = new Vector2(MaxSpeed,rg2d.velocity.y);
-                 if(rg2d.velocity.x < -MaxSpeed) rg2d.velocity = new Vector2(-MaxSpeed,rg2d.velocity.y);
+                 
                 }
 
             if (groundCheck.IsGround)

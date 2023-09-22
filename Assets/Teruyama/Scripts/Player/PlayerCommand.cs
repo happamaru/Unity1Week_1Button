@@ -17,7 +17,7 @@ public class HighSpeed:ICommand{
       player.MaxSpeed = 20;
       var rg2d = player.rg2d;
       rg2d.velocity = Vector2.zero;
-      rg2d.gravityScale = 0;
+      //rg2d.gravityScale = 0;
       player.IsNoButton = true;
       rg2d.constraints = RigidbodyConstraints2D.FreezeRotation  //Rotationを全てオン
             | RigidbodyConstraints2D.FreezePositionY;  //PositionのYのみオン
