@@ -26,19 +26,6 @@ MonoBehaviour:
     sprite: {fileID: 2537882373423050008, guid: 1fbb09fb3389e7f428cc21cb0571c14a, type: 3}
     Command:
       rid: 1120290638891843584
-  - name: "\u30AF\u30ED\u30A6"
-    speed: 2.5
-    jumpPower: 450
-    JumpCount: 1
-    gravity: 1.5
-    blowPower: 0
-    CommandInterval: 3
-    animationType: 2
-    changeEffect: {fileID: 862486574076858879, guid: 7f727dd879c8e9e4a8a3561045b0e519, type: 3}
-    Animation: {fileID: 11400000, guid: 474ad494e8194a64a93e6c83c437a6cf, type: 2}
-    sprite: {fileID: 2537882373423050008, guid: 52e545bfa4f28d44bb19d9a024bc7651, type: 3}
-    Command:
-      rid: 1120290626852618240
   - name: "\u5FCD\u8005"
     speed: 6.5
     jumpPower: 800
@@ -91,6 +78,71 @@ MonoBehaviour:
     sprite: {fileID: 2537882373423050008, guid: d3d1a503186ed264db2cbd24200e5094, type: 3}
     Command:
       rid: 1120290704617897984
+  - name: "\u30A2\u30FC\u30C1\u30E3\u30FC"
+    speed: 6
+    jumpPower: 800
+    JumpCount: 1
+    gravity: 6
+    blowPower: 0
+    CommandInterval: 0.4
+    animationType: 5
+    changeEffect: {fileID: 8563390700614445672, guid: 780ea35dad9714e4787e2a93d7b5e78e, type: 3}
+    Animation: {fileID: 11400000, guid: 5cb32aa16ee2a284495405c0aa07f7ba, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: 1937a2e9e9703e842bdbfb8c54518ee8, type: 3}
+    Command:
+      rid: 1120290719771394048
+  - name: "\u30AF\u30ED\u30A6"
+    speed: 2.5
+    jumpPower: 450
+    JumpCount: 1
+    gravity: 1.5
+    blowPower: 0
+    CommandInterval: 3
+    animationType: 2
+    changeEffect: {fileID: 862486574076858879, guid: 7f727dd879c8e9e4a8a3561045b0e519, type: 3}
+    Animation: {fileID: 11400000, guid: 474ad494e8194a64a93e6c83c437a6cf, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: 52e545bfa4f28d44bb19d9a024bc7651, type: 3}
+    Command:
+      rid: 1120290626852618240
+  - name: "\u5B88\u885B"
+    speed: 2
+    jumpPower: 400
+    JumpCount: 1
+    gravity: 3
+    blowPower: 0
+    CommandInterval: 1
+    animationType: 8
+    changeEffect: {fileID: 7411798528326461958, guid: f12c2cf1aed80a94284cc6ea7eb3a0f4, type: 3}
+    Animation: {fileID: 11400000, guid: 54a0a91b30eb8a946ae8044b82353500, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: cbc71025f5062e54296c3d905812b8cb, type: 3}
+    Command:
+      rid: -2
+  - name: "\u5927\u9B54\u5C0E\u58EB"
+    speed: 1
+    jumpPower: 200
+    JumpCount: 0
+    gravity: 3
+    blowPower: 0
+    CommandInterval: 12
+    animationType: 5
+    changeEffect: {fileID: 7758097831833352222, guid: c32651bab02924f4380823a5539a0b69, type: 3}
+    Animation: {fileID: 11400000, guid: fa64e0c8576368d41871f2405fb66a22, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: 3cba859b250d51744a0181d3a78d4742, type: 3}
+    Command:
+      rid: 1120290704617897986
+  - name: "\u935B\u51B6\u5C4B"
+    speed: 3
+    jumpPower: 500
+    JumpCount: 1
+    gravity: 2
+    blowPower: 0
+    CommandInterval: 2
+    animationType: 4
+    changeEffect: {fileID: 7758097831833352222, guid: c32651bab02924f4380823a5539a0b69, type: 3}
+    Animation: {fileID: 11400000, guid: dfc7351e4a78219449b2cd5be6a353bf, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: 97424609fbf047e4cbcd88fd656a2e06, type: 3}
+    Command:
+      rid: 1120290704617897985
   - name: "\u30A4\u30CE\u30B7\u30B7"
     speed: 10
     jumpPower: 0
@@ -115,58 +167,6 @@ MonoBehaviour:
     changeEffect: {fileID: 7597491518885655522, guid: 760a84f5f55ffbc4ea5ac7a0791778fb, type: 3}
     Animation: {fileID: 11400000, guid: 13c329eeb5d03744fb8526542be8a21c, type: 2}
     sprite: {fileID: -7008412969330441016, guid: 2fc74fa7747dc0049add021cd64d7a48, type: 3}
-    Command:
-      rid: -2
-  - name: "\u935B\u51B6\u5C4B"
-    speed: 3
-    jumpPower: 500
-    JumpCount: 1
-    gravity: 2
-    blowPower: 0
-    CommandInterval: 2
-    animationType: 4
-    changeEffect: {fileID: 7758097831833352222, guid: c32651bab02924f4380823a5539a0b69, type: 3}
-    Animation: {fileID: 11400000, guid: dfc7351e4a78219449b2cd5be6a353bf, type: 2}
-    sprite: {fileID: 2537882373423050008, guid: 97424609fbf047e4cbcd88fd656a2e06, type: 3}
-    Command:
-      rid: 1120290704617897985
-  - name: "\u5927\u9B54\u5C0E\u58EB"
-    speed: 1
-    jumpPower: 200
-    JumpCount: 0
-    gravity: 3
-    blowPower: 0
-    CommandInterval: 12
-    animationType: 5
-    changeEffect: {fileID: 7758097831833352222, guid: c32651bab02924f4380823a5539a0b69, type: 3}
-    Animation: {fileID: 11400000, guid: fa64e0c8576368d41871f2405fb66a22, type: 2}
-    sprite: {fileID: 2537882373423050008, guid: 3cba859b250d51744a0181d3a78d4742, type: 3}
-    Command:
-      rid: 1120290704617897986
-  - name: "\u30A2\u30FC\u30C1\u30E3\u30FC"
-    speed: 6
-    jumpPower: 800
-    JumpCount: 1
-    gravity: 6
-    blowPower: 0
-    CommandInterval: 0.4
-    animationType: 5
-    changeEffect: {fileID: 8563390700614445672, guid: 780ea35dad9714e4787e2a93d7b5e78e, type: 3}
-    Animation: {fileID: 11400000, guid: 5cb32aa16ee2a284495405c0aa07f7ba, type: 2}
-    sprite: {fileID: 2537882373423050008, guid: 1937a2e9e9703e842bdbfb8c54518ee8, type: 3}
-    Command:
-      rid: 1120290719771394048
-  - name: "\u5B88\u885B"
-    speed: 2
-    jumpPower: 400
-    JumpCount: 1
-    gravity: 3
-    blowPower: 0
-    CommandInterval: 1
-    animationType: 8
-    changeEffect: {fileID: 7411798528326461958, guid: f12c2cf1aed80a94284cc6ea7eb3a0f4, type: 3}
-    Animation: {fileID: 11400000, guid: 54a0a91b30eb8a946ae8044b82353500, type: 2}
-    sprite: {fileID: 2537882373423050008, guid: cbc71025f5062e54296c3d905812b8cb, type: 3}
     Command:
       rid: -2
   references:

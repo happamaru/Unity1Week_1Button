@@ -116,7 +116,7 @@ public class TeamCompositionManager : MonoBehaviour
         //チーム編成を更新
         for(int i = 0; i < 4; i++)
         {
-            GameManager.team[i] = Heroes[i];
+            GameManager.team[i] = Heroes[i] - 1;
         }
 
 
@@ -143,7 +143,7 @@ public class TeamCompositionManager : MonoBehaviour
     {
         for(int i = 0; i < 4; i++)
         {
-            CharaImageGroup.transform.GetChild(GameManager.team[i]).GetComponent<CharaImage>().SetCharaImage();
+            CharaImageGroup.transform.GetChild(GameManager.team[i] + 1).GetComponent<CharaImage>().SetCharaImage();
         }
     }
 }

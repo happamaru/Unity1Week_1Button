@@ -29,6 +29,9 @@ public class CharaImage : MonoBehaviour,
     public TextMeshProUGUI charanametext;
     public TextMeshProUGUI charaexplainetext;
 
+    public string[] charanames;
+    [TextArea(1, 4)] public string[] charaexplaintext;
+
 
 
     void Awake()
@@ -54,6 +57,7 @@ public class CharaImage : MonoBehaviour,
 
         //titlemanagerのheroes配列にクリックしたボタンのnumberをセットする
         SetCharaNumber(CharaNumber);
+
     }
 
     public void SetCharaImage()
@@ -81,12 +85,14 @@ public class CharaImage : MonoBehaviour,
     public void OnPointerEnter(PointerEventData eventData)
     {
         teamcompositionmanager.CharaExplanationObject.transform.GetChild(0).GetComponent<SpriteLibrary>().spriteLibraryAsset = transform.GetChild(0).GetChild(0).GetComponent<SpriteLibrary>().spriteLibraryAsset;
+        SetCharaName();
+        SetCharaImageExplain();
 
         if(button.interactable == false) return;
         transform.DOScale(OriginalScale * 1.3f, 0.24f).SetUpdate(true).SetEase(Ease.OutCubic);
 
         //キャラの名前と説明を入れる
-        SetNameAndExplaine();
+
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -130,6 +136,16 @@ public class CharaImage : MonoBehaviour,
         
             //returnしていないということは編成セットが満員
             Debug.Log("編成セットが満員です！");
+    }
+
+    void SetCharaName()
+    {
+        charanametext.GetComponent<TextMeshProUGUI>().text = charanames[CharaNumber - 1];
+    }
+
+    void SetCharaImageExplain()
+    {
+        charaexplainetext.GetComponent<TextMeshProUGUI>().text = charaexplaintext[CharaNumber - 1];
     }
 
 
