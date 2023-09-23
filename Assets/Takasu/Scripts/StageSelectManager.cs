@@ -17,12 +17,13 @@ public class StageSelectManager : MonoBehaviour
     GameObject stagenametext;
     GameObject rightbutton;
     GameObject leftbutton;
+    GameObject difficultytext;
 
     public int stagenumber;
 
     public Sprite[] stagesprite;
     public string[] stagename;
-    public int [] difficulty;
+    public string [] difficulty;
     
     void Start()
     {
@@ -32,6 +33,7 @@ public class StageSelectManager : MonoBehaviour
         stagenametext = StageSelectGroup.transform.GetChild(0).GetChild(1).gameObject;
         rightbutton = StageSelectGroup.transform.GetChild(0).GetChild(2).gameObject;
         leftbutton = StageSelectGroup.transform.GetChild(0).GetChild(3).gameObject;
+        difficultytext = StageSelectGroup.transform.GetChild(0).GetChild(6).gameObject;
         
         stagenumber = 0;
         
@@ -47,12 +49,30 @@ public class StageSelectManager : MonoBehaviour
     public void ToStart()
     {
         SceneManager.LoadScene("MainScene");
+
+        //ステージが複数できたら下の処理に変える
+/*
+        switch(stagenumber)
+        {
+            case 0:
+                SceneManager.LoadScene("ステージ名");
+            break;
+            case 1:
+                SceneManager.LoadScene("ステージ名");
+            break;
+            case 2:
+                SceneManager.LoadScene("ステージ名");
+            break;
+        }
+*/
+        
     }
 
     void SetStageInfo(int stagenumber)
     {
         stageimage.GetComponent<Image>().sprite = stagesprite[stagenumber];
         stagenametext.GetComponent<TextMeshProUGUI>().text = stagename[stagenumber];
+        difficultytext.GetComponent<TextMeshProUGUI>().text = difficulty[stagenumber];
 
         if(stagenumber == 0)
         {
