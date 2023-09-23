@@ -156,17 +156,17 @@ MonoBehaviour:
     sprite: {fileID: 2537882373423050008, guid: 1937a2e9e9703e842bdbfb8c54518ee8, type: 3}
     Command:
       rid: 1120290719771394048
-  - name: "\u30C8\u30ED\u30FC\u30EB"
-    speed: 3
+  - name: "\u5B88\u885B"
+    speed: 2
     jumpPower: 400
     JumpCount: 1
     gravity: 3
     blowPower: 0
     CommandInterval: 1
-    animationType: 3
-    changeEffect: {fileID: 7758097831833352222, guid: c32651bab02924f4380823a5539a0b69, type: 3}
-    Animation: {fileID: 11400000, guid: 9df330bf56080d14cbeea258cf456834, type: 2}
-    sprite: {fileID: -4556197565260342421, guid: 1a78810867d9a9a41935a4cf6ce3683f, type: 3}
+    animationType: 8
+    changeEffect: {fileID: 7411798528326461958, guid: f12c2cf1aed80a94284cc6ea7eb3a0f4, type: 3}
+    Animation: {fileID: 11400000, guid: 54a0a91b30eb8a946ae8044b82353500, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: cbc71025f5062e54296c3d905812b8cb, type: 3}
     Command:
       rid: -2
   references:

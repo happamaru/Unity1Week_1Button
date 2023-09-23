@@ -20,7 +20,8 @@ public class CharaDatas{
         Slash,
         Shot,
         Fire1H,
-        Fire2H
+        Fire2H,
+        Blocking
     }
 
     [TooltipAttribute("キャラクターの名前")] public string name;

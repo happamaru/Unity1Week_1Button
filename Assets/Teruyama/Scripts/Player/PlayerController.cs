@@ -36,7 +36,7 @@ using DG.Tweening;
         [SerializeField] ChracterDataBase chracterDataBase;//キャラクターのデータベース
         List<CharaDatas> charaData;
         [SerializeField] SpriteLibrary spriteLibrary;
-        int NowCharaIndex;//現在のID
+        [SerializeField,ReadOnly] int NowCharaIndex;//現在のID
         string NowAnimation;
         ICommand NowCommand;
 
@@ -67,6 +67,7 @@ using DG.Tweening;
         }
     [SerializeField] DebugType debugType;
     [SerializeField] int[] Debug_Party;
+    [SerializeField,ReadOnly] bool IsNoDamage;
 
         /// <summary>
         /// キャラクターの変更、初期化処理
@@ -168,6 +169,11 @@ using DG.Tweening;
                 NowCharaIndex++;
                 if(NowCharaIndex >= PartyNums.Length){
                     NowCharaIndex = 0;
+                }
+                if(charaData[PartyNums[NowCharaIndex]].name == "守衛"){
+                    IsNoDamage = true;
+                }else{
+                    IsNoDamage = false;
                 }
                 OnChangeSlot.Invoke(NowCharaIndex);
                 CharacterChange(PartyNums[NowCharaIndex]);
@@ -332,9 +338,15 @@ using DG.Tweening;
             Character.CharacterController.height = 0.16f * Character.transform.localScale.x;
         }
 
-         private void OnCollisionEnter2D(Collision2D other) {    
+         private void OnCollisionEnter2D(Collision2D other) {
+            
             var enemy = other.gameObject.GetComponent<IEnemy>();
             if(enemy != null){
+                if(IsNoDamage){
+                rg2d.AddForce(Vector2.left * this.transform.localScale.x * 800);
+                Character.SetState(AnimationState.Blocking);
+                return;
+            }
                 HitBlink();
                 OnHpChange(enemy.AddDamage());
             }
