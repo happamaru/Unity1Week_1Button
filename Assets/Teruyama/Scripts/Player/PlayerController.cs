@@ -347,8 +347,9 @@ using DG.Tweening;
                 Character.SetState(AnimationState.Blocking);
                 return;
             }
-                HitBlink();
-                OnHpChange(enemy.AddDamage());
+                int num = enemy.AddDamage();
+                HitBlink(num);
+                OnHpChange(num);
             }
         }
 
@@ -362,8 +363,9 @@ using DG.Tweening;
         
         Sequence _seq;
      /// <summary> 点滅によるダメージ演出再生 </summary>
-    private void HitBlink()
+    private void HitBlink(int num)
     {
+        if(num == 0) return;
         _seq?.Kill();
         _seq = DOTween.Sequence();
         _seq.AppendCallback(() => spriteRenderer.color = Vector4.zero);

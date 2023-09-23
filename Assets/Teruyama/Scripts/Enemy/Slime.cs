@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Slime :Enemy,IEnemy
 {
+    enum SlimeType{
+        Pink,
+        Yellow
+    }
+    [SerializeField] SlimeType slimeType;
     Rigidbody2D SlimeRg2d;
     [SerializeField] float speed;
  
@@ -30,7 +35,15 @@ public class Slime :Enemy,IEnemy
         if(SlimeRg2d.velocity.x < -speed){
             SlimeRg2d.velocity = new Vector2(-speed,SlimeRg2d.velocity.y);
         }    
+        if(slimeType == SlimeType.Yellow){
+            delta += Time.deltaTime;
+            if(delta > 1.5f){
+                delta = 0;
+                SlimeRg2d.AddForce(Vector2.up * 250);
+            }
+        }
     }
+    float delta;
 
     public int AddDamage(){
         var rg2d = Character.GetComponent<Rigidbody2D>();
