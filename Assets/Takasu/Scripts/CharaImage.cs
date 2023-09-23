@@ -30,6 +30,7 @@ public class CharaImage : MonoBehaviour,
     public TextMeshProUGUI charaexplainetext;
 
     public string[] charanames;
+    public float[] charanamefontsize;
     [TextArea(1, 4)] public string[] charaexplaintext;
 
 
@@ -85,13 +86,14 @@ public class CharaImage : MonoBehaviour,
     public void OnPointerEnter(PointerEventData eventData)
     {
         teamcompositionmanager.CharaExplanationObject.transform.GetChild(0).GetComponent<SpriteLibrary>().spriteLibraryAsset = transform.GetChild(0).GetChild(0).GetComponent<SpriteLibrary>().spriteLibraryAsset;
+        //キャラの名前と説明を入れる
         SetCharaName();
         SetCharaImageExplain();
 
         if(button.interactable == false) return;
         transform.DOScale(OriginalScale * 1.3f, 0.24f).SetUpdate(true).SetEase(Ease.OutCubic);
 
-        //キャラの名前と説明を入れる
+        
 
     }
 
@@ -141,6 +143,7 @@ public class CharaImage : MonoBehaviour,
     void SetCharaName()
     {
         charanametext.GetComponent<TextMeshProUGUI>().text = charanames[CharaNumber - 1];
+        charanametext.GetComponent<TextMeshProUGUI>().fontSize = charanamefontsize[CharaNumber-1];
     }
 
     void SetCharaImageExplain()
