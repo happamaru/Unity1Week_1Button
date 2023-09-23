@@ -275,6 +275,17 @@ using DG.Tweening;
             */
         }
 
+        public void IsGameOver(){
+            IsNoButton = true;
+            rg2d.constraints = RigidbodyConstraints2D.FreezePositionX;
+            Character.SetState(AnimationState.Dead);
+        }
+        public void IsClear(){
+            IsNoButton = true;
+            rg2d.constraints = RigidbodyConstraints2D.FreezePosition;
+            Character.SetState(AnimationState.Idle);
+        }
+
         public void FixedUpdate()
         {
             Move();
