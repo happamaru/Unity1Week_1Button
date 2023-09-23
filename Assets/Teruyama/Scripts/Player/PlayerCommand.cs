@@ -7,6 +7,7 @@ public class HighJump:ICommand{
     public IEnumerator Command(PlayerController player){
       var rg2d = player.rg2d;
       rg2d.velocity = new Vector2(rg2d.velocity.x,0);
+      SoundManager_SE.m_Instane.PlaySoundEfect(player.playerInformation.highJump,0.2f);
       rg2d.AddForce(Vector2.up * 800);
       yield return new WaitForSeconds(0.3f);
     }
@@ -19,6 +20,7 @@ public class HighSpeed:ICommand{
       rg2d.velocity = Vector2.zero;
       //rg2d.gravityScale = 0;
       player.IsNoButton = true;
+      SoundManager_SE.m_Instane.PlaySoundEfect(player.playerInformation.highSpeed,0.2f);
       rg2d.constraints = RigidbodyConstraints2D.FreezeRotation  //Rotationを全てオン
             | RigidbodyConstraints2D.FreezePositionY;  //PositionのYのみオン
       rg2d.AddForce(new Vector2(player.gameObject.transform.localScale.x,0) * 2000);
@@ -29,6 +31,7 @@ public class HighSpeed:ICommand{
 }
 public class Slash:ICommand{
   public IEnumerator Command(PlayerController player){
+    SoundManager_SE.m_Instane.PlaySoundEfect(player.playerInformation.slash,0.2f);
     GameObject go = player.attackManager.SetEffect((int)AttackManager.AttackType.Slash);
     //go.transform.parent = player.transform;
     //go.transform.localPosition = Vector2.zero;
@@ -52,6 +55,7 @@ public class Slash:ICommand{
 
 public class HyperSlash:ICommand{
   public IEnumerator Command(PlayerController player){
+    SoundManager_SE.m_Instane.PlaySoundEfect(player.playerInformation.HyperSlash,0.2f);
     GameObject go = player.attackManager.SetEffect((int)AttackManager.AttackType.HyperSlash);
     go.transform.parent = player.transform;
     go.transform.localPosition = Vector2.zero;
@@ -63,6 +67,7 @@ public class HyperSlash:ICommand{
 
 public class Magic:ICommand{
   public IEnumerator Command(PlayerController player){
+    SoundManager_SE.m_Instane.PlaySoundEfect(player.playerInformation.magic,0.2f);
     GameObject go = player.attackManager.SetEffect((int)AttackManager.AttackType.Magic);
     go.transform.position = player.transform.position;
     go.transform.localPosition += player.attackManager.attackDataBase.attackDatas[(int)AttackManager.AttackType.HyperSlash].InitPosition;

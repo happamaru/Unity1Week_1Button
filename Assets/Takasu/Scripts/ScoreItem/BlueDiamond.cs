@@ -34,7 +34,7 @@ public class BlueDiamond : MonoBehaviour, IScore
         Instantiate(diamondeffect, pos, Quaternion.identity);
 
         DisplayScore(bluediamondscore);
-
+        SoundManager_SE.m_Instane.PlaySoundEfect(GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>().coin,0.2f);
         Destroy(gameObject);
 
         return bluediamondscore;

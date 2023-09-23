@@ -11,6 +11,17 @@ public class PlayerInformation : MonoBehaviour
     public GameObject HpBar;
     public Action<int> OnScoreChange;
 
+    public AudioClip damage;
+    public AudioClip coin;
+    public AudioClip enemyDie;
+    public AudioClip hit;
+    public AudioClip nockBack;
+    public AudioClip slash;
+    public AudioClip magic;
+    public AudioClip highJump;
+    public AudioClip highSpeed;
+    public AudioClip HyperSlash;
+
 
    public IEnumerator SetDie(Vector2 pos){
         GameObject go = Instantiate(DieEffect);

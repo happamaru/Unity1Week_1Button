@@ -15,6 +15,8 @@ public class MainSceneManager : MonoBehaviour
         animator.SetBool("IsPush",true);
         yield return new WaitForSeconds(2);
         GameManager.resultScore = uIManager.Get_NowScore;
+        GameManager.hp = uIManager.Get_Hp;
+        GameManager.time = uIManager.Get_Time;
         SceneManager.LoadScene("ResultScene");
     }
     private void OnCollisionEnter2D(Collision2D other) {

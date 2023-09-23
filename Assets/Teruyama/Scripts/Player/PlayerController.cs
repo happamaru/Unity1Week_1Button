@@ -29,7 +29,7 @@ using DG.Tweening;
         public Rigidbody2D rg2d;
         [SerializeField] TextMeshProUGUI NameText; 
         bool IsAttacked;//攻撃後の硬直で攻撃できないならtrue
-        [NonSerialized] public int JumpCount;
+        public int JumpCount;
         [SerializeField] int MaxJumpCount;//ジャンプ回数の最大値
         public float MaxSpeed;//スピードの最大値
         [SerializeField] float commandInterval;//コマンド後の硬直
@@ -47,6 +47,7 @@ using DG.Tweening;
         [NonSerialized] public Action<int> OnChangeSlot;
         public AttackManager attackManager;
         [SerializeField] GameObject ThiefField;
+        public PlayerInformation playerInformation;
 
         public bool IsNoButton = false;
         public GameObject InitThief(){
@@ -210,7 +211,6 @@ using DG.Tweening;
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if(!IsNoButton){
-
                 if(JumpCount == 0){
                     if(groundCheck.IsGround == false) return;
                 }
@@ -221,10 +221,8 @@ using DG.Tweening;
                 rg2d.velocity = new Vector2(rg2d.velocity.x,0);
                 rg2d.AddForce(JumpSpeed * Vector2.up);
                 //if(groundCheck.IsGround)
-                {
-                    JumpDust.Play(true);
-                }
-                }
+                JumpDust.Play(true);
+            }
             }
         }
 
@@ -347,7 +345,9 @@ using DG.Tweening;
                 Character.SetState(AnimationState.Blocking);
                 return;
             }
+
                 int num = enemy.AddDamage();
+                SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.damage,0.1f);
                 HitBlink(num);
                 OnHpChange(num);
             }

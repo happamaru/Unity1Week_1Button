@@ -19,7 +19,7 @@ public class Coin : MonoBehaviour,IScore
     public int AddScore()
     {
         Instantiate(coineffect, transform.position, Quaternion.identity);
-
+        SoundManager_SE.m_Instane.PlaySoundEfect(GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>().coin,0.2f);
         DisplayScore(coinscore);
 
         //ゲームオブジェクトを削除

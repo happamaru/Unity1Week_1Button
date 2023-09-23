@@ -21,7 +21,6 @@ public class Skull : MonoBehaviour, IScore
     public int AddScore()
     {
         int score;
-
         int scorerand = UnityEngine.Random.Range(0, 100);
 
         if(scorerand > 80)// 81 ~ 99で10000点
@@ -46,6 +45,7 @@ public class Skull : MonoBehaviour, IScore
             Instantiate(skulleffect, transform.position, Quaternion.identity);
 
         DisplayScore(score);
+        SoundManager_SE.m_Instane.PlaySoundEfect(GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>().coin,0.2f);
 
         Destroy(gameObject);
             

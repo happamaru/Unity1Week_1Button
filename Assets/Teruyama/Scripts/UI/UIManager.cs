@@ -11,10 +11,19 @@ public class UIManager : MonoBehaviour
     [SerializeField] PlayerInformation playerInformation;
     [SerializeField] Image SkillGauge;
     [SerializeField] Image HpGauge;
+    [SerializeField] TextMeshProUGUI TimerText;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] GameOverManager gameOverManager;
     const int MaxHp = 100; 
     int NowHp;
+    public int Get_Hp{
+        get{return NowHp;}
+    }
+    const int MaxTime = 300;
+    int time = MaxTime;
+    public int Get_Time{
+        get{return time;}
+    }
     [SerializeField,ReadOnly] int NowScore;
     float delta;
     public int Get_NowScore{
@@ -29,7 +38,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] Transform SelectButton;
     [SerializeField] Image[] slots;
     float[] SelectPosx = {245,350,455,560};
+    [SerializeField] AudioClip MainBGM;
     void Start(){
+        SoundManager_BGM.m_Instane.PlayBackGroundMusic(MainBGM,0.3f);
         ParentHp = Instantiate(playerInformation.HpBar);
         Hp = ParentHp.transform.GetChild(0).gameObject;
         ParentHp.transform.position = playerInformation.GetPlayerPos() + HpBarPos;
@@ -49,12 +60,13 @@ public class UIManager : MonoBehaviour
 
     void Update(){
          ParentHp.transform.position = playerInformation.GetPlayerPos() + HpBarPos;
-       /* delta += Time.deltaTime;
+
+        delta += Time.deltaTime;
         if(delta > 1.0f){
             delta = 0;
-            ChangeScore(1);
+            time -= 1;
+            TimerText.text = time.ToString();
         }
-        */
     }
 
     void OnChangeSlot(int index){
@@ -71,6 +83,7 @@ public class UIManager : MonoBehaviour
         //HpGauge.DOFillAmount(Num/(float)MaxHp,0.5f);
         Hp.transform.localScale = new Vector3(Num/MaxHp,1,1);
     }
+
 
     void ChangeGauge(float interval){
         SkillGauge.DOFillAmount(1,interval).SetEase(Ease.Linear);

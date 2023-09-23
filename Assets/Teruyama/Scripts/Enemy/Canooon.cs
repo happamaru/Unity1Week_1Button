@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Canon1 : MonoBehaviour,IEnemy
+public class Canooon : MonoBehaviour,IEnemy
 {
     [SerializeField] float activeTime;
     [SerializeField] int damage;
@@ -11,6 +11,8 @@ public class Canon1 : MonoBehaviour,IEnemy
         yield return new WaitForSeconds(activeTime);
         Destroy(this.gameObject);
     }
+
+    
 
     public int AddDamage(){
         Destroy(this.gameObject);

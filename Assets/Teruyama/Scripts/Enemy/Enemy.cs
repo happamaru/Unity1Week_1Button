@@ -42,6 +42,7 @@ public abstract class Enemy : MonoBehaviour
         var Damage = other.gameObject.GetComponent<IDamage>();
         if(Damage != null){
             HitBlink();
+            SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.hit,0.1f);
             HP -= Damage.AddDamage();
             hp.transform.localScale = new Vector3((float)HP/hpNum,1,1);
             playerInformation.SetHit(this.transform.position);
@@ -49,6 +50,7 @@ public abstract class Enemy : MonoBehaviour
                 this.transform.DOKill();
                 StartCoroutine(playerInformation.SetDie(this.transform.position));
                 playerInformation.OnScoreChange(score);  
+                SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.enemyDie,0.1f);
                 Destroy(this.gameObject);
             }
         }     
