@@ -66,6 +66,7 @@ public class Magic:ICommand{
     GameObject go = player.attackManager.SetEffect((int)AttackManager.AttackType.Magic);
     go.transform.position = player.transform.position;
     go.transform.localPosition += player.attackManager.attackDataBase.attackDatas[(int)AttackManager.AttackType.HyperSlash].InitPosition;
+    go.transform.localScale = new Vector3(go.transform.localScale.x * player.transform.localScale.x,go.transform.localScale.y,go.transform.localScale.z);
     float dir = player.transform.localScale.x;
     if(dir < 0) {
       go.transform.DOMoveX(-20,2).SetRelative(true).SetEase(Ease.Linear);
@@ -96,6 +97,22 @@ public class CraftMan:ICommand{
 public class BigExploMagic:ICommand{
   public IEnumerator Command(PlayerController player){
     player.attackManager.StartCoroutine(player.attackManager.BigMagic(player.transform.position,18,player.transform.localScale.x));   
+    yield break;
+}
+}
+
+public class BowAttack:ICommand{
+  public IEnumerator Command(PlayerController player){
+    GameObject go = player.attackManager.SetEffect(6);
+    go.transform.position = player.transform.position;
+    go.transform.localPosition += player.attackManager.attackDataBase.attackDatas[(int)AttackManager.AttackType.HyperSlash].InitPosition;
+   go.transform.localScale = new Vector3(go.transform.localScale.x * player.transform.localScale.x,go.transform.localScale.y,go.transform.localScale.z);
+    float dir = player.transform.localScale.x;
+    if(dir < 0) {
+      go.transform.DOMoveX(-20,2).SetRelative(true).SetEase(Ease.Linear);
+      go.GetComponent<SpriteRenderer>().flipX = false;
+    }
+    else go.transform.DOMoveX(20,2).SetRelative(true).SetEase(Ease.Linear);
     yield break;
 }
 }

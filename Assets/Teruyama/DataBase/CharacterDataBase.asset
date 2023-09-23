@@ -143,6 +143,19 @@ MonoBehaviour:
     sprite: {fileID: 2537882373423050008, guid: 3cba859b250d51744a0181d3a78d4742, type: 3}
     Command:
       rid: 1120290704617897986
+  - name: "\u30A2\u30FC\u30C1\u30E3\u30FC"
+    speed: 6
+    jumpPower: 800
+    JumpCount: 1
+    gravity: 6
+    blowPower: 0
+    CommandInterval: 0.4
+    animationType: 5
+    changeEffect: {fileID: 8563390700614445672, guid: 780ea35dad9714e4787e2a93d7b5e78e, type: 3}
+    Animation: {fileID: 11400000, guid: 5cb32aa16ee2a284495405c0aa07f7ba, type: 2}
+    sprite: {fileID: 2537882373423050008, guid: 1937a2e9e9703e842bdbfb8c54518ee8, type: 3}
+    Command:
+      rid: 1120290719771394048
   - name: "\u30C8\u30ED\u30FC\u30EB"
     speed: 3
     jumpPower: 400
@@ -177,3 +190,5 @@ MonoBehaviour:
       type: {class: CraftMan, ns: , asm: Assembly-CSharp}
     - rid: 1120290704617897986
       type: {class: BigExploMagic, ns: , asm: Assembly-CSharp}
+    - rid: 1120290719771394048
+      type: {class: BowAttack, ns: , asm: Assembly-CSharp}
