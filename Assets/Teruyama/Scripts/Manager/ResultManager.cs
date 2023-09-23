@@ -24,6 +24,7 @@ public class ResultManager : MonoBehaviour
 
     int timebonus;
     int hpbonus;
+    int finalscore;
     void Start(){
         if(IsDebug)
         {
@@ -53,8 +54,9 @@ public class ResultManager : MonoBehaviour
             TimeBonus.GetComponent<RectTransform>().DOAnchorPosY(-12.0f, 0.5f).SetDelay(scoredelay).OnComplete(() => {
                 HPBonus.GetComponent<RectTransform>().DOAnchorPosY(-12.0f, 0.5f).SetDelay(scoredelay).OnComplete(() => {
                     // 指定したupdateNumberまでカウントアップ・カウントダウンする
+                    finalscore = GameManager.resultScore + timebonus + hpbonus;
                     int nowNumber = 0;
-                    int updateNumber = GameManager.resultScore + timebonus + hpbonus;
+                    int updateNumber = finalscore;
                     DOTween.To(() => nowNumber, (n) => nowNumber = n, updateNumber, finalscoreduration)
                         .OnUpdate(() => FinalScore.text = nowNumber.ToString("#,0")).OnComplete(() => {
                             GRankingButton.SetActive(true);
@@ -76,7 +78,7 @@ public class ResultManager : MonoBehaviour
         if(IsDebug){
             naichilab.RankingLoader.Instance.SendScoreAndShowRanking(DebugScore);    
         }else{
-        naichilab.RankingLoader.Instance.SendScoreAndShowRanking (GameManager.resultScore);
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking (finalscore);
         }
     }
 
