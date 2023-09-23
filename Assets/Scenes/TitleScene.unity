@@ -1980,7 +1980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &508371074
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6196,6 +6196,14 @@ PrefabInstance:
       propertyPath: teamcompositionmanager
       value: 
       objectReference: {fileID: 608931532}
+    - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
+      propertyPath: charaexplaintext.Array.data[0]
+      value: "\u305D\u308C\u306A\u308A\u306E\u653B\u6483\u80FD\u529B\u3068\n\u305D\u308C\u306A\u308A\u306E\u6A5F\u52D5\u529B\u3092\n\u4F75\u305B\u6301\u3064\n\u591A\u5206\u3053\u3044\u3064\u304C\u4E00\u756A\u5F37\u3044\n\u56F0\u3063\u305F\u3089\u30C1\u30FC\u30E0\u306B\u5165\u308C\u3088\u3046\n\n\u30B9\u30AD\u30EB\uFF1A\u65AC\u6483"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546842986247341196, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
+      propertyPath: charaexplainfontsize.Array.data[0]
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5767640700725387700, guid: a82a9c7f7d02fdc4d89026524761bec7, type: 3}
       propertyPath: m_Sprite
       value: 
