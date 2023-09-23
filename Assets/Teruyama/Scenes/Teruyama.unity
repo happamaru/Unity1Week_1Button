@@ -2857,6 +2857,9 @@ MonoBehaviour:
   highJump: {fileID: 8300000, guid: aee8c40f0d7bc41f3886bc799fdd4cb3, type: 3}
   highSpeed: {fileID: 8300000, guid: 62ace86c7f2cb4abcbf184a9b7387619, type: 3}
   HyperSlash: {fileID: 8300000, guid: cb75eca32853a453a9cc7ca57a501c5e, type: 3}
+  jump: {fileID: 8300000, guid: aa7f9ef44519b45be9ccdf83764e9133, type: 3}
+  change: {fileID: 8300000, guid: b841f58202c1e4c278c0af0cca7b2526, type: 3}
+  Land: {fileID: 8300000, guid: 6f487255e0931458a840f50af40ed6c7, type: 3}
 --- !u!4 &604640494
 Transform:
   m_ObjectHideFlags: 0
@@ -107034,7 +107037,7 @@ MonoBehaviour:
   - {fileID: 1645438523}
   - {fileID: 1707789491}
   - {fileID: 215232472}
-  MainBGM: {fileID: 8300000, guid: 23ef5ca2fc28a4788881017dbb68fac5, type: 3}
+  MainBGM: {fileID: 8300000, guid: 78081e7f53ea64b6b810bb36108bcb85, type: 3}
 --- !u!1001 &1880779475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108783,6 +108786,7 @@ MonoBehaviour:
   debugType: 2
   Debug_Party: 0000000001000000040000000b000000
   IsNoDamage: 0
+  IsJump: 0
 --- !u!70 &375063816584014957
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ MonoBehaviour:
       rid: 1120290638891843584
   - name: "\u5FCD\u8005"
     speed: 6.5
-    jumpPower: 800
+    jumpPower: 900
     JumpCount: 1
     gravity: 6.5
     blowPower: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
       rid: 1120290638891843587
   - name: "\u9B54\u6CD5\u4F7F\u3044"
     speed: 3.5
-    jumpPower: 200
+    jumpPower: 250
     JumpCount: 2
     gravity: 1
     blowPower: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
       rid: 1120290650869465088
   - name: "\u6CE5\u68D2"
     speed: 5
-    jumpPower: 500
+    jumpPower: 600
     JumpCount: 1
     gravity: 3
     blowPower: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
       rid: 1120290626852618240
   - name: "\u5B88\u885B"
     speed: 2
-    jumpPower: 400
+    jumpPower: 500
     JumpCount: 1
     gravity: 3
     blowPower: 0
@@ -119,11 +119,11 @@ MonoBehaviour:
       rid: -2
   - name: "\u5927\u9B54\u5C0E\u58EB"
     speed: 1
-    jumpPower: 200
+    jumpPower: 0
     JumpCount: 0
     gravity: 3
     blowPower: 0
-    CommandInterval: 12
+    CommandInterval: 8
     animationType: 5
     changeEffect: {fileID: 7758097831833352222, guid: c32651bab02924f4380823a5539a0b69, type: 3}
     Animation: {fileID: 11400000, guid: fa64e0c8576368d41871f2405fb66a22, type: 2}
@@ -144,7 +144,7 @@ MonoBehaviour:
     Command:
       rid: 1120290704617897985
   - name: "\u30A4\u30CE\u30B7\u30B7"
-    speed: 10
+    speed: 11
     jumpPower: 0
     JumpCount: 0
     gravity: 3
@@ -159,7 +159,7 @@ MonoBehaviour:
   - name: "\u30B9\u30E9\u30A4\u30E0"
     speed: 3
     jumpPower: 400
-    JumpCount: 5
+    JumpCount: 6
     gravity: 3
     blowPower: 0
     CommandInterval: 1

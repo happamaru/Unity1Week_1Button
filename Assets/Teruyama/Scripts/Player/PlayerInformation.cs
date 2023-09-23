@@ -21,7 +21,9 @@ public class PlayerInformation : MonoBehaviour
     public AudioClip highJump;
     public AudioClip highSpeed;
     public AudioClip HyperSlash;
-
+    public AudioClip jump;
+    public AudioClip change;
+    public AudioClip Land;
 
    public IEnumerator SetDie(Vector2 pos){
         GameObject go = Instantiate(DieEffect);

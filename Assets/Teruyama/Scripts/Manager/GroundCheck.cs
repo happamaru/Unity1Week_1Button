@@ -17,6 +17,11 @@ public class GroundCheck : MonoBehaviour
             }
                 
         }
+        private void OnTriggerEnter2D(Collider2D other) {
+            if(other.gameObject.tag == "ground"){
+                SoundManager_SE.m_Instane.PlaySoundEfect(playerController.playerInformation.Land,0.2f); 
+            }
+        }
        
         private void OnTriggerExit2D(Collider2D other) {
             if(other.gameObject.tag == "ground"){

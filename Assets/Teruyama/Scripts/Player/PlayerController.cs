@@ -106,7 +106,7 @@ using DG.Tweening;
                 CharacterChange(PartyNums[NowCharaIndex]);
                 StartCoroutine(AttackInterval());
                 }
-                }
+            }
         }
         /// <summary>
         /// 初期化
@@ -153,7 +153,7 @@ using DG.Tweening;
                 Character.SetState(AnimationState.Jumping);
                 rg2d.velocity = new Vector2(rg2d.velocity.x,0);
                 rg2d.AddForce(JumpSpeed * Vector2.up);
-                Debug.Log("Jump");
+                SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.jump,0.2f);
                 JumpDust.Play(true);
                 }
                 }
@@ -174,7 +174,7 @@ using DG.Tweening;
                 Character.SetState(AnimationState.Jumping);
                 rg2d.velocity = new Vector2(rg2d.velocity.x,0);
                 rg2d.AddForce(JumpSpeed * Vector2.up);
-                Debug.Log("Jump");
+                SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.jump,0.2f);
                 JumpDust.Play(true);
                 }
                 }
@@ -209,9 +209,10 @@ using DG.Tweening;
                 StartCoroutine(Attack());
                 } 
              }
-              if (Input.GetKeyDown(KeyCode.LeftShift)){
+              if (Input.GetKeyDown(KeyCode.X)){
                 //if(!IsNoButton){
                 NowCharaIndex++;
+                SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.change,0.2f);
                 if(NowCharaIndex >= PartyNums.Length){
                     NowCharaIndex = 0;
                 }
