@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 1162067803606052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9281, y: 1.9281, z: 1.9281}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 224908479469227892}
@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 11.9, y: 5.5}
-  m_SizeDelta: {x: 29.643, y: 32}
+  m_AnchoredPosition: {x: 5, y: 0}
+  m_SizeDelta: {x: 10, y: 32}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &222513203462191114
 CanvasRenderer:
@@ -67,13 +67,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 06435b70c193c0047877a63f8fd90088, type: 3}
+    m_Font: {fileID: 12800000, guid: f0bc8875c8a3e5e499aaf296d1499ec0, type: 3}
     m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -115,7 +115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 300.2, y: 3.7}
+  m_AnchoredPosition: {x: 280, y: 0}
   m_SizeDelta: {x: 250, y: 32}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &222694436681420224
@@ -147,12 +147,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 06435b70c193c0047877a63f8fd90088, type: 3}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: f0bc8875c8a3e5e499aaf296d1499ec0, type: 3}
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 3
-    m_MaxSize: 60
+    m_MaxSize: 32
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -303,13 +303,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 06435b70c193c0047877a63f8fd90088, type: 3}
-    m_FontSize: 48
+    m_Font: {fileID: 12800000, guid: f0bc8875c8a3e5e499aaf296d1499ec0, type: 3}
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 2
-    m_MaxSize: 48
-    m_Alignment: 4
+    m_MinSize: 3
+    m_MaxSize: 32
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

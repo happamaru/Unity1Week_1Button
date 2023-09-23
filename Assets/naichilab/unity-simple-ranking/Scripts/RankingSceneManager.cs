@@ -245,8 +245,8 @@ namespace naichilab
             //2017.2.0b3でなぜかScrollViewContentを追加しても描画されない場合がある。
             //親maskをOFF/ONすると直るので無理やり・・・
             var m = scrollViewContent.parent.GetComponent<Mask>();
-            //m.enabled = false;
-            //m.enabled = true;
+            m.enabled = false;
+            m.enabled = true;
         }
     }
 }
