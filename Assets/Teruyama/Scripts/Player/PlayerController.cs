@@ -210,6 +210,7 @@ using DG.Tweening;
             
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                if(!groundCheck.IsGround) return;
                 if(!IsNoButton){
                 if(JumpCount == 0){
                     if(groundCheck.IsGround == false) return;
@@ -222,6 +223,23 @@ using DG.Tweening;
                 rg2d.AddForce(JumpSpeed * Vector2.up);
                 //if(groundCheck.IsGround)
                 JumpDust.Play(true);
+            }
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                if(groundCheck.IsGround) return;
+                if(!IsNoButton){
+                if(JumpCount == 0){
+                    return;
+                }
+                if(JumpCount >= MaxJumpCount) return;
+                JumpCount++;
+                _inputY = 1;
+                Character.SetState(AnimationState.Jumping);
+                rg2d.velocity = new Vector2(rg2d.velocity.x,0);
+                rg2d.AddForce(JumpSpeed * Vector2.up);
+                //if(groundCheck.IsGround)
+                JumpDust.Play(true);
+            }
             }
             }
         }
