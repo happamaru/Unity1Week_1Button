@@ -31,7 +31,8 @@ public class CharaImage : MonoBehaviour,
 
     public string[] charanames;
     public float[] charanamefontsize;
-    [TextArea(1, 4)] public string[] charaexplaintext;
+    public float[] charaexplainfontsize;
+    [TextArea(1, 10)] public string[] charaexplaintext;
 
 
 
@@ -149,6 +150,7 @@ public class CharaImage : MonoBehaviour,
     void SetCharaImageExplain()
     {
         charaexplainetext.GetComponent<TextMeshProUGUI>().text = charaexplaintext[CharaNumber - 1];
+        charaexplainetext.GetComponent<TextMeshProUGUI>().fontSize = charaexplainfontsize[CharaNumber-1];
     }
 
 
