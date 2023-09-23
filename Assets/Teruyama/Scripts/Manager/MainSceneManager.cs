@@ -6,13 +6,20 @@ using UnityEngine.SceneManagement;
 public class MainSceneManager : MonoBehaviour
 {
     [SerializeField] UIManager uIManager;
+    [SerializeField] PlayerController playerController;
     Animator animator;
+    bool IsClear;
 
     void Start(){
         animator = GetComponent<Animator>();
     }
     IEnumerator Clear(){
+        if(IsClear) yield break;
+        IsClear = true;
         animator.SetBool("IsPush",true);
+        playerController.IsClear();
+        yield return new WaitForSeconds(1);
+        uIManager.ClearFade();
         yield return new WaitForSeconds(2);
         GameManager.resultScore = uIManager.Get_NowScore;
         GameManager.hp = uIManager.Get_Hp;

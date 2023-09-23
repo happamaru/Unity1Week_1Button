@@ -39,6 +39,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] Image[] slots;
     float[] SelectPosx = {245,350,455,560};
     [SerializeField] AudioClip MainBGM;
+    [SerializeField] Image fadeImage;
+    [SerializeField] Image ClearImage;
     void Start(){
         SoundManager_BGM.m_Instane.PlayBackGroundMusic(MainBGM,0.3f);
         ParentHp = Instantiate(playerInformation.HpBar);
@@ -73,11 +75,18 @@ public class UIManager : MonoBehaviour
         if(index >= PartyNum) return;
         SelectButton.transform.localPosition = new Vector3(SelectPosx[index],SelectButton.transform.localPosition.y,SelectButton.transform.localPosition.z);
     } 
+    public void FadeOut(){
+        fadeImage.DOFade(1,1.5f).SetEase(Ease.Linear);
+    }
+    public void ClearFade(){
+        ClearImage.DOFade(1,1.5f).SetEase(Ease.Linear);
+    }
 
     void ChangeHp(int num){
         NowHp -= num;
         if(NowHp <= 0){
-            gameOverManager.GameOver();
+            NowHp = 0;
+           StartCoroutine(gameOverManager.GameOver());
         }
         float Num = (float)NowHp;
         //HpGauge.DOFillAmount(Num/(float)MaxHp,0.5f);
