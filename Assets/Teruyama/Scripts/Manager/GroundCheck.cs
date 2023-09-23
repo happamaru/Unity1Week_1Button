@@ -11,6 +11,7 @@ public class GroundCheck : MonoBehaviour
                 //if(!IsGround){
                 //playerController.rg2d.velocity = new Vector2(playerController.rg2d.velocity.x,0);
                 IsGround = true;
+                playerController.IsJump = false;
                 playerController.JumpCount = 0;
                 //}
             }
@@ -20,6 +21,8 @@ public class GroundCheck : MonoBehaviour
         private void OnTriggerExit2D(Collider2D other) {
             if(other.gameObject.tag == "ground"){
                 IsGround = false;
+                playerController.IsJump = true;
+                playerController.JumpCount++;
             }
         }
 }

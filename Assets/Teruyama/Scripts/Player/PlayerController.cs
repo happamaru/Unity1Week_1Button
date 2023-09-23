@@ -137,15 +137,18 @@ using DG.Tweening;
             Character.SetState(AnimationState.Idle);
         }
 
+       public bool IsJump;
+
         void Update()
         {
             
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-               // if(!groundCheck.IsGround){
+                if(IsJump){  
                 if(!IsNoButton){
+                if(!groundCheck.IsGround){
                 //if(JumpCount != 0){
-                if(JumpCount <= MaxJumpCount){
+                if(JumpCount < MaxJumpCount){
                 JumpCount++;
                 Character.SetState(AnimationState.Jumping);
                 rg2d.velocity = new Vector2(rg2d.velocity.x,0);
@@ -156,6 +159,29 @@ using DG.Tweening;
                 }
                 //}
                 //}
+            }
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                if(!IsJump){  
+                if(!IsNoButton){
+                if(groundCheck.IsGround){
+                //if(JumpCount != 0){
+                if(JumpCount <= MaxJumpCount){
+                
+                IsJump = true;
+                Character.SetState(AnimationState.Jumping);
+                rg2d.velocity = new Vector2(rg2d.velocity.x,0);
+                rg2d.AddForce(JumpSpeed * Vector2.up);
+                Debug.Log("Jump");
+                JumpDust.Play(true);
+                }
+                }
+                }
+                //}
+                //}
+            }
             }
 
           //  if (Input.GetKeyDown(KeyCode.A)) Character.Animator.SetTrigger("Attack");
