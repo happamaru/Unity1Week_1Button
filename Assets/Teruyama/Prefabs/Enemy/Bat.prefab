@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  HP: 3
+  HP: 1
   MovePosX: 8
   score: 300
   addForce: 1000
