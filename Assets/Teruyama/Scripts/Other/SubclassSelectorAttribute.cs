@@ -4,7 +4,6 @@ using UnityEngine;
 [AttributeUsage(AttributeTargets.Field, AllowMultiple = false)]
 public class SubclassSelectorAttribute : PropertyAttribute
 {
-
     private bool m_includeMono;
 
     public SubclassSelectorAttribute(bool includeMono = false)
