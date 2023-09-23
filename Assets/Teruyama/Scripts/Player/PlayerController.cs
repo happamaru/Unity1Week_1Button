@@ -139,6 +139,24 @@ using DG.Tweening;
 
         void Update()
         {
+            
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+               // if(!groundCheck.IsGround){
+                if(!IsNoButton){
+                //if(JumpCount != 0){
+                if(JumpCount <= MaxJumpCount){
+                JumpCount++;
+                Character.SetState(AnimationState.Jumping);
+                rg2d.velocity = new Vector2(rg2d.velocity.x,0);
+                rg2d.AddForce(JumpSpeed * Vector2.up);
+                Debug.Log("Jump");
+                JumpDust.Play(true);
+                }
+                }
+                //}
+                //}
+            }
 
           //  if (Input.GetKeyDown(KeyCode.A)) Character.Animator.SetTrigger("Attack");
           //  else if (Input.GetKeyDown(KeyCode.J)) Character.Animator.SetTrigger("Jab");
@@ -208,40 +226,26 @@ using DG.Tweening;
                 }
             }
             
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            /*if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if(!groundCheck.IsGround) return;
                 if(!IsNoButton){
                 if(JumpCount == 0){
                     if(groundCheck.IsGround == false) return;
-                }
-                if(JumpCount >= MaxJumpCount) return;
+                if(JumpCount <= MaxJumpCount){
+
                 JumpCount++;
                 _inputY = 1;
                 Character.SetState(AnimationState.Jumping);
                 rg2d.velocity = new Vector2(rg2d.velocity.x,0);
                 rg2d.AddForce(JumpSpeed * Vector2.up);
                 //if(groundCheck.IsGround)
-                JumpDust.Play(true);
-            }
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                if(groundCheck.IsGround) return;
-                if(!IsNoButton){
-                if(JumpCount == 0){
-                    return;
                 }
-                if(JumpCount >= MaxJumpCount) return;
-                JumpCount++;
-                _inputY = 1;
-                Character.SetState(AnimationState.Jumping);
-                rg2d.velocity = new Vector2(rg2d.velocity.x,0);
-                rg2d.AddForce(JumpSpeed * Vector2.up);
-                //if(groundCheck.IsGround)
                 JumpDust.Play(true);
+                }
             }
             }
-            }
+            */
         }
 
         public void FixedUpdate()
