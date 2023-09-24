@@ -136,6 +136,11 @@ using DG.Tweening;
             NowCharaIndex = 0;
             CharacterChange(PartyNums[NowCharaIndex]);
             Character.SetState(AnimationState.Idle);
+            if(charaData[PartyNums[NowCharaIndex]].name == "守衛"){
+                    IsNoDamage = true;
+            }else{
+                    IsNoDamage = false;
+            }
         }
 
          bool IsOver;
