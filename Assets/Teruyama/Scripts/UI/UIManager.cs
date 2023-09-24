@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
     int[] slotNums = new int[PartyNum];
     [SerializeField] ChracterDataBase chracterDataBase;
     [SerializeField] Transform SelectButton;
-    [SerializeField] Image[] slots;
+    [SerializeField] SpriteRenderer[] slots;
     float[] SelectPosx = {245,350,455,560};
     [SerializeField] AudioClip MainBGM;
     [SerializeField] Image fadeImage;

@@ -18485,7 +18485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &728456112
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19130,10 +19130,10 @@ MonoBehaviour:
   chracterDataBase: {fileID: 11400000, guid: 2e55e544490f9e44897c79d27a51ed96, type: 2}
   SelectButton: {fileID: 243933060}
   slots:
-  - {fileID: 1869639447}
-  - {fileID: 1182083416}
-  - {fileID: 1466403208}
-  - {fileID: 665283358}
+  - {fileID: 2009674574}
+  - {fileID: 1672680385}
+  - {fileID: 2101211337}
+  - {fileID: 1960721040}
   MainBGM: {fileID: 8300000, guid: 78081e7f53ea64b6b810bb36108bcb85, type: 3}
   fadeImage: {fileID: 1903889134}
   ClearImage: {fileID: 1225462022}
@@ -19359,7 +19359,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -24441,7 +24441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077479920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 219.21494, y: -124.366646, z: -8114.845}
+  m_LocalPosition: {x: 245, y: -279, z: -8114.845}
   m_LocalScale: {x: 90.031624, y: 90.031624, z: 90.031624}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26427,7 +26427,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -29095,7 +29095,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30080,7 +30080,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
