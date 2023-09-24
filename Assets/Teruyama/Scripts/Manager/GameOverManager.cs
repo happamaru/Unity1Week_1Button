@@ -22,7 +22,7 @@ public class GameOverManager : MonoBehaviour
         IsGameOver = true;
         GameManager.resultScore = uIManager.Get_NowScore;
         GameManager.hp = 0;
-        GameManager.time = uIManager.Get_Time;
+        GameManager.time = 0;
         player.GetComponent<PlayerController>().IsGameOver();
         yield return new WaitForSeconds(1f);
         uIManager.FadeOut();

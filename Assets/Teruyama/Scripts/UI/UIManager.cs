@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
     float delta;
     public int Get_NowScore{
         get{return NowScore;}
+        set{NowScore = value;}
     }
     [SerializeField] Vector3 HpBarPos;
     GameObject Hp;
@@ -67,6 +68,9 @@ public class UIManager : MonoBehaviour
         if(delta > 1.0f){
             delta = 0;
             time -= 1;
+            if(time < 1){
+                time = 0;
+            }
             TimerText.text = time.ToString();
         }
     }
