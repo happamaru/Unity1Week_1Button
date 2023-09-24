@@ -17,6 +17,7 @@ public class TitleManager : MonoBehaviour
     public GameObject TitleGroup;
     public GameObject TeamCompositionGroup;
     public GameObject StageSelectGruop;
+    public GameObject AsobikataGroup;
     public TeamCompositionManager teamcompositionmanager;
     
 
@@ -85,6 +86,13 @@ public class TitleManager : MonoBehaviour
         SoundManager_SE.m_Instane.PlaySoundEfect(SelectaudioClip,0.2f);
 
         StageSelectGruop.GetComponent<RectTransform>().DOAnchorPosY(0.0f, 0.5f, true);
+    }
+
+    public void AsobikataButton()
+    {
+        SoundManager_SE.m_Instane.PlaySoundEfect(SelectaudioClip,0.2f);
+        AsobikataGroup.GetComponent<RectTransform>().DOAnchorPosY(0.0f, 0.5f, true);
+
     }
 
     
