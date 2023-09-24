@@ -138,6 +138,8 @@ using DG.Tweening;
             Character.SetState(AnimationState.Idle);
         }
 
+         bool IsOver;
+
        public bool IsJump;
 
         void Update()
@@ -211,7 +213,7 @@ using DG.Tweening;
                 } 
              }
               if (Input.GetKeyDown(KeyCode.X)){
-                //if(!IsNoButton){
+                if(!IsOver){
                 NowCharaIndex++;
                 SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.change,0.2f);
                 if(NowCharaIndex >= PartyNums.Length){
@@ -226,7 +228,7 @@ using DG.Tweening;
                 CharacterChange(PartyNums[NowCharaIndex]);
                StartCoroutine(ChangeEffect(PartyNums[NowCharaIndex]));
                 }
-            // }
+             }
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
@@ -276,8 +278,10 @@ using DG.Tweening;
             */
         }
 
+       
         public void IsGameOver(){
             IsNoButton = true;
+            IsOver = true;
             rg2d.constraints = RigidbodyConstraints2D.FreezePositionX;
             Character.SetState(AnimationState.Dead);
         }
