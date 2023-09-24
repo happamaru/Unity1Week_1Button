@@ -417,6 +417,7 @@ using DG.Tweening;
             var item = other.gameObject.GetComponent<IScore>();
             if(item != null){
                 OnScoreChange(item.AddScore());
+                item = null;
             }
         }
 

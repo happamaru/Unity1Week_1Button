@@ -15,9 +15,12 @@ public class GoldCoin : MonoBehaviour,IScore
 
     public GameObject scoretext;
 
-
+    bool once;
+    
     public int AddScore()
     {
+        if(once) return 0;
+        once = true;
         Instantiate(coineffect, transform.position, Quaternion.identity);
         SoundManager_SE.m_Instane.PlaySoundEfect(GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>().coin,0.2f);
         DisplayScore(goldcoinscore);

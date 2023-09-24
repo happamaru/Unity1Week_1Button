@@ -14,10 +14,12 @@ public class Coin : MonoBehaviour,IScore
     public GameObject coineffect;
 
     public GameObject scoretext;
-
+    bool once;
 
     public int AddScore()
     {
+        if(once) return 0;
+        once = true;
         Instantiate(coineffect, transform.position, Quaternion.identity);
         SoundManager_SE.m_Instane.PlaySoundEfect(GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>().coin,0.2f);
         DisplayScore(coinscore);

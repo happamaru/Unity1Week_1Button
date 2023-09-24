@@ -15,11 +15,13 @@ public class Skull : MonoBehaviour, IScore
 
     public GameObject scoretext;
 
-
+    bool once;
 
 
     public int AddScore()
     {
+        if(once) return 0;
+        once = true;
         int score;
         int scorerand = UnityEngine.Random.Range(0, 100);
 

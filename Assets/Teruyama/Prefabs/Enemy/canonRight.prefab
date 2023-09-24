@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   HP: 8
-  MovePosX: 7
+  MovePosX: 10
   score: 300
   addForce: 0
   HpPos: {x: -0.6, y: 0.5, z: 0}

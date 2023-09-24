@@ -16,9 +16,12 @@ public class Gem : MonoBehaviour, IScore
     public GameObject gemeffect;
 
     public GameObject scoretext;
+    bool once;
 
     public int AddScore()
     {
+        if(once) return 0;
+        once = true;
         Instantiate(gemeffect, transform.position, Quaternion.identity);
         SoundManager_SE.m_Instane.PlaySoundEfect(GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>().coin,0.2f);
         Destroy(gameObject);

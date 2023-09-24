@@ -7,7 +7,7 @@ public class CameraManager : MonoBehaviour
    [SerializeField] GameObject player;
    [SerializeField] float LimitLeftPosX;
    [SerializeField] float LimitRightPosX;
-    private void LateUpdate() {
+    private void Update() {
         this.transform.position = new Vector3(player.transform.position.x,player.transform.position.y,-10);
 
         if(this.transform.position.x < LimitLeftPosX){

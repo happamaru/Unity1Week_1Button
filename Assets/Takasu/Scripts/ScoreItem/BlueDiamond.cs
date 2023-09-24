@@ -10,6 +10,7 @@ using UnityEngine.UIElements;
 public class BlueDiamond : MonoBehaviour, IScore
 {
     public int bluediamondscore = 5000;
+    bool once;
     
     public GameObject diamondeffect;
 
@@ -31,6 +32,9 @@ public class BlueDiamond : MonoBehaviour, IScore
 
     public int AddScore()
     {
+        if(once) return 0;
+        once = true;
+
         Instantiate(diamondeffect, pos, Quaternion.identity);
 
         DisplayScore(bluediamondscore);
