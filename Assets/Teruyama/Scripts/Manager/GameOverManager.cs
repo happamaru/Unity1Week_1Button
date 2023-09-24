@@ -8,6 +8,7 @@ public class GameOverManager : MonoBehaviour
    [SerializeField] GameObject player;
    [SerializeField] UIManager uIManager;
    bool IsGameOver;
+   [SerializeField] AudioClip gameOver;
    void Update(){
     if(player.transform.position.y < -20){
         StartCoroutine(GameOver());
@@ -20,6 +21,8 @@ public class GameOverManager : MonoBehaviour
    public IEnumerator GameOver(){
         if(IsGameOver) yield break;
         IsGameOver = true;
+        SoundManager_BGM.m_Instane.StopBackGroundMusic();
+        SoundManager_SE.m_Instane.PlaySoundEfect(gameOver,0.2f);
         GameManager.resultScore = uIManager.Get_NowScore;
         GameManager.hp = 0;
         GameManager.time = 0;

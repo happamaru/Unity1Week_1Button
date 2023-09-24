@@ -23,7 +23,7 @@ public class Gem : MonoBehaviour, IScore
         if(once) return 0;
         once = true;
         Instantiate(gemeffect, transform.position, Quaternion.identity);
-        SoundManager_SE.m_Instane.PlaySoundEfect(GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>().coin,0.2f);
+        SoundManager_SE.m_Instane.PlaySoundEfect(GameObject.Find("CharacterInformation").GetComponent<PlayerInformation>().coin2,0.2f);
         Destroy(gameObject);
 
         DisplayScore(gemscore);

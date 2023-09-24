@@ -9,6 +9,7 @@ public class MainSceneManager : MonoBehaviour
     [SerializeField] PlayerController playerController;
     Animator animator;
     bool IsClear;
+    [SerializeField] AudioClip ClearAudio;
 
     void Start(){
         animator = GetComponent<Animator>();
@@ -16,6 +17,8 @@ public class MainSceneManager : MonoBehaviour
     IEnumerator Clear(){
         if(IsClear) yield break;
         IsClear = true;
+        SoundManager_BGM.m_Instane.StopBackGroundMusic();
+        SoundManager_SE.m_Instane.PlaySoundEfect(ClearAudio,0.2f);
         GameManager.resultScore = uIManager.Get_NowScore;
         GameManager.hp = uIManager.Get_Hp;
         GameManager.time = uIManager.Get_Time;

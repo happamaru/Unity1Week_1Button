@@ -94,6 +94,7 @@ using DG.Tweening;
         IEnumerator AttackInterval(){
             OnChangeGauge.Invoke(commandInterval);
             yield return new WaitForSeconds(commandInterval);
+            SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.skillcharge,0.2f);
             IsAttacked = false;
         }
         IEnumerator Attack(){
@@ -403,11 +404,13 @@ using DG.Tweening;
                 if(IsNoDamage){
                 rg2d.AddForce(Vector2.left * this.transform.localScale.x * 800);
                 Character.SetState(AnimationState.Blocking);
+                SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.guard,0.2f);
                 return;
             }
 
                 int num = enemy.AddDamage();
                 SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.damage,0.1f);
+                SoundManager_SE.m_Instane.PlaySoundEfect(playerInformation.nockBack,0.2f);
                 HitBlink(num);
                 OnHpChange(num);
             }

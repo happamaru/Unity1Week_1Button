@@ -13,6 +13,14 @@ public class PlayerInformation : MonoBehaviour
 
     public AudioClip damage;
     public AudioClip coin;
+    public AudioClip coin2;
+    public AudioClip coin3;
+    public AudioClip guard;
+    public AudioClip dorobo;
+    public AudioClip kaziya;
+    public AudioClip explosion;
+    public AudioClip archer;
+    public AudioClip skillcharge;
     public AudioClip enemyDie;
     public AudioClip hit;
     public AudioClip nockBack;

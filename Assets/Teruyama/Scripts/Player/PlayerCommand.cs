@@ -84,6 +84,7 @@ public class Magic:ICommand{
 
 public class thief:ICommand{
   public IEnumerator Command(PlayerController player){
+    SoundManager_SE.m_Instane.PlaySoundEfect(player.playerInformation.dorobo,0.5f);
     GameObject go = player.InitThief();
     go.transform.position = player.transform.position;
     yield break;
@@ -92,6 +93,7 @@ public class thief:ICommand{
 
 public class CraftMan:ICommand{
   public IEnumerator Command(PlayerController player){
+     SoundManager_SE.m_Instane.PlaySoundEfect(player.playerInformation.kaziya,0.2f);
     GameObject go = player.InitBlock();
     go.transform.position = player.transform.position;
     go.transform.AddPosY(-1);
@@ -101,6 +103,7 @@ public class CraftMan:ICommand{
 
 public class BigExploMagic:ICommand{
   public IEnumerator Command(PlayerController player){
+     SoundManager_SE.m_Instane.PlaySoundEfect(player.playerInformation.explosion,0.2f);
     player.attackManager.StartCoroutine(player.attackManager.BigMagic(player.transform.position,18,player.transform.localScale.x));   
     yield break;
 }
@@ -109,6 +112,7 @@ public class BigExploMagic:ICommand{
 public class BowAttack:ICommand{
   public IEnumerator Command(PlayerController player){
     GameObject go = player.attackManager.SetEffect(6);
+     SoundManager_SE.m_Instane.PlaySoundEfect(player.playerInformation.archer,0.5f);
     go.transform.position = player.transform.position;
     go.transform.localPosition += player.attackManager.attackDataBase.attackDatas[(int)AttackManager.AttackType.HyperSlash].InitPosition;
    go.transform.localScale = new Vector3(go.transform.localScale.x * player.transform.localScale.x,go.transform.localScale.y,go.transform.localScale.z);

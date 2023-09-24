@@ -39,11 +39,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] Transform SelectButton;
     [SerializeField] SpriteRenderer[] slots;
     float[] SelectPosx = {245,354,465,570};
-    [SerializeField] AudioClip MainBGM;
+    [SerializeField] AudioClip[] MainBGMs;
+   public enum BGMType{
+        main1,
+        main2,
+        main3
+    }
+    [SerializeField] BGMType bGMType;
     [SerializeField] Image fadeImage;
     [SerializeField] Image ClearImage;
     void Start(){
-        SoundManager_BGM.m_Instane.PlayBackGroundMusic(MainBGM,0.3f);
+        SoundManager_BGM.m_Instane.PlayBackGroundMusic(MainBGMs[(int)bGMType],0.3f);
         ParentHp = Instantiate(playerInformation.HpBar);
         Hp = ParentHp.transform.GetChild(0).gameObject;
         ParentHp.transform.position = playerInformation.GetPlayerPos() + HpBarPos;

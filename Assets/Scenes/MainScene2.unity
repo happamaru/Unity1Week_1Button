@@ -6735,6 +6735,14 @@ MonoBehaviour:
   HpBar: {fileID: 1470814639785598475, guid: b5fe47af58573a9438ea677815659906, type: 3}
   damage: {fileID: 8300000, guid: 29fabe54ebc6448a090c30485b5dc188, type: 3}
   coin: {fileID: 8300000, guid: 87d913f874ac84d30918f875f958b71d, type: 3}
+  coin2: {fileID: 8300000, guid: 6d9cb29a10b87453f8217b098583f63a, type: 3}
+  coin3: {fileID: 8300000, guid: a5e7b962a0ee949fba21ca5476d7fe26, type: 3}
+  guard: {fileID: 8300000, guid: 24085c00ef88048c4bb2849b8757aa53, type: 3}
+  dorobo: {fileID: 8300000, guid: 1b728c40ca5db4dd88383d7f2ebfa993, type: 3}
+  kaziya: {fileID: 8300000, guid: 9e723f3fd6fdb4341a89d1566e20a6e2, type: 3}
+  explosion: {fileID: 8300000, guid: af54bd94a8a99457281768e494c7aa4e, type: 3}
+  archer: {fileID: 8300000, guid: a1e27a4ffa9bc4d4dae67b11c91af395, type: 3}
+  skillcharge: {fileID: 8300000, guid: 880ee821f7d1748128baf376e1a41fde, type: 3}
   enemyDie: {fileID: 8300000, guid: 29fabe54ebc6448a090c30485b5dc188, type: 3}
   hit: {fileID: 8300000, guid: 9b8ee7a6ec7304a629439a35181da43a, type: 3}
   nockBack: {fileID: 8300000, guid: 42be068b8dbcd469093ce683dc69d481, type: 3}
@@ -8243,7 +8251,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -200
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.5, y: 1.5, z: 0}
   m_MaxChunkCount: 16
@@ -20172,7 +20180,10 @@ MonoBehaviour:
   - {fileID: 1672680385}
   - {fileID: 2101211337}
   - {fileID: 1960721040}
-  MainBGM: {fileID: 8300000, guid: 78081e7f53ea64b6b810bb36108bcb85, type: 3}
+  MainBGMs:
+  - {fileID: 8300000, guid: 78081e7f53ea64b6b810bb36108bcb85, type: 3}
+  - {fileID: 8300000, guid: f3d7673e53caa491eab315ce32c0627d, type: 3}
+  bGMType: 0
   fadeImage: {fileID: 1903889134}
   ClearImage: {fileID: 1225462022}
 --- !u!4 &834241796
@@ -29355,6 +29366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1476724410}
   uIManager: {fileID: 834241795}
+  gameOver: {fileID: 8300000, guid: 921dd5d5c4fdb48c28263727966e52fb, type: 3}
 --- !u!4 &1458434546
 Transform:
   m_ObjectHideFlags: 0
@@ -31962,6 +31974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIManager: {fileID: 834241795}
   playerController: {fileID: 1476724411}
+  ClearAudio: {fileID: 8300000, guid: e6d7bef65038143ecbc4d5594304ac9c, type: 3}
 --- !u!95 &1819890442
 Animator:
   serializedVersion: 5
