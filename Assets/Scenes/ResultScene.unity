@@ -3441,7 +3441,7 @@ MonoBehaviour:
   WadaikoaudioClip: {fileID: 8300000, guid: 7f002e7189193bc42bf478d27a078b53, type: 3}
   DramrallaudioClip: {fileID: 8300000, guid: 9de40797725b9c94aabe63b7a2898af7, type: 3}
   HakushuaudioClip: {fileID: 8300000, guid: 03a9258a741fa8c44bc7744e5e93d029, type: 3}
-  BGMaudioClip: {fileID: 8300000, guid: 94556e197b5134c59bd963af9ddc0dd5, type: 3}
+  BGMaudioClip: {fileID: 8300000, guid: dda8c6ffd21ec4509a10eb0824c440a4, type: 3}
   SelectaudioClip: {fileID: 8300000, guid: 703e5eab945b84c5a90c56495c86adc9, type: 3}
 --- !u!4 &1035383612
 Transform:
