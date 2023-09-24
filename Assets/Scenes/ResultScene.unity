@@ -3436,6 +3436,8 @@ MonoBehaviour:
   DebugID: 0
   scoredelay: 1
   finalscoreduration: 2.2
+  TimeBonusNumber: 60
+  HPBonusNumber: 100
   WadaikoaudioClip: {fileID: 8300000, guid: 7f002e7189193bc42bf478d27a078b53, type: 3}
   DramrallaudioClip: {fileID: 8300000, guid: 9de40797725b9c94aabe63b7a2898af7, type: 3}
   HakushuaudioClip: {fileID: 8300000, guid: 03a9258a741fa8c44bc7744e5e93d029, type: 3}
