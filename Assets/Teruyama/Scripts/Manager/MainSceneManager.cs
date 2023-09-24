@@ -16,14 +16,14 @@ public class MainSceneManager : MonoBehaviour
     IEnumerator Clear(){
         if(IsClear) yield break;
         IsClear = true;
+        GameManager.resultScore = uIManager.Get_NowScore;
+        GameManager.hp = uIManager.Get_Hp;
+        GameManager.time = uIManager.Get_Time;
         animator.SetBool("IsPush",true);
         playerController.IsClear();
         yield return new WaitForSeconds(1);
         uIManager.ClearFade();
         yield return new WaitForSeconds(2);
-        GameManager.resultScore = uIManager.Get_NowScore;
-        GameManager.hp = uIManager.Get_Hp;
-        GameManager.time = uIManager.Get_Time;
         SceneManager.LoadScene("ResultScene");
     }
     private void OnCollisionEnter2D(Collision2D other) {

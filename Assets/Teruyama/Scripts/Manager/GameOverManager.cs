@@ -20,13 +20,13 @@ public class GameOverManager : MonoBehaviour
    public IEnumerator GameOver(){
         if(IsGameOver) yield break;
         IsGameOver = true;
+        GameManager.resultScore = uIManager.Get_NowScore;
+        GameManager.hp = 0;
+        GameManager.time = uIManager.Get_Time;
         player.GetComponent<PlayerController>().IsGameOver();
         yield return new WaitForSeconds(1f);
         uIManager.FadeOut();
         yield return new WaitForSeconds(2.2f);
-        GameManager.resultScore = uIManager.Get_NowScore;
-        GameManager.hp = uIManager.Get_Hp;
-        GameManager.time = uIManager.Get_Time;
         SceneManager.LoadScene("ResultScene");
    }
 }
