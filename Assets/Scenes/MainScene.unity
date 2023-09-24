@@ -6962,8 +6962,9 @@ MonoBehaviour:
   - {fileID: 1397939980}
   - {fileID: 1123594241}
   MainBGMs:
-  - {fileID: 8300000, guid: 78081e7f53ea64b6b810bb36108bcb85, type: 3}
-  - {fileID: 8300000, guid: f3d7673e53caa491eab315ce32c0627d, type: 3}
+  - {fileID: 8300000, guid: f2b5338a011ca494f860fdf6a8d94fe1, type: 3}
+  - {fileID: 8300000, guid: d5c6e5e78d56f48028c4de460f3f07dc, type: 3}
+  - {fileID: 8300000, guid: 23ef5ca2fc28a4788881017dbb68fac5, type: 3}
   bGMType: 0
   fadeImage: {fileID: 1569016806}
   ClearImage: {fileID: 2040568736}

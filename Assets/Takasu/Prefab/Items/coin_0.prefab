@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a487146839f92c24ebb1ac8e2b8d1189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinscore: 100
+  coinscore: 200
   scoresize: 2
   coineffect: {fileID: 7454987551522880206, guid: b79eb62ac0fad724a8eae4c035ebf1bc, type: 3}
   scoretext: {fileID: 6049666091617551603, guid: e0f9f99f96afd9640a927aea89ed418b, type: 3}
