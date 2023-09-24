@@ -17,7 +17,6 @@ public class StageSelectManager : MonoBehaviour
     Vector2 OriginalScale;
 
     public GameObject StageSelectGroup;
-    public Camera camera;
     GameObject stageimage;
     GameObject stagenametext;
     GameObject rightbutton;
@@ -60,7 +59,7 @@ public class StageSelectManager : MonoBehaviour
 
         //camera.DOFieldOfView(endValue, 1.0f);
         Debug.Log("start");
-        camera.orthographicSize = camera.orthographicSize - 1.0f;
+
 
         //SceneManager.LoadScene("MainScene");
 

@@ -78,7 +78,7 @@ public class TitleManager : MonoBehaviour
 
     //ステージ選択画面を呼び出す
     public void StageSelectButton(){
-       SoundManager_SE.m_Instane.PlaySoundEfect(StartaudioClip,0.2f);
+       //SoundManager_SE.m_Instane.PlaySoundEfect(StartaudioClip,0.2f);
        // SoundManager_BGM.m_Instane.PlayBackGroundMusic(audioClip,0.2f);
         //SceneManager.LoadScene("MainScene");
 

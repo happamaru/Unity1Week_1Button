@@ -23,6 +23,12 @@ public class ResultManager : MonoBehaviour
      [SerializeField] float scoredelay;
      [SerializeField] float finalscoreduration;
 
+     [SerializeField] AudioClip WadaikoaudioClip;
+     [SerializeField] AudioClip DramrallaudioClip;
+     [SerializeField] AudioClip HakushuaudioClip;
+     [SerializeField] AudioClip BGMaudioClip;
+     [SerializeField] AudioClip SelectaudioClip;
+
     int timebonus;
     int hpbonus;
     int finalscore;
@@ -52,13 +58,20 @@ public class ResultManager : MonoBehaviour
 
         //スコアをひとつづつ表示する
         ResultScore.GetComponent<RectTransform>().DOAnchorPosY(-12.0f, 0.5f).SetDelay(scoredelay).OnComplete(() => {
+            SoundManager_SE.m_Instane.PlaySoundEfect(WadaikoaudioClip,0.2f);
             TimeBonus.GetComponent<RectTransform>().DOAnchorPosY(-12.0f, 0.5f).SetDelay(scoredelay).OnComplete(() => {
+                SoundManager_SE.m_Instane.PlaySoundEfect(WadaikoaudioClip,0.2f);
                 HPBonus.GetComponent<RectTransform>().DOAnchorPosY(-12.0f, 0.5f).SetDelay(scoredelay).OnComplete(() => {
+                    SoundManager_SE.m_Instane.PlaySoundEfect(WadaikoaudioClip,0.2f);
+
+                    StartCoroutine("StartDramrall");
+
+                    StartCoroutine("StartBGM");
                     // 指定したupdateNumberまでカウントアップ・カウントダウンする
                     finalscore = GameManager.resultScore + timebonus + hpbonus;
                     int nowNumber = 0;
                     int updateNumber = finalscore;
-                    DOTween.To(() => nowNumber, (n) => nowNumber = n, updateNumber, finalscoreduration)
+                    DOTween.To(() => nowNumber, (n) => nowNumber = n, updateNumber, finalscoreduration).SetDelay(1.0f)
                         .OnUpdate(() => FinalScore.text = nowNumber.ToString("#,0")).OnComplete(() => {
                             GRankingButton.SetActive(true);
                             GTitleButton.SetActive(true);
@@ -73,9 +86,11 @@ public class ResultManager : MonoBehaviour
         
     }
     public void ToTitle(){
+        SoundManager_SE.m_Instane.PlaySoundEfect(SelectaudioClip,0.2f);
         SceneManager.LoadScene("TitleScene");
     }
     public void OpenRanking(){
+        SoundManager_SE.m_Instane.PlaySoundEfect(SelectaudioClip,0.2f);
         if(IsDebug){
             naichilab.RankingLoader.Instance.SendScoreAndShowRanking(DebugScore,DebugID);    
         }else{
@@ -97,5 +112,19 @@ public class ResultManager : MonoBehaviour
         int bonus = (int)((float)GameManager.hp / 100.0f * GameManager.resultScore);
 
         return bonus;
+    }
+
+    IEnumerator StartDramrall()
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        SoundManager_SE.m_Instane.PlaySoundEfect(DramrallaudioClip,0.2f);
+    }
+
+    IEnumerator StartBGM()
+    {
+        yield return new WaitForSeconds(3.2f);
+
+        SoundManager_BGM.m_Instane.PlayBackGroundMusic(BGMaudioClip,0.1f);
     }
 }
