@@ -20183,7 +20183,7 @@ MonoBehaviour:
   MainBGMs:
   - {fileID: 8300000, guid: 78081e7f53ea64b6b810bb36108bcb85, type: 3}
   - {fileID: 8300000, guid: f3d7673e53caa491eab315ce32c0627d, type: 3}
-  bGMType: 0
+  bGMType: 1
   fadeImage: {fileID: 1903889134}
   ClearImage: {fileID: 1225462022}
 --- !u!4 &834241796
@@ -29518,7 +29518,7 @@ MonoBehaviour:
   IsNoButton: 0
   block: {fileID: 883380724255815505, guid: 2d25a3d6868eb314ba93583384cbb47c, type: 3}
   PartyNums: 00000000000000000000000000000000
-  debugType: 2
+  debugType: 0
   Debug_Party: 0000000001000000040000000b000000
   IsNoDamage: 0
   IsJump: 0

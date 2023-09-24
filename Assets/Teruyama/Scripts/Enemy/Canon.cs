@@ -7,7 +7,7 @@ public class Canon : Enemy
     [SerializeField] float canonSpan;
     [SerializeField] float canonSpeed;
     [SerializeField] GameObject canonPrefab;
-    [SerializeField] Animator animator;
+    [SerializeField] Animator aanimator;
     float delta;
     enum CanonType{
         Side,
@@ -36,10 +36,10 @@ public class Canon : Enemy
     void Start(){
         
         Rigidbody2D rg2d = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        aanimator = GetComponent<Animator>();
         OnVisible = () =>{
             IsMove = true;
-            animator.enabled = true;
+            aanimator.enabled = true;
         };
         OnDisable = () =>{
             Destroy(this.gameObject);
