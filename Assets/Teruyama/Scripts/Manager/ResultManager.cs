@@ -22,6 +22,8 @@ public class ResultManager : MonoBehaviour
      [SerializeField] int DebugID;
      [SerializeField] float scoredelay;
      [SerializeField] float finalscoreduration;
+     [SerializeField] float TimeBonusNumber;
+     [SerializeField] float HPBonusNumber;
 
      [SerializeField] AudioClip WadaikoaudioClip;
      [SerializeField] AudioClip DramrallaudioClip;
@@ -102,14 +104,14 @@ public class ResultManager : MonoBehaviour
 
     int CulcTimeBonus()
     {
-        int bonus = (int)((float)GameManager.time / 300.0f * GameManager.resultScore);
+        int bonus = (int)((float)GameManager.time / TimeBonusNumber * GameManager.resultScore);
 
         return bonus;
     }
 
     int CulcHPBonus()
     {
-        int bonus = (int)((float)GameManager.hp / 100.0f * GameManager.resultScore);
+        int bonus = (int)((float)GameManager.hp / HPBonusNumber * GameManager.resultScore);
 
         return bonus;
     }
@@ -125,6 +127,7 @@ public class ResultManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3.2f);
 
+        SoundManager_SE.m_Instane.PlaySoundEfect(HakushuaudioClip,0.2f);
         SoundManager_BGM.m_Instane.PlayBackGroundMusic(BGMaudioClip,0.1f);
     }
 }
