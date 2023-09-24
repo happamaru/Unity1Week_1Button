@@ -69,12 +69,15 @@ public class StageSelectManager : MonoBehaviour
         switch(stagenumber)
         {
             case 0:
+                GameManager.PlayStageNum = 0;
                 SceneManager.LoadScene("ステージ名");
             break;
             case 1:
+                GameManager.PlayStageNum = 1;
                 SceneManager.LoadScene("ステージ名");
             break;
             case 2:
+                GameManager.PlayStageNum = 2;
                 SceneManager.LoadScene("ステージ名");
             break;
         }

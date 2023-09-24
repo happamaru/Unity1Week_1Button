@@ -19,6 +19,7 @@ public class ResultManager : MonoBehaviour
      
      [SerializeField] bool IsDebug;
      [SerializeField] int DebugScore;
+     [SerializeField] int DebugID;
      [SerializeField] float scoredelay;
      [SerializeField] float finalscoreduration;
 
@@ -76,9 +77,9 @@ public class ResultManager : MonoBehaviour
     }
     public void OpenRanking(){
         if(IsDebug){
-            naichilab.RankingLoader.Instance.SendScoreAndShowRanking(DebugScore);    
+            naichilab.RankingLoader.Instance.SendScoreAndShowRanking(DebugScore,DebugID);    
         }else{
-        naichilab.RankingLoader.Instance.SendScoreAndShowRanking (finalscore);
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking (finalscore,GameManager.PlayStageNum);
         }
     }
 
