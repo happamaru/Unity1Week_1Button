@@ -64,23 +64,23 @@ public class StageSelectManager : MonoBehaviour
         //SceneManager.LoadScene("MainScene");
 
         //ステージが複数できたら下の処理に変える
-/*
+
         switch(stagenumber)
         {
             case 0:
                 GameManager.PlayStageNum = 0;
-                SceneManager.LoadScene("ステージ名");
+                SceneManager.LoadScene("MainScene");
             break;
             case 1:
                 GameManager.PlayStageNum = 1;
-                SceneManager.LoadScene("ステージ名");
+                SceneManager.LoadScene("MainScene2");
             break;
             case 2:
                 GameManager.PlayStageNum = 2;
-                SceneManager.LoadScene("ステージ名");
+                SceneManager.LoadScene("MainScene3");
             break;
         }
-*/
+
         
     }
 

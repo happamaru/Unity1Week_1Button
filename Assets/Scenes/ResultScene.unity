@@ -3431,7 +3431,7 @@ MonoBehaviour:
   RankingButton: {fileID: 568046998}
   GRankingButton: {fileID: 568046996}
   GTitleButton: {fileID: 569549029}
-  IsDebug: 1
+  IsDebug: 0
   DebugScore: 1000
   DebugID: 0
   scoredelay: 1
