@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 523375797e9094c449213e42e02fdea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemscore: 1000
+  gemscore: 3000
   scoresize: 2
   gemeffect: {fileID: 7482234625477884037, guid: c1445e12c8712e142bfdedf91d4c6008, type: 3}
   scoretext: {fileID: 6049666091617551603, guid: e0f9f99f96afd9640a927aea89ed418b, type: 3}
