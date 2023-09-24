@@ -14712,7 +14712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 42148812}
   LimitLeftPosX: 0
-  LimitRightPosX: 227
+  LimitRightPosX: 257
 --- !u!81 &950610671
 AudioListener:
   m_ObjectHideFlags: 0

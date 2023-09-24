@@ -80,7 +80,7 @@ MonoBehaviour:
       rid: 1120290704617897984
   - name: "\u30A2\u30FC\u30C1\u30E3\u30FC"
     speed: 6
-    jumpPower: 800
+    jumpPower: 850
     JumpCount: 1
     gravity: 6
     blowPower: 0
