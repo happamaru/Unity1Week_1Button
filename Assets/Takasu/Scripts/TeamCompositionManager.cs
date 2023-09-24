@@ -147,4 +147,5 @@ public class TeamCompositionManager : MonoBehaviour
             CharaImageGroup.transform.GetChild(GameManager.team[i] + 1).GetComponent<CharaImage>().SetCharaImage();
         }
     }
+
 }

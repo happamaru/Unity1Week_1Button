@@ -41,7 +41,7 @@ public class ButtonManager : MonoBehaviour,
             
     }
 
-    
+
 
     public void OnPointerEnter(PointerEventData eventData)
     {
