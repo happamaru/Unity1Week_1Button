@@ -10,9 +10,14 @@ using TMPro;
 
 public class StageSelectManager : MonoBehaviour
 {
+    [SerializeField] AudioClip StartaudioClip;
+    [SerializeField] AudioClip BackaudioClip;
+    [SerializeField] AudioClip SelectaudioClip;
+
     Vector2 OriginalScale;
 
     public GameObject StageSelectGroup;
+    public Camera camera;
     GameObject stageimage;
     GameObject stagenametext;
     GameObject rightbutton;
@@ -24,6 +29,7 @@ public class StageSelectManager : MonoBehaviour
     public Sprite[] stagesprite;
     public string[] stagename;
     public string [] difficulty;
+    public float endValue;
     
     void Start()
     {
@@ -43,12 +49,20 @@ public class StageSelectManager : MonoBehaviour
 
     public void ToTitle()
     {
+        SoundManager_SE.m_Instane.PlaySoundEfect(BackaudioClip,0.2f);
+
         StageSelectGroup.GetComponent<RectTransform>().DOAnchorPosY(900.0f, 0.5f, true);
     }
 
     public void ToStart()
     {
-        SceneManager.LoadScene("MainScene");
+        SoundManager_SE.m_Instane.PlaySoundEfect(StartaudioClip,0.2f);
+
+        //camera.DOFieldOfView(endValue, 1.0f);
+        Debug.Log("start");
+        camera.orthographicSize = camera.orthographicSize - 1.0f;
+
+        //SceneManager.LoadScene("MainScene");
 
         //ステージが複数できたら下の処理に変える
 /*
@@ -86,6 +100,8 @@ public class StageSelectManager : MonoBehaviour
 
     public void OnRightButton()
     {
+        SoundManager_SE.m_Instane.PlaySoundEfect(SelectaudioClip,0.2f);
+
         stagenumber++;
 
         leftbutton.GetComponent<Button>().interactable = true;
@@ -100,6 +116,8 @@ public class StageSelectManager : MonoBehaviour
 
     public void OnLeftButton()
     {
+        SoundManager_SE.m_Instane.PlaySoundEfect(SelectaudioClip,0.2f);
+
         stagenumber--;
 
         rightbutton.GetComponent<Button>().interactable = true;

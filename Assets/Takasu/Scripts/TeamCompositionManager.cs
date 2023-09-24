@@ -14,6 +14,7 @@ public class TeamCompositionManager : MonoBehaviour
     [SerializeField] AudioClip TeamComposeaudioClip;
     [SerializeField] AudioClip OneBackaudioClip;
     [SerializeField] AudioClip ResetaudioClip;
+    [SerializeField] AudioClip BackaudioClip;
 
 
     public GameObject[] TeamAnimObject;
@@ -42,7 +43,7 @@ public class TeamCompositionManager : MonoBehaviour
     //チーム編成を一つ戻す
     public void OnBackOneStep()
     {
-        SoundManager_SE.m_Instane.PlaySoundEfect(OneBackaudioClip,0.2f);
+        SoundManager_SE.m_Instane.PlaySoundEfect(BackaudioClip,0.2f);
 
         int a = 4;
 
@@ -78,7 +79,7 @@ public class TeamCompositionManager : MonoBehaviour
     //チーム編成をリセットする
     public void OnTeamReset()
     {
-        SoundManager_SE.m_Instane.PlaySoundEfect(ResetaudioClip,0.2f);
+        SoundManager_SE.m_Instane.PlaySoundEfect(BackaudioClip,0.2f);
 
         //チーム編成、編成画面をリセット
         for(int i = 0; i < 4; i++)

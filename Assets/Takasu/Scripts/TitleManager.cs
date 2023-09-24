@@ -26,7 +26,7 @@ public class TitleManager : MonoBehaviour
         TeamCompositionGroup.GetComponent<CanvasGroup>().alpha = 0;
         TeamCompositionGroup.GetComponent<CanvasGroup>().interactable = false;
 
-        SoundManager_BGM.m_Instane.PlayBackGroundMusic(TitleaudioClip,0.2f);
+        SoundManager_BGM.m_Instane.PlayBackGroundMusic(TitleaudioClip,0.1f);
 
     }
 
@@ -81,6 +81,8 @@ public class TitleManager : MonoBehaviour
        SoundManager_SE.m_Instane.PlaySoundEfect(StartaudioClip,0.2f);
        // SoundManager_BGM.m_Instane.PlayBackGroundMusic(audioClip,0.2f);
         //SceneManager.LoadScene("MainScene");
+
+        SoundManager_SE.m_Instane.PlaySoundEfect(SelectaudioClip,0.2f);
 
         StageSelectGruop.GetComponent<RectTransform>().DOAnchorPosY(0.0f, 0.5f, true);
     }
